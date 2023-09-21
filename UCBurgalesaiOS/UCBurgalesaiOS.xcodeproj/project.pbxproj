@@ -14,6 +14,9 @@
 		D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8A92ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift */; };
 		D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8B32ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift */; };
 		D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8B52ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift */; };
+		D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C32ABC585200BBEC4E /* ProfileModel.swift */; };
+		D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C32ABC585200BBEC4E /* ProfileModel.swift */; };
+		D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C32ABC585200BBEC4E /* ProfileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 		D323D8AF2ABC57E900BBEC4E /* UCBurgalesaiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UCBurgalesaiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D323D8B32ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCBurgalesaiOSUITests.swift; sourceTree = "<group>"; };
 		D323D8B52ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCBurgalesaiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D323D8C32ABC585200BBEC4E /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D323D8C22ABC580B00BBEC4E /* Model */,
 				D323D8982ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift */,
 				D323D89A2ABC57E800BBEC4E /* ContentView.swift */,
 				D323D89C2ABC57E900BBEC4E /* Assets.xcassets */,
@@ -125,6 +130,14 @@
 				D323D8B52ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift */,
 			);
 			path = UCBurgalesaiOSUITests;
+			sourceTree = "<group>";
+		};
+		D323D8C22ABC580B00BBEC4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D323D8C32ABC585200BBEC4E /* ProfileModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D323D89B2ABC57E800BBEC4E /* ContentView.swift in Sources */,
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
 			);
@@ -267,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
+				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */,
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
 			);
