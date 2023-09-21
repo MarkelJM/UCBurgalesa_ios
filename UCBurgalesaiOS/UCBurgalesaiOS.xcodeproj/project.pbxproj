@@ -17,6 +17,12 @@
 		D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C32ABC585200BBEC4E /* ProfileModel.swift */; };
 		D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C32ABC585200BBEC4E /* ProfileModel.swift */; };
 		D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C32ABC585200BBEC4E /* ProfileModel.swift */; };
+		D323D8C82ABC58C800BBEC4E /* RideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C72ABC58C800BBEC4E /* RideModel.swift */; };
+		D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C72ABC58C800BBEC4E /* RideModel.swift */; };
+		D323D8CA2ABC58C800BBEC4E /* RideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8C72ABC58C800BBEC4E /* RideModel.swift */; };
+		D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */; };
+		D323D8CD2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */; };
+		D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,8 @@
 		D323D8B32ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCBurgalesaiOSUITests.swift; sourceTree = "<group>"; };
 		D323D8B52ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCBurgalesaiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D323D8C32ABC585200BBEC4E /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		D323D8C72ABC58C800BBEC4E /* RideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideModel.swift; sourceTree = "<group>"; };
+		D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				D323D8C32ABC585200BBEC4E /* ProfileModel.swift */,
+				D323D8C72ABC58C800BBEC4E /* RideModel.swift */,
+				D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,6 +283,8 @@
 				D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D323D89B2ABC57E800BBEC4E /* ContentView.swift in Sources */,
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
+				D323D8C82ABC58C800BBEC4E /* RideModel.swift in Sources */,
+				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +294,8 @@
 			files = (
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
+				D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */,
+				D323D8CD2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +306,8 @@
 				D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */,
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
+				D323D8CA2ABC58C800BBEC4E /* RideModel.swift in Sources */,
+				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
