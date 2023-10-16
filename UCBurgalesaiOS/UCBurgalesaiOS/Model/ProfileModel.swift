@@ -23,7 +23,7 @@ struct ProfileModel {
     var rolesInClub: [String]
     var profilePhoto: URL
     var photos: [URL]
-    var routeType: RouteType
+    var routeType: ProfileRouteType /* user can decide which its prefered roututyoe, joint is not option, this is goint to be useful to show predeterminated royte when there two options(if there is joint it is for all, not options)*/
     var facebookName: String
     var stravaAccount: String
 }
@@ -34,7 +34,7 @@ struct Address {
     var street: String
 }
 
-enum RouteType {
+enum ProfileRouteType {
     case short
     case long
 }

@@ -11,20 +11,27 @@ struct RideModel {
     var rideId: String
     var date: Date
     var rideName: String
-    var organizer: String // Could be a reference to a Profile id.
+    var organizer: String 
     var score: Int
     var restStopName: String
-    var profileImage: URL // Altimetry or route profile image.
+    var profileImage: URL
     var routeImage: URL
-    var category: String // Could be an enum: .long, .short, .joint
+    var category: RouteType
     var kilometers: Double
     var startTime: Date
-    var routePoints: [String] // Might be more detailed depending on the info of each point.
+    var routePoints: [String]
     var startCoordinates: Coordinate
     var startCheckinRadius: Double
     var minRestStopCheckinTime: Date
     var restStopCoordinates: Coordinate
     var restStopCheckinRadius: Double
+}
+
+enum RouteType: String {
+    case long
+    case joint
+    case short
+    case all
 }
 
 struct Coordinate {
