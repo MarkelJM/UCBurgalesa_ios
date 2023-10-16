@@ -34,7 +34,7 @@ struct Address {
     var street: String
 }
 
-enum ProfileRouteType {
+enum ProfileRouteType: String {
     case short
     case long
 }
