@@ -77,6 +77,12 @@
 		D3B3F1762ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
 		D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
 		D3B3F1782ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
+		D3B3F17B2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */; };
+		D3B3F17C2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */; };
+		D3B3F17D2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */; };
+		D3B3F17F2ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
+		D3B3F1802ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
+		D3B3F1812ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
 		D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
@@ -129,6 +135,8 @@
 		D3B3F16D2ADE9CD30000B662 /* RegisterEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewModel.swift; sourceTree = "<group>"; };
 		D3B3F1712ADE9D190000B662 /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPopUpView.swift; sourceTree = "<group>"; };
+		D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D3B3F17E2ADEDE980000B662 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +196,7 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3B3F1822ADEE2810000B662 /* ImagePicker */,
 				D3B3F14D2ADD96550000B662 /* Register */,
 				D3B3F1432ADD95A90000B662 /* Navigation */,
 				D3B3F13A2ADD8D150000B662 /* Login */,
@@ -277,6 +286,7 @@
 		D3B3F14D2ADD96550000B662 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				D3B3F1792ADED7CA0000B662 /* Profile */,
 				D3B3F16C2ADE9CBC0000B662 /* RegisterEmail */,
 				D3B3F1632ADE99040000B662 /* CodeVerify */,
 				D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */,
@@ -310,6 +320,22 @@
 				D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */,
 			);
 			path = RegisterEmail;
+			sourceTree = "<group>";
+		};
+		D3B3F1792ADED7CA0000B662 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */,
+				D3B3F17E2ADEDE980000B662 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D3B3F1822ADEE2810000B662 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		D3C56AEF2ADD89DB008378BF /* Firebase */ = {
@@ -490,7 +516,9 @@
 				D3B3F1502ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15C2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1542ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
+				D3B3F17F2ADEDE980000B662 /* ProfileView.swift in Sources */,
 				D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
+				D3B3F17B2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
 				D323D8C82ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3115FB02AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
@@ -507,6 +535,7 @@
 				D3B3F1612ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3B3F1592ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
+				D3B3F17C2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
 				D3B3F1472ADD95C30000B662 /* AppState.swift in Sources */,
 				D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
@@ -520,6 +549,7 @@
 				D3B3F1412ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D3B3F14B2ADD962D0000B662 /* NavigationState.swift in Sources */,
+				D3B3F1802ADEDE980000B662 /* ProfileView.swift in Sources */,
 				D3B3F1512ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +575,9 @@
 				D3B3F1522ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15E2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1562ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
+				D3B3F1812ADEDE980000B662 /* ProfileView.swift in Sources */,
 				D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
+				D3B3F17D2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
 				D323D8CA2ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3115FB22AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,

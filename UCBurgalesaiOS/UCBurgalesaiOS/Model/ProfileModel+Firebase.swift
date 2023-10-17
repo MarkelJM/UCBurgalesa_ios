@@ -15,29 +15,28 @@ extension ProfileModel {
               let firstName = firestoreData["firstName"] as? String,
               let lastName1 = firestoreData["lastName1"] as? String,
               let lastName2 = firestoreData["lastName2"] as? String,
-              let bikeBrand = firestoreData["bikeBrand"] as? String,
               let addressData = firestoreData["address"] as? [String: Any],
               let postalCode = addressData["postalCode"] as? String,
               let city = addressData["city"] as? String,
               let street = addressData["street"] as? String,
               let phone = firestoreData["phone"] as? String,
               let email = firestoreData["email"] as? String,
-              let birthDateString = firestoreData["birthDate"] as? String,
-              let birthDate = DateFormatter.firestoreDateFormatter.date(from: birthDateString),
+              let birthDateTimestamp = firestoreData["birthDate"] as? Timestamp,
               let federated = firestoreData["federated"] as? Bool,
               let volunteer = firestoreData["volunteer"] as? Bool,
-              let rolesInClub = firestoreData["rolesInClub"] as? [String],
-              let profilePhotoString = firestoreData["profilePhoto"] as? String,
-              let profilePhoto = URL(string: profilePhotoString),
-              let photosStrings = firestoreData["photos"] as? [String],
               let routeTypeString = firestoreData["routeType"] as? String,
-              let routeType = ProfileRouteType(rawValue: routeTypeString),
-              let facebookName = firestoreData["facebookName"] as? String,
-              let stravaAccount = firestoreData["stravaAccount"] as? String else {
+              let routeType = ProfileRouteType(rawValue: routeTypeString) else {
             return nil
         }
         
-        let photos = photosStrings.compactMap { URL(string: $0) }
+        let bikeBrand = firestoreData["bikeBrand"] as? String
+        let rolesInClub = firestoreData["rolesInClub"] as? [String]
+        let profilePhotoString = firestoreData["profilePhoto"] as? String
+        let profilePhoto = profilePhotoString != nil ? URL(string: profilePhotoString!) : nil
+        let photosStrings = firestoreData["photos"] as? [String]
+        let photos = photosStrings?.compactMap { URL(string: $0) }
+        let facebookName = firestoreData["facebookName"] as? String
+        let stravaAccount = firestoreData["stravaAccount"] as? String
         
         self.id = id
         self.clubId = clubId
@@ -48,7 +47,7 @@ extension ProfileModel {
         self.address = Address(postalCode: postalCode, city: city, street: street)
         self.phone = phone
         self.email = email
-        self.birthDate = birthDate
+        self.birthDate = birthDateTimestamp.dateValue()
         self.federated = federated
         self.volunteer = volunteer
         self.rolesInClub = rolesInClub
@@ -60,13 +59,12 @@ extension ProfileModel {
     }
     
     func toFirestoreData() -> [String: Any] {
-        return [
+        var data: [String: Any] = [
             "id": id,
             "clubId": clubId,
             "firstName": firstName,
             "lastName1": lastName1,
             "lastName2": lastName2,
-            "bikeBrand": bikeBrand,
             "address": [
                 "postalCode": address.postalCode,
                 "city": address.city,
@@ -74,16 +72,19 @@ extension ProfileModel {
             ],
             "phone": phone,
             "email": email,
-            "birthDate": DateFormatter.firestoreDateFormatter.string(from: birthDate),
+            "birthDate": Timestamp(date: birthDate),
             "federated": federated,
             "volunteer": volunteer,
-            "rolesInClub": rolesInClub,
-            "profilePhoto": profilePhoto.absoluteString,
-            "photos": photos.map { $0.absoluteString },
-            "routeType": routeType.rawValue,
-            "facebookName": facebookName,
-            "stravaAccount": stravaAccount
+            "routeType": routeType.rawValue
         ]
+        
+        if let bikeBrand = bikeBrand { data["bikeBrand"] = bikeBrand }
+        if let rolesInClub = rolesInClub { data["rolesInClub"] = rolesInClub }
+        if let profilePhoto = profilePhoto { data["profilePhoto"] = profilePhoto.absoluteString }
+        if let photos = photos { data["photos"] = photos.map { $0.absoluteString } }
+        if let facebookName = facebookName { data["facebookName"] = facebookName }
+        if let stravaAccount = stravaAccount { data["stravaAccount"] = stravaAccount }
+        
+        return data
     }
 }
-

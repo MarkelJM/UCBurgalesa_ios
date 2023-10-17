@@ -15,8 +15,12 @@ struct NavigationState: View {
         switch appState.currentView {
         case .login:
             LoginView()
+        case .registerEmail:
+            RegisterEmailView()
+    
+        case .codeVerify:
+            CodeVerifyView()
         }
-        
     }
 }
 
