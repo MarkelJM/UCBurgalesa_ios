@@ -43,6 +43,14 @@ class FirebaseAuthManager {
     func isEmailVerified() -> Bool {
         return Auth.auth().currentUser?.isEmailVerified ?? false
     }
+    
+    func checkEmailVerification(completion: @escaping (Bool) -> Void) {
+        Auth.auth().currentUser?.reload(completion: { _ in
+            let isVerified = Auth.auth().currentUser?.isEmailVerified ?? false
+            completion(isVerified)
+        })
+    }
+
 
 }
 

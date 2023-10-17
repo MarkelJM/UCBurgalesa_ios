@@ -68,6 +68,15 @@
 		D3B3F1692ADE995E0000B662 /* CodeVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1682ADE995E0000B662 /* CodeVerifyView.swift */; };
 		D3B3F16A2ADE995E0000B662 /* CodeVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1682ADE995E0000B662 /* CodeVerifyView.swift */; };
 		D3B3F16B2ADE995E0000B662 /* CodeVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1682ADE995E0000B662 /* CodeVerifyView.swift */; };
+		D3B3F16E2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F16D2ADE9CD30000B662 /* RegisterEmailViewModel.swift */; };
+		D3B3F16F2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F16D2ADE9CD30000B662 /* RegisterEmailViewModel.swift */; };
+		D3B3F1702ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F16D2ADE9CD30000B662 /* RegisterEmailViewModel.swift */; };
+		D3B3F1722ADE9D190000B662 /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1712ADE9D190000B662 /* RegisterEmailView.swift */; };
+		D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1712ADE9D190000B662 /* RegisterEmailView.swift */; };
+		D3B3F1742ADE9D190000B662 /* RegisterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1712ADE9D190000B662 /* RegisterEmailView.swift */; };
+		D3B3F1762ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
+		D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
+		D3B3F1782ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
 		D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
@@ -117,6 +126,9 @@
 		D3B3F15F2ADE97FB0000B662 /* CodeUserVerifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeUserVerifyModel.swift; sourceTree = "<group>"; };
 		D3B3F1642ADE992E0000B662 /* CodeVerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifyViewModel.swift; sourceTree = "<group>"; };
 		D3B3F1682ADE995E0000B662 /* CodeVerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifyView.swift; sourceTree = "<group>"; };
+		D3B3F16D2ADE9CD30000B662 /* RegisterEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewModel.swift; sourceTree = "<group>"; };
+		D3B3F1712ADE9D190000B662 /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
+		D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPopUpView.swift; sourceTree = "<group>"; };
 		D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +277,7 @@
 		D3B3F14D2ADD96550000B662 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				D3B3F16C2ADE9CBC0000B662 /* RegisterEmail */,
 				D3B3F1632ADE99040000B662 /* CodeVerify */,
 				D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */,
 				D3B3F1572ADD9D750000B662 /* RegisterView.swift */,
@@ -287,6 +300,16 @@
 				D3B3F1682ADE995E0000B662 /* CodeVerifyView.swift */,
 			);
 			path = CodeVerify;
+			sourceTree = "<group>";
+		};
+		D3B3F16C2ADE9CBC0000B662 /* RegisterEmail */ = {
+			isa = PBXGroup;
+			children = (
+				D3B3F16D2ADE9CD30000B662 /* RegisterEmailViewModel.swift */,
+				D3B3F1712ADE9D190000B662 /* RegisterEmailView.swift */,
+				D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */,
+			);
+			path = RegisterEmail;
 			sourceTree = "<group>";
 		};
 		D3C56AEF2ADD89DB008378BF /* Firebase */ = {
@@ -457,8 +480,11 @@
 				D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3B3F1582ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F1602ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
+				D3B3F1762ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
+				D3B3F16E2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
 				D323D89B2ABC57E800BBEC4E /* ContentView.swift in Sources */,
 				D3B3F1402ADD8D370000B662 /* LoginView.swift in Sources */,
+				D3B3F1722ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14A2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
 				D3B3F1502ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
@@ -483,7 +509,10 @@
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3B3F1472ADD95C30000B662 /* AppState.swift in Sources */,
 				D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */,
+				D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
+				D3B3F16F2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
+				D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3115FB12AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D323D8CD2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 				D3B3F16A2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
@@ -506,8 +535,11 @@
 				D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3B3F15A2ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F1622ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
+				D3B3F1782ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
+				D3B3F1702ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
 				D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */,
 				D3B3F1422ADD8D370000B662 /* LoginView.swift in Sources */,
+				D3B3F1742ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14C2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
 				D3B3F1522ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
