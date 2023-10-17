@@ -17,13 +17,13 @@ class RegisterViewModel: ObservableObject {
     
     private var firestoreManager = FirestoreManager()
     private var cancellables = Set<AnyCancellable>()
-    
+    /*
     func registerProfile() {
         let profile = ProfileModel(
             id: UUID().uuidString,
             clubId: "", // Asume que tienes un valor predeterminado o lo obtienes de alguna manera
             firstName: firstName,
-            lastName1: lastName1,
+            lastName1: lastName1
             // ... (otros campos del modelo)
         )
         
@@ -35,4 +35,5 @@ class RegisterViewModel: ObservableObject {
             }
         }
     }
+     */
 }

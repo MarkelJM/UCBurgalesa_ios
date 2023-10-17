@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct RegisterView: View {
     @StateObject var viewModel = RegisterViewModel()
     
@@ -31,3 +31,4 @@ struct RegisterView_Previews: PreviewProvider {
         RegisterView()
     }
 }
+*/

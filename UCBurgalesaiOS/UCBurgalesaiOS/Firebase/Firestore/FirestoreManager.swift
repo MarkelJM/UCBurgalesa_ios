@@ -48,4 +48,40 @@ class FirestoreManager {
             completion(true, nil)
         }
     }
+    ///Registration verification code
+    func getVerifier(for identifier: Int, completion: @escaping (Verifier?, Error?) -> Void) {
+        let documentId = "\(identifier - 1)"
+        db.collection("Verificadores").document(documentId).getDocument { (document, error) in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            if let documentData = document?.data(),
+               let identifierCiclista = documentData["IndetificadorCiclista"] as? String,
+               let emailUser = documentData["emailUser"] as? String,
+               let registered = documentData["registered"] as? Bool,
+               let verifierCode = documentData["verificador"] as? String {
+                
+                let verifier = Verifier(identifierCiclista: identifierCiclista, emailUser: emailUser, registered: registered, verifierCode: verifierCode)
+                completion(verifier, nil)
+            } else {
+                completion(nil, nil)
+            }
+        }
+    }
+    
+    func updateEmail(for identifier: Int, email: String, completion: @escaping (Error?) -> Void) {
+        let documentId = "\(identifier - 1)"
+        db.collection("Verificadores").document(documentId).updateData(["emailUser": email]) { error in
+            completion(error)
+        }
+    }
+    
+    func markAsRegistered(for identifier: Int, completion: @escaping (Error?) -> Void) {
+        let documentId = "\(identifier - 1)"
+        db.collection("Verificadores").document(documentId).updateData(["registered": true]) { error in
+            completion(error)
+        }
+    }
 }
