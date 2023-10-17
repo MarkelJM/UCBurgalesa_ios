@@ -7,6 +7,9 @@
 
 import Foundation
 import Combine
+import FirebaseStorage
+import FirebaseFirestore
+import SwiftUI
 
 class ProfileViewModel: ObservableObject {
     @Published var firstName: String = ""
@@ -31,6 +34,39 @@ class ProfileViewModel: ObservableObject {
     
     private var firestoreManager = FirestoreManager()
     private var cancellables = Set<AnyCancellable>()
+    
+    @Published var selectedImage: UIImage?//to upload photo
+    
+    func savePhoto() {
+        // Subir la imagen primero
+        if let image = selectedImage {
+            let storage = Storage.storage()
+            let storageRef = storage.reference().child("profile_photos/\(UUID().uuidString).png")
+
+            if let uploadData = image.pngData() {
+                storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+
+                    storageRef.downloadURL { (url, error) in
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+
+                        if let profilePhotoURL = url {
+                            self.profilePhoto = profilePhotoURL
+                            self.saveProfile()
+                        }
+                    }
+                }
+            }
+        } else {
+            saveProfile()
+        }
+    }
     
     func saveProfile() {
         let profile = ProfileModel(

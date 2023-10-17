@@ -83,6 +83,9 @@
 		D3B3F17F2ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
 		D3B3F1802ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
 		D3B3F1812ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
+		D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
+		D3B3F1852ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
+		D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
 		D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
@@ -137,6 +140,7 @@
 		D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPopUpView.swift; sourceTree = "<group>"; };
 		D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D3B3F17E2ADEDE980000B662 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -334,6 +338,7 @@
 		D3B3F1822ADEE2810000B662 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D3B3F17B2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
 				D323D8C82ABC58C800BBEC4E /* RideModel.swift in Sources */,
+				D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB02AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
@@ -542,6 +548,7 @@
 				D3B3F16F2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
+				D3B3F1852ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB12AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D323D8CD2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 				D3B3F16A2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
@@ -579,6 +586,7 @@
 				D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D3B3F17D2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
 				D323D8CA2ABC58C800BBEC4E /* RideModel.swift in Sources */,
+				D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB22AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);

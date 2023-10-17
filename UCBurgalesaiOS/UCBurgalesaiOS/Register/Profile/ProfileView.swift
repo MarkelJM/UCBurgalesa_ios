@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
+    @State private var isImagePickerPresented: Bool = false
+    @State private var selectedImage: UIImage?
     
     var body: some View {
         VStack {
@@ -46,10 +48,16 @@ struct ProfileView: View {
                 ))
             }
             
-            TextField("Profile Photo URL", text: Binding(
-                get: { viewModel.profilePhoto?.absoluteString ?? "" },
-                set: { viewModel.profilePhoto = URL(string: $0) }
-            ))
+            Button("Select Profile Photo") {
+                isImagePickerPresented = true
+            }
+
+            if let image = selectedImage {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+            }
             
             Picker("Route Type", selection: $viewModel.routeType) {
                 Text("Short").tag(ProfileRouteType.short)
@@ -61,6 +69,9 @@ struct ProfileView: View {
             }
         }
         .padding()
+        .sheet(isPresented: $isImagePickerPresented) {
+            ImagePicker(image: $selectedImage)//to uoload photo from mobile
+        }
     }
 }
 
