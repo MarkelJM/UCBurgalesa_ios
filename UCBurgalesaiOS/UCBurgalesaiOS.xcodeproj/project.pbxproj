@@ -86,6 +86,12 @@
 		D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
 		D3B3F1852ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
 		D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
+		D3B3F1892ADEE6FB0000B662 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1882ADEE6FB0000B662 /* Colors.swift */; };
+		D3B3F18A2ADEE6FB0000B662 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1882ADEE6FB0000B662 /* Colors.swift */; };
+		D3B3F18B2ADEE6FB0000B662 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1882ADEE6FB0000B662 /* Colors.swift */; };
+		D3B3F18D2ADEE7330000B662 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F18C2ADEE7330000B662 /* Fonts.swift */; };
+		D3B3F18E2ADEE7330000B662 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F18C2ADEE7330000B662 /* Fonts.swift */; };
+		D3B3F18F2ADEE7330000B662 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F18C2ADEE7330000B662 /* Fonts.swift */; };
 		D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
@@ -141,6 +147,8 @@
 		D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D3B3F17E2ADEDE980000B662 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		D3B3F1882ADEE6FB0000B662 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D3B3F18C2ADEE7330000B662 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +208,7 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3B3F1872ADEE6E40000B662 /* Design */,
 				D3B3F1822ADEE2810000B662 /* ImagePicker */,
 				D3B3F14D2ADD96550000B662 /* Register */,
 				D3B3F1432ADD95A90000B662 /* Navigation */,
@@ -341,6 +350,15 @@
 				D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */,
 			);
 			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		D3B3F1872ADEE6E40000B662 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				D3B3F1882ADEE6FB0000B662 /* Colors.swift */,
+				D3B3F18C2ADEE7330000B662 /* Fonts.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 		D3C56AEF2ADD89DB008378BF /* Firebase */ = {
@@ -506,10 +524,12 @@
 			files = (
 				D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3B3F1462ADD95C30000B662 /* AppState.swift in Sources */,
+				D3B3F18D2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F1692ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3B3F1652ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3B3F1582ADD9D750000B662 /* RegisterView.swift in Sources */,
+				D3B3F1892ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3B3F1602ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3B3F1762ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
 				D3B3F16E2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
@@ -536,10 +556,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B3F1662ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
+				D3B3F18A2ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
 				D3B3F1612ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3B3F1592ADD9D750000B662 /* RegisterView.swift in Sources */,
+				D3B3F18E2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3B3F17C2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
 				D3B3F1472ADD95C30000B662 /* AppState.swift in Sources */,
@@ -567,10 +589,12 @@
 			files = (
 				D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3B3F1482ADD95C30000B662 /* AppState.swift in Sources */,
+				D3B3F18F2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F16B2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3B3F1672ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3B3F15A2ADD9D750000B662 /* RegisterView.swift in Sources */,
+				D3B3F18B2ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3B3F1622ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3B3F1782ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
 				D3B3F1702ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
