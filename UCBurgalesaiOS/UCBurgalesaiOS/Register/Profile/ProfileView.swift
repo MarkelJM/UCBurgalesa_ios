@@ -13,65 +13,101 @@ struct ProfileView: View {
     @State private var selectedImage: UIImage?
     
     var body: some View {
-        VStack {
-            VStack {
-                TextField("First Name", text: $viewModel.firstName)
-                TextField("Last Name 1", text: $viewModel.lastName1)
-                TextField("Last Name 2", text: $viewModel.lastName2)
-                TextField("Bike Brand", text: Binding<String>(
-                    get: { viewModel.bikeBrand ?? "" },
-                    set: { viewModel.bikeBrand = $0.isEmpty ? nil : $0 }
-                ))
-            }
+        ZStack {
+            // Fondo con diseño
+            //Background2()
+            //DiagonalShadedBackground()
+            //DiagonalSolidShadedBackground()
+            //DiagonalGradient1()
             
-            VStack {
-                TextField("Postal Code", text: $viewModel.postalCode)
-                TextField("City", text: $viewModel.city)
-                TextField("Street", text: $viewModel.street)
-                TextField("Phone", text: $viewModel.phone)
-                TextField("Email", text: $viewModel.email)
-            }
-            
-            DatePicker("Birth Date", selection: $viewModel.birthDate)
-            
-            VStack {
-                Toggle("Federated", isOn: $viewModel.federated)
-                Toggle("Volunteer", isOn: $viewModel.volunteer)
-                TextField("Facebook Name", text: Binding<String>(
-                    get: { viewModel.facebookName ?? "" },
-                    set: { viewModel.facebookName = $0.isEmpty ? nil : $0 }
-                ))
-                TextField("Strava Account", text: Binding<String>(
-                    get: { viewModel.stravaAccount ?? "" },
-                    set: { viewModel.stravaAccount = $0.isEmpty ? nil : $0 }
-                    /* stravaAccount es opcional (String?). Sin embargo, TextField espera un valor no opcional (String). El Binding personalizado actúa como un puente entre estos dos, convirtiendo el valor opcional en no opcional para el TextField y viceversa.*/
-                ))
-            }
-            
-            Button("Select Profile Photo") {
-                isImagePickerPresented = true
-            }
-
-            if let image = selectedImage {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
-            }
-            
-            Picker("Route Type", selection: $viewModel.routeType) {
-                Text("Short").tag(ProfileRouteType.short)
-                Text("Long").tag(ProfileRouteType.long)
-            }
-            
-            Button(action: viewModel.saveProfile) {
-                Text("Save Profile")
-            }
+            /*
+             VStack {
+             VStack {
+             TextField("First Name", text: $viewModel.firstName)
+             .textFieldStyle()
+             TextField("Last Name 1", text: $viewModel.lastName1)
+             .textFieldStyle()
+             TextField("Last Name 2", text: $viewModel.lastName2)
+             .textFieldStyle()
+             TextField("Bike Brand", text: Binding<String>(
+             get: { viewModel.bikeBrand ?? "" },
+             set: { viewModel.bikeBrand = $0.isEmpty ? nil : $0 }
+             ))
+             .textFieldStyle()
+             }
+             
+             VStack {
+             TextField("Postal Code", text: $viewModel.postalCode)
+             .textFieldStyle()
+             TextField("City", text: $viewModel.city)
+             .textFieldStyle()
+             TextField("Street", text: $viewModel.street)
+             .textFieldStyle()
+             TextField("Phone", text: $viewModel.phone)
+             .textFieldStyle()
+             TextField("Email", text: $viewModel.email)
+             .textFieldStyle()
+             }
+             
+             DatePicker("Birth Date", selection: $viewModel.birthDate)
+             .padding(.horizontal)
+             .background(Color.gray.opacity(0.2))
+             .cornerRadius(10)
+             
+             VStack {
+             Toggle("Federated", isOn: $viewModel.federated)
+             .toggleStyle(SwitchToggleStyle(tint: .brightOrange))
+             Toggle("Volunteer", isOn: $viewModel.volunteer)
+             .toggleStyle(SwitchToggleStyle(tint: .deepOrange))
+             TextField("Facebook Name", text: Binding<String>(
+             get: { viewModel.facebookName ?? "" },
+             set: { viewModel.facebookName = $0.isEmpty ? nil : $0 }
+             ))
+             .textFieldStyle()
+             TextField("Strava Account", text: Binding<String>(
+             get: { viewModel.stravaAccount ?? "" },
+             set: { viewModel.stravaAccount = $0.isEmpty ? nil : $0 }
+             ))
+             .textFieldStyle()
+             }
+             
+             Button("Select Profile Photo") {
+             isImagePickerPresented = true
+             }
+             .buttonStyle()
+             
+             if let image = selectedImage {
+             Image(uiImage: image)
+             .resizable()
+             .scaledToFit()
+             .frame(width: 100, height: 100)
+             }
+             
+             Picker("Route Type", selection: $viewModel.routeType) {
+             Text("Short").tag(ProfileRouteType.short)
+             Text("Long").tag(ProfileRouteType.long)
+             }
+             .padding(.horizontal)
+             .background(Color.gray.opacity(0.2))
+             .cornerRadius(10)
+             
+             Button(action: viewModel.saveProfile) {
+             Text("Save Profile")
+             }
+             .buttonStyle()
+             }
+             .padding()
+             .background(Color.white.opacity(0.9))
+             .cornerRadius(15)
+             .shadow(radius: 10)
+             .padding()
+             }
+             .sheet(isPresented: $isImagePickerPresented) {
+             ImagePicker(image: $selectedImage) // para subir foto desde el móvil
+             }
+             */
         }
-        .padding()
-        .sheet(isPresented: $isImagePickerPresented) {
-            ImagePicker(image: $selectedImage)//to uoload photo from mobile
-        }
+        
     }
 }
 
