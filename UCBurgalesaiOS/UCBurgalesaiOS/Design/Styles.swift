@@ -25,23 +25,27 @@ extension Button where Label == Text {
         self
             .buttonStyle()
             .background(Color.brightOrange)
+            .cornerRadius(10)
+        
     }
     
     func deepOrangeButton() -> some View {
         self
             .buttonStyle()
             .background(Color.deepOrange)
+            .cornerRadius(10)
     }
     
     func vibrantVioletButton() -> some View {
         self
             .buttonStyle()
-            .background(Color.Violet)
+            .background(Color.violet)
+            .cornerRadius(10)
     }
 }
 
 extension Toggle where Label == Text {
-    func toggleStyle() -> some View {
+    func toggleStyleCustom() -> some View {
         self
             .toggleStyle(SwitchToggleStyle(tint: Color.brightOrange))
             .padding()
@@ -51,7 +55,7 @@ extension Toggle where Label == Text {
 }
 
 extension DatePicker {
-    func datePickerStyle() -> some View {
+    func datePickerStyleCustom() -> some View {
         self
             .datePickerStyle(GraphicalDatePickerStyle())
             .padding()

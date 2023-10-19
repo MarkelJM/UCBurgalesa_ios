@@ -11,7 +11,7 @@ import SwiftUI
 extension Color {
     static let brightOrange = Color(red: 255/255, green: 143/255, blue: 87/255) // Suavizado
     static let deepOrange = Color(red: 247/255, green: 132/255, blue: 76/255)  // Suavizado
-    static let Violet = Color(red: 127/255, green: 0, blue: 255/255)    // VIOLETA
+    static let violet = Color(red: 127/255, green: 0, blue: 255/255)    // VIOLETA
 }
 
 /*

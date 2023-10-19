@@ -50,7 +50,9 @@ class FirebaseAuthManager {
             completion(isVerified)
         })
     }
-
+    
+    
+    
 
 }
 
