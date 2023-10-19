@@ -20,6 +20,8 @@ struct NavigationState: View {
     
         case .codeVerify:
             CodeVerifyView()
+        case .profile:
+            ProfileView()
         }
     }
 }

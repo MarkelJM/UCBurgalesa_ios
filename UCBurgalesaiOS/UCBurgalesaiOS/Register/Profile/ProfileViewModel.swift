@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import FirebaseStorage
 import FirebaseFirestore
+import FirebaseAuth
 import SwiftUI
 
 class ProfileViewModel: ObservableObject {
@@ -36,6 +37,14 @@ class ProfileViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     @Published var selectedImage: UIImage?//to upload photo
+    
+    func fetchUserEmail() {
+        //para guardar todos los datos que rellena el usuario en firestore--> traemos el email
+        if let user = Auth.auth().currentUser {
+            self.email = user.email ?? ""
+        }
+    }
+
     
     func savePhoto() {
         // Subir la imagen primero
@@ -98,4 +107,36 @@ class ProfileViewModel: ObservableObject {
             }
         }
     }
+    
+    func loadProfile() {
+        if let userId = Auth.auth().currentUser?.uid {
+            firestoreManager.getProfile(for: userId) { (profile, error) in
+                if let profile = profile {
+                    // Asignar los datos del perfil a las propiedades del ViewModel
+                    self.firstName = profile.firstName
+                    self.lastName1 = profile.lastName1
+                    self.lastName2 = profile.lastName2
+                    self.bikeBrand = profile.bikeBrand
+                    self.postalCode = profile.address.postalCode
+                    self.city = profile.address.city
+                    self.street = profile.address.street
+                    self.phone = profile.phone
+                    self.email = profile.email
+                    self.birthDate = profile.birthDate
+                    self.federated = profile.federated
+                    self.volunteer = profile.volunteer
+                    self.rolesInClub = profile.rolesInClub
+                    self.profilePhoto = profile.profilePhoto
+                    self.photos = profile.photos
+                    self.routeType = profile.routeType
+                    self.facebookName = profile.facebookName
+                    self.stravaAccount = profile.stravaAccount
+                } else if let error = error {
+                    // Puedes manejar el error aquí, por ejemplo, mostrando un mensaje al usuario
+                    print("Error loading profile: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+
 }

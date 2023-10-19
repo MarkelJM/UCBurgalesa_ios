@@ -281,6 +281,7 @@
 		D3B3F13A2ADD8D150000B662 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D3B3F1982AE14A2C0000B662 /* ForgotPassword */,
 				D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */,
 				D3B3F13F2ADD8D370000B662 /* LoginView.swift */,
 			);
@@ -369,6 +370,13 @@
 				D3B3F1942ADFE9BF0000B662 /* Backgrounds.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		D3B3F1982AE14A2C0000B662 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		D3C56AEF2ADD89DB008378BF /* Firebase */ = {

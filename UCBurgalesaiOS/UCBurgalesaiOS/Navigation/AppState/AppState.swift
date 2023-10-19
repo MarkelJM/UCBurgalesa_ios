@@ -15,5 +15,6 @@ class AppState: ObservableObject {
         case login
         case registerEmail
         case codeVerify
+        case profile
     }
 }
