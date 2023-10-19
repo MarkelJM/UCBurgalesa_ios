@@ -35,6 +35,12 @@
 		D323D8F12AC5DC7D00BBEC4E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D323D8F02AC5DC7D00BBEC4E /* FirebaseMessaging */; };
 		D323D8F32AC5DC7D00BBEC4E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D323D8F22AC5DC7D00BBEC4E /* FirebaseStorage */; };
 		D323D8F52AC5E3E900BBEC4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D323D8F42AC5E3E900BBEC4E /* GoogleService-Info.plist */; };
+		D36281372AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281362AE14AD600E21A4F /* ForgotPasswordViewModel.swift */; };
+		D36281382AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281362AE14AD600E21A4F /* ForgotPasswordViewModel.swift */; };
+		D36281392AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281362AE14AD600E21A4F /* ForgotPasswordViewModel.swift */; };
+		D362813B2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */; };
+		D362813C2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */; };
+		D362813D2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */; };
 		D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
@@ -136,6 +142,8 @@
 		D323D8C72ABC58C800BBEC4E /* RideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideModel.swift; sourceTree = "<group>"; };
 		D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingModel.swift; sourceTree = "<group>"; };
 		D323D8F42AC5E3E900BBEC4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D36281362AE14AD600E21A4F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3B3F13F2ADD8D370000B662 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3B3F1452ADD95C30000B662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -375,6 +383,8 @@
 		D3B3F1982AE14A2C0000B662 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				D36281362AE14AD600E21A4F /* ForgotPasswordViewModel.swift */,
+				D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -553,6 +563,7 @@
 				D3B3F1602ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3B3F1762ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
 				D3B3F16E2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
+				D36281372AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D89B2ABC57E800BBEC4E /* ContentView.swift in Sources */,
 				D3B3F1402ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3B3F1722ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
@@ -567,6 +578,7 @@
 				D323D8C82ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB02AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
+				D362813B2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
 				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +596,7 @@
 				D3B3F18E2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3B3F17C2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
+				D362813C2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
 				D3B3F1472ADD95C30000B662 /* AppState.swift in Sources */,
 				D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
@@ -599,6 +612,7 @@
 				D3B3F1552ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F1412ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
+				D36281382AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D3B3F14B2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D3B3F1802ADEDE980000B662 /* ProfileView.swift in Sources */,
 				D3B3F1512ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
@@ -622,6 +636,7 @@
 				D3B3F1622ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3B3F1782ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
 				D3B3F1702ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
+				D36281392AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */,
 				D3B3F1422ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3B3F1742ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
@@ -636,6 +651,7 @@
 				D323D8CA2ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB22AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
+				D362813D2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
 				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

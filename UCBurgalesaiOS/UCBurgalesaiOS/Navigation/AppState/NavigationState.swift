@@ -22,6 +22,8 @@ struct NavigationState: View {
             CodeVerifyView()
         case .profile:
             ProfileView()
+        case .forgotPassword:
+            ForgotPasswordView()
         }
     }
 }
