@@ -41,6 +41,12 @@
 		D362813B2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */; };
 		D362813C2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */; };
 		D362813D2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */; };
+		D36281402AE288E000E21A4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813F2AE288E000E21A4F /* HomeView.swift */; };
+		D36281412AE288E000E21A4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813F2AE288E000E21A4F /* HomeView.swift */; };
+		D36281422AE288E000E21A4F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D362813F2AE288E000E21A4F /* HomeView.swift */; };
+		D36281442AE288EF00E21A4F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281432AE288EF00E21A4F /* HomeViewModel.swift */; };
+		D36281452AE288EF00E21A4F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281432AE288EF00E21A4F /* HomeViewModel.swift */; };
+		D36281462AE288EF00E21A4F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281432AE288EF00E21A4F /* HomeViewModel.swift */; };
 		D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
@@ -83,12 +89,12 @@
 		D3B3F1762ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
 		D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
 		D3B3F1782ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */; };
-		D3B3F17B2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */; };
-		D3B3F17C2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */; };
-		D3B3F17D2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */; };
-		D3B3F17F2ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
-		D3B3F1802ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
-		D3B3F1812ADEDE980000B662 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileView.swift */; };
+		D3B3F17B2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift */; };
+		D3B3F17C2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift */; };
+		D3B3F17D2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17A2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift */; };
+		D3B3F17F2ADEDE980000B662 /* ProfileRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileRegisterView.swift */; };
+		D3B3F1802ADEDE980000B662 /* ProfileRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileRegisterView.swift */; };
+		D3B3F1812ADEDE980000B662 /* ProfileRegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F17E2ADEDE980000B662 /* ProfileRegisterView.swift */; };
 		D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
 		D3B3F1852ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
 		D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */; };
@@ -144,6 +150,8 @@
 		D323D8F42AC5E3E900BBEC4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D36281362AE14AD600E21A4F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		D362813F2AE288E000E21A4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D36281432AE288EF00E21A4F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3B3F13F2ADD8D370000B662 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3B3F1452ADD95C30000B662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -158,8 +166,8 @@
 		D3B3F16D2ADE9CD30000B662 /* RegisterEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewModel.swift; sourceTree = "<group>"; };
 		D3B3F1712ADE9D190000B662 /* RegisterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailView.swift; sourceTree = "<group>"; };
 		D3B3F1752ADEA1F80000B662 /* VerificationPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPopUpView.swift; sourceTree = "<group>"; };
-		D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		D3B3F17E2ADEDE980000B662 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D3B3F17A2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRegisterViewModel.swift; sourceTree = "<group>"; };
+		D3B3F17E2ADEDE980000B662 /* ProfileRegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRegisterView.swift; sourceTree = "<group>"; };
 		D3B3F1832ADEE2B00000B662 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D3B3F1882ADEE6FB0000B662 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D3B3F18C2ADEE7330000B662 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -224,6 +232,7 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D362813E2AE288BD00E21A4F /* Home */,
 				D3B3F1872ADEE6E40000B662 /* Design */,
 				D3B3F1822ADEE2810000B662 /* ImagePicker */,
 				D3B3F14D2ADD96550000B662 /* Register */,
@@ -286,6 +295,15 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		D362813E2AE288BD00E21A4F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D362813F2AE288E000E21A4F /* HomeView.swift */,
+				D36281432AE288EF00E21A4F /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		D3B3F13A2ADD8D150000B662 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,7 +334,7 @@
 		D3B3F14D2ADD96550000B662 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				D3B3F1792ADED7CA0000B662 /* Profile */,
+				D3B3F1792ADED7CA0000B662 /* ProfileRegister */,
 				D3B3F16C2ADE9CBC0000B662 /* RegisterEmail */,
 				D3B3F1632ADE99040000B662 /* CodeVerify */,
 				D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */,
@@ -352,13 +370,13 @@
 			path = RegisterEmail;
 			sourceTree = "<group>";
 		};
-		D3B3F1792ADED7CA0000B662 /* Profile */ = {
+		D3B3F1792ADED7CA0000B662 /* ProfileRegister */ = {
 			isa = PBXGroup;
 			children = (
-				D3B3F17A2ADEDC1C0000B662 /* ProfileViewModel.swift */,
-				D3B3F17E2ADEDE980000B662 /* ProfileView.swift */,
+				D3B3F17A2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift */,
+				D3B3F17E2ADEDE980000B662 /* ProfileRegisterView.swift */,
 			);
-			path = Profile;
+			path = ProfileRegister;
 			sourceTree = "<group>";
 		};
 		D3B3F1822ADEE2810000B662 /* ImagePicker */ = {
@@ -553,6 +571,7 @@
 				D3B3F1912ADFDEA30000B662 /* Styles.swift in Sources */,
 				D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3B3F1462ADD95C30000B662 /* AppState.swift in Sources */,
+				D36281442AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
 				D3B3F1952ADFE9BF0000B662 /* Backgrounds.swift in Sources */,
 				D3B3F18D2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F1692ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
@@ -566,15 +585,16 @@
 				D36281372AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D89B2ABC57E800BBEC4E /* ContentView.swift in Sources */,
 				D3B3F1402ADD8D370000B662 /* LoginView.swift in Sources */,
+				D36281402AE288E000E21A4F /* HomeView.swift in Sources */,
 				D3B3F1722ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14A2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
 				D3B3F1502ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15C2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1542ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
-				D3B3F17F2ADEDE980000B662 /* ProfileView.swift in Sources */,
+				D3B3F17F2ADEDE980000B662 /* ProfileRegisterView.swift in Sources */,
 				D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
-				D3B3F17B2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
+				D3B3F17B2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D323D8C82ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB02AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
@@ -590,12 +610,13 @@
 				D3B3F1662ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3B3F18A2ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
+				D36281412AE288E000E21A4F /* HomeView.swift in Sources */,
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
 				D3B3F1612ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3B3F1592ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F18E2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
-				D3B3F17C2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
+				D3B3F17C2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D362813C2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
 				D3B3F1472ADD95C30000B662 /* AppState.swift in Sources */,
 				D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */,
@@ -614,7 +635,8 @@
 				D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D36281382AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D3B3F14B2ADD962D0000B662 /* NavigationState.swift in Sources */,
-				D3B3F1802ADEDE980000B662 /* ProfileView.swift in Sources */,
+				D3B3F1802ADEDE980000B662 /* ProfileRegisterView.swift in Sources */,
+				D36281452AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
 				D3B3F1512ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +648,7 @@
 				D3B3F1932ADFDEA30000B662 /* Styles.swift in Sources */,
 				D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3B3F1482ADD95C30000B662 /* AppState.swift in Sources */,
+				D36281462AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
 				D3B3F1972ADFE9BF0000B662 /* Backgrounds.swift in Sources */,
 				D3B3F18F2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F16B2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
@@ -639,15 +662,16 @@
 				D36281392AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */,
 				D3B3F1422ADD8D370000B662 /* LoginView.swift in Sources */,
+				D36281422AE288E000E21A4F /* HomeView.swift in Sources */,
 				D3B3F1742ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14C2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
 				D3B3F1522ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15E2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1562ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
-				D3B3F1812ADEDE980000B662 /* ProfileView.swift in Sources */,
+				D3B3F1812ADEDE980000B662 /* ProfileRegisterView.swift in Sources */,
 				D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
-				D3B3F17D2ADEDC1C0000B662 /* ProfileViewModel.swift in Sources */,
+				D3B3F17D2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D323D8CA2ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB22AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,

@@ -12,7 +12,7 @@ import FirebaseFirestore
 import FirebaseAuth
 import SwiftUI
 
-class ProfileViewModel: ObservableObject {
+class ProfileRegisterViewModel: ObservableObject {
     @Published var firstName: String = ""
     @Published var lastName1: String = ""
     @Published var lastName2: String = ""

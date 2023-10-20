@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     @StateObject var viewModel = ForgotPasswordViewModel()
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack(spacing: 20) {
@@ -39,6 +40,11 @@ struct ForgotPasswordView: View {
                     .foregroundColor(viewModel.isError ? .red : .green)
                     .padding()
             }
+            Spacer()
+            Button("Volver al login") {
+                presentationMode.wrappedValue.dismiss()
+            }
+            .padding(.top)
             
             Spacer()
         }

@@ -21,7 +21,7 @@ struct NavigationState: View {
         case .codeVerify:
             CodeVerifyView()
         case .profile:
-            ProfileView()
+            ProfileRegisterView()
         case .forgotPassword:
             ForgotPasswordView()
         }

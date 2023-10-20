@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ProfileView: View {
-    @StateObject var viewModel = ProfileViewModel()
+struct ProfileRegisterView: View {
+    @StateObject var viewModel = ProfileRegisterViewModel()
     @State private var isImagePickerPresented: Bool = false
     @State private var selectedImage: UIImage?
     
@@ -120,8 +120,8 @@ struct ProfileView: View {
 }
 
 
-struct ProfileView_Previews: PreviewProvider {
+struct ProfileRegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileRegisterView()
     }
 }

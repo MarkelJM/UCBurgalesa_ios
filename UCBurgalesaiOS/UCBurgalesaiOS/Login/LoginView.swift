@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
+    @State private var showForgotPassword = false
     
     var body: some View {
         VStack {
@@ -32,7 +33,10 @@ struct LoginView: View {
                 .padding(.horizontal)
             Text("Forgot your password?")
                 .onTapGesture {
-                    // Navigate to forgot password view
+                    showForgotPassword = true
+                }
+                .sheet(isPresented: $showForgotPassword) { 
+                    ForgotPasswordView()
                 }
             
             Button(action: viewModel.login) {
