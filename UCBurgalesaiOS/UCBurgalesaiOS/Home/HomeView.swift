@@ -8,26 +8,27 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
                 // Primer fila de botones
                 HStack(spacing: 20) {
-                    navigationButton(index: 0, destination: Text("Rutas"), imageName: "rutasImage")
-                    navigationButton(index: 1, destination: Text("Fichajes/puntos"), imageName: "fichajesImage")
+                    navigationButton(destination: .routes, imageName: "map")
+                    navigationButton(destination: .points, imageName: "star.fill")
                 }
                 
                 // Segunda fila de botones
                 HStack(spacing: 20) {
-                    navigationButton(index: 2, destination: Text("Patrocinadores"), imageName: "patrocinadoresImage")
-                    navigationButton(index: 3, destination: Text("Configuración"), imageName: "configuracionImage")
+                    navigationButton(destination: .sponsors, imageName: "gift.fill")
+                    navigationButton(destination: .settings, imageName: "gearshape.fill")
                 }
                 
                 // Tercera fila de botones
                 HStack(spacing: 20) {
-                    navigationButton(index: 4, destination: Text("Historia del club"), imageName: "historiaImage")
-                    navigationButton(index: 5, destination: Text("Noticias"), imageName: "noticiasImage")
+                    navigationButton(destination: .history, imageName: "book.fill")
+                    navigationButton(destination: .news, imageName: "newspaper.fill")
                 }
                 
                 Spacer()
@@ -41,25 +42,25 @@ struct HomeView: View {
         }
     }
     
-    func navigationButton(index: Int, destination: Text, imageName: String) -> some View {
-        NavigationLink(destination: AnyView(destination)) {
-            Button(action: {}) {
-                Image(imageName) // <-- Cambia por el nombre de tu imagen
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 150, height: 150)
-                    .cornerRadius(15) // Radio en los bordes
-            }
+    func navigationButton(destination: AppState.AppView, imageName: String) -> some View {
+        Button(action: {
+            appState.currentView = destination
+        }) {
+            Image(systemName: imageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 150, height: 150)
+                .cornerRadius(15) // Radio en los bordes
         }
     }
-
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject(AppState())
     }
 }
+
 
 /*
  

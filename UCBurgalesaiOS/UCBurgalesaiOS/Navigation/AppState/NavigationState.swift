@@ -17,13 +17,24 @@ struct NavigationState: View {
             LoginView()
         case .registerEmail:
             RegisterEmailView()
-    
         case .codeVerify:
             CodeVerifyView()
         case .profile:
             ProfileRegisterView()
         case .forgotPassword:
             ForgotPasswordView()
+        case .routes:
+            RoutesView()
+        case .points:
+            PointsView()
+        case .sponsors:
+            SponsorsView()
+        case .settings:
+            SettingsView()
+        case .history:
+            HistoryView()
+        case .news:
+            NewsView()
         }
     }
 }
