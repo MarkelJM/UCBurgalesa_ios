@@ -14,23 +14,20 @@ struct HomeView: View {
             VStack(spacing: 20) {
                 // Primer fila de botones
                 HStack(spacing: 20) {
-                    ForEach(0..<2) { index in
-                        navigationButton(index: index)
-                    }
+                    navigationButton(index: 0, destination: Text("Rutas"), imageName: "rutasImage")
+                    navigationButton(index: 1, destination: Text("Fichajes/puntos"), imageName: "fichajesImage")
                 }
                 
                 // Segunda fila de botones
                 HStack(spacing: 20) {
-                    ForEach(2..<4) { index in
-                        navigationButton(index: index)
-                    }
+                    navigationButton(index: 2, destination: Text("Patrocinadores"), imageName: "patrocinadoresImage")
+                    navigationButton(index: 3, destination: Text("Configuración"), imageName: "configuracionImage")
                 }
                 
                 // Tercera fila de botones
                 HStack(spacing: 20) {
-                    ForEach(4..<6) { index in
-                        navigationButton(index: index)
-                    }
+                    navigationButton(index: 4, destination: Text("Historia del club"), imageName: "historiaImage")
+                    navigationButton(index: 5, destination: Text("Noticias"), imageName: "noticiasImage")
                 }
                 
                 Spacer()
@@ -44,10 +41,10 @@ struct HomeView: View {
         }
     }
     
-    func navigationButton(index: Int) -> some View {
-        NavigationLink(destination: ForgotPasswordView()) {
+    func navigationButton(index: Int, destination: Text, imageName: String) -> some View {
+        NavigationLink(destination: AnyView(destination)) {
             Button(action: {}) {
-                Image("yourImageName") // <-- Cambia "yourImageName" por el nombre de tu imagen
+                Image(imageName) // <-- Cambia por el nombre de tu imagen
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height: 150)
@@ -55,6 +52,7 @@ struct HomeView: View {
             }
         }
     }
+
 }
 
 struct HomeView_Previews: PreviewProvider {
