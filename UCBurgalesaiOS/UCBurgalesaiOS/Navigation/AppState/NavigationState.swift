@@ -23,8 +23,8 @@ struct NavigationState: View {
             ProfileRegisterView()
         case .forgotPassword:
             ForgotPasswordView()
-        case .routes:
-            RoutesView()
+        case .routesList:
+            RoutesListView()
         case .points:
             PointsView()
         case .sponsors:

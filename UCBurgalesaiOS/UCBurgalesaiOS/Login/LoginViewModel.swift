@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var email: String = ""
@@ -15,7 +16,16 @@ class LoginViewModel: ObservableObject {
     
     private var authManager = FirebaseAuthManager()
     
+    @EnvironmentObject var appState: AppState
+    
     func login() {
+        // Comprobar si el nombre de usuario y la contraseña son los especificados
+        if email == "username" && password == "123456" {
+            appState.currentView = .routesList
+            return
+        }
+        
+        // Si no, continuar con la autenticación de Firebase
         authManager.login(email: email, password: password) { (success, error) in
             if let error = error {
                 self.errorMessage = error.localizedDescription
@@ -25,3 +35,4 @@ class LoginViewModel: ObservableObject {
         }
     }
 }
+

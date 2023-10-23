@@ -15,7 +15,7 @@ struct HomeView: View {
             VStack(spacing: 20) {
                 // Primer fila de botones
                 HStack(spacing: 20) {
-                    navigationButton(destination: .routes, imageName: "map")
+                    navigationButton(destination: .routesList, imageName: "map")
                     navigationButton(destination: .points, imageName: "star.fill")
                 }
                 

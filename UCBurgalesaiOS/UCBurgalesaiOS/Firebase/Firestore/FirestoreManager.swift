@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 class FirestoreManager {
     private var db = Firestore.firestore()
-    
+    //Profiles
     func createProfile(profile: ProfileModel, completion: @escaping (Bool, Error?) -> Void) {
         let data = profile.toFirestoreData()
         db.collection("Profiles").document(profile.id).setData(data) { error in
@@ -59,6 +59,22 @@ class FirestoreManager {
             completion(true, nil)
         }
     }
+    
+    func getProfile(for userId: String, completion: @escaping (ProfileModel?, Error?) -> Void) {
+        db.collection("Profiles").document(userId).getDocument { (document, error) in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            if let document = document, document.exists, let data = document.data() {
+                let profile = ProfileModel(from: data)
+                completion(profile, nil)
+            } else {
+                completion(nil, nil)
+            }
+        }
+    }
     ///Registration verification code
     func getVerifier(for identifier: Int, completion: @escaping (Verifier?, Error?) -> Void) {
         let documentId = "\(identifier - 1)"
@@ -96,21 +112,32 @@ class FirestoreManager {
         }
     }
     
-    func getProfile(for userId: String, completion: @escaping (ProfileModel?, Error?) -> Void) {
-        db.collection("Profiles").document(userId).getDocument { (document, error) in
+    //DatosRutas
+    func fetchAllRides(completion: @escaping ([RideModel]?, Error?) -> Void) {
+        db.collection("MockDatosSalidasPrueba").getDocuments { (querySnapshot, error) in
             if let error = error {
                 completion(nil, error)
                 return
             }
             
-            if let document = document, document.exists, let data = document.data() {
-                let profile = ProfileModel(from: data)
-                completion(profile, nil)
-            } else {
-                completion(nil, nil)
+            var rides: [RideModel] = []
+            
+            for document in querySnapshot!.documents {
+                if let ride = RideModel(from: document.data()) {
+                    rides.append(ride)
+                }
             }
+            
+            // Ordenar las rutas por fecha
+            rides.sort { $0.date < $1.date }
+            
+            completion(rides, nil)
         }
     }
+
+    
+    
+    
 
     
 

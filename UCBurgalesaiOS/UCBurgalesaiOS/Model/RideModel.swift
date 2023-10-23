@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct RideModel {
+struct RideModel: Identifiable {
+    var id: String { rideId } 
     var rideId: String
     var date: Date
     var rideName: String
-    var organizer: String 
+    var organizer: String
     var score: Int
     var restStopName: String
     var profileImage: URL

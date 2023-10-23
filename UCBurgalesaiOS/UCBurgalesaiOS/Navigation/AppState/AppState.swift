@@ -17,7 +17,7 @@ class AppState: ObservableObject {
         case codeVerify
         case profile
         case forgotPassword
-        case routes
+        case routesList
         case points
         case sponsors
         case settings
