@@ -119,6 +119,9 @@
 		D3E7E67D2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */; };
 		D3E7E67E2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */; };
 		D3E7E67F2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */; };
+		D3E7E6872AE963C300C00157 /* ClubTopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6862AE963C300C00157 /* ClubTopTabBar.swift */; };
+		D3E7E6882AE963C300C00157 /* ClubTopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6862AE963C300C00157 /* ClubTopTabBar.swift */; };
+		D3E7E6892AE963C300C00157 /* ClubTopTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6862AE963C300C00157 /* ClubTopTabBar.swift */; };
 		D3FF7DFF2AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E012AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
@@ -221,6 +224,7 @@
 		D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		D3E7E6782AE9229000C00157 /* SponsorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorModel.swift; sourceTree = "<group>"; };
 		D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SponsorModel+Firebase.swift"; sourceTree = "<group>"; };
+		D3E7E6862AE963C300C00157 /* ClubTopTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubTopTabBar.swift; sourceTree = "<group>"; };
 		D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E022AE2EBA50025389F /* SponsorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsView.swift; sourceTree = "<group>"; };
 		D3FF7E062AE2EBB50025389F /* RoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListView.swift; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 		D3B3F1432ADD95A90000B662 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				D3E7E6852AE963A200C00157 /* ClubNavigation */,
 				D3B3F1442ADD95B20000B662 /* AppState */,
 			);
 			path = Navigation;
@@ -531,6 +536,14 @@
 				D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */,
 			);
 			path = SponsorModel;
+			sourceTree = "<group>";
+		};
+		D3E7E6852AE963A200C00157 /* ClubNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				D3E7E6862AE963C300C00157 /* ClubTopTabBar.swift */,
+			);
+			path = ClubNavigation;
 			sourceTree = "<group>";
 		};
 		D3FF7DF82AE2EAE60025389F /* Sponsors */ = {
@@ -734,6 +747,7 @@
 				D3B3F1912ADFDEA30000B662 /* Styles.swift in Sources */,
 				D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E0B2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
+				D3E7E6872AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
 				D3FF7E232AE2EC150025389F /* NewsView.swift in Sources */,
 				D3B3F1462ADD95C30000B662 /* AppState.swift in Sources */,
 				D36281442AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
@@ -809,6 +823,7 @@
 				D3FF7E1C2AE2EBFC0025389F /* SettingViewModel.swift in Sources */,
 				D3B3F16F2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
 				D3FF7E042AE2EBA50025389F /* SponsorsView.swift in Sources */,
+				D3E7E6882AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
 				D3FF7E142AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
@@ -841,6 +856,7 @@
 				D3B3F1932ADFDEA30000B662 /* Styles.swift in Sources */,
 				D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E0D2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
+				D3E7E6892AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
 				D3FF7E252AE2EC150025389F /* NewsView.swift in Sources */,
 				D3B3F1482ADD95C30000B662 /* AppState.swift in Sources */,
 				D36281462AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
