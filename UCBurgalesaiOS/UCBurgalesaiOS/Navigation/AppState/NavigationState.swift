@@ -31,8 +31,8 @@ struct NavigationState: View {
             SponsorsView()
         case .settings:
             SettingsView()
-        case .history:
-            HistoryView()
+        case .club:
+            ClubView()
         case .news:
             NewsView()
         case .home:
