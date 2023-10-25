@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import SwiftUI
 
 
 class CodeVerifyViewModel: ObservableObject {
@@ -14,6 +15,7 @@ class CodeVerifyViewModel: ObservableObject {
     @Published var code: String = ""
     @Published var showAlert = false
     @Published var alertMessage = ""
+    @EnvironmentObject var appState: AppState
     
     private var firestoreManager = FirestoreManager()
     
@@ -38,7 +40,7 @@ class CodeVerifyViewModel: ObservableObject {
                         self.showAlert = true
                     } else {
                         // Continuar con el proceso de registro
-                        // Aquí puedes navegar a la vista de registro de email
+                        self.appState.currentView = .registerEmail // Navegar a la vista de registro de email
                     }
                 } else {
                     self.alertMessage = "Código incorrecto."

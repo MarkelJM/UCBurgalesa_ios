@@ -18,7 +18,7 @@ struct NavigationState: View {
         case .registerEmail:
             RegisterEmailView()
         case .codeVerify:
-            CodeVerifyView()
+            CodeVerifyView().environmentObject(appState)
         case .profile:
             ProfileRegisterView()
         case .forgotPassword:
@@ -35,6 +35,9 @@ struct NavigationState: View {
             HistoryView()
         case .news:
             NewsView()
+        case .home:
+            HomeView().environmentObject(appState)
+            
         }
     }
 }

@@ -113,6 +113,12 @@
 		D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
 		D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */; };
+		D3E7E6792AE9229000C00157 /* SponsorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6782AE9229000C00157 /* SponsorModel.swift */; };
+		D3E7E67A2AE9229000C00157 /* SponsorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6782AE9229000C00157 /* SponsorModel.swift */; };
+		D3E7E67B2AE9229000C00157 /* SponsorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6782AE9229000C00157 /* SponsorModel.swift */; };
+		D3E7E67D2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */; };
+		D3E7E67E2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */; };
+		D3E7E67F2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */; };
 		D3FF7DFF2AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E012AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
@@ -213,6 +219,8 @@
 		D3B3F1902ADFDEA30000B662 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		D3B3F1942ADFE9BF0000B662 /* Backgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backgrounds.swift; sourceTree = "<group>"; };
 		D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		D3E7E6782AE9229000C00157 /* SponsorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorModel.swift; sourceTree = "<group>"; };
+		D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SponsorModel+Firebase.swift"; sourceTree = "<group>"; };
 		D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E022AE2EBA50025389F /* SponsorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsView.swift; sourceTree = "<group>"; };
 		D3FF7E062AE2EBB50025389F /* RoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListView.swift; sourceTree = "<group>"; };
@@ -334,12 +342,11 @@
 		D323D8C22ABC580B00BBEC4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D323D8C32ABC585200BBEC4E /* ProfileModel.swift */,
-				D3B3F15B2ADDA0B80000B662 /* ProfileModel+Firebase.swift */,
-				D323D8C72ABC58C800BBEC4E /* RideModel.swift */,
-				D3115FAF2AD5C06200E437D0 /* RideModel+Firebase.swift */,
-				D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */,
-				D3B3F15F2ADE97FB0000B662 /* CodeUserVerifyModel.swift */,
+				D3E7E6842AE9230D00C00157 /* SponsorModel */,
+				D3E7E6832AE9230200C00157 /* CodeVerifyModel */,
+				D3E7E6822AE922EE00C00157 /* CheckingModel */,
+				D3E7E6812AE922E200C00157 /* RideModel */,
+				D3E7E6802AE922D800C00157 /* ProfileModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,6 +488,49 @@
 				D3C56AF12ADD8A01008378BF /* FirebaseAuthManager.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D3E7E6802AE922D800C00157 /* ProfileModel */ = {
+			isa = PBXGroup;
+			children = (
+				D323D8C32ABC585200BBEC4E /* ProfileModel.swift */,
+				D3B3F15B2ADDA0B80000B662 /* ProfileModel+Firebase.swift */,
+			);
+			path = ProfileModel;
+			sourceTree = "<group>";
+		};
+		D3E7E6812AE922E200C00157 /* RideModel */ = {
+			isa = PBXGroup;
+			children = (
+				D323D8C72ABC58C800BBEC4E /* RideModel.swift */,
+				D3115FAF2AD5C06200E437D0 /* RideModel+Firebase.swift */,
+			);
+			path = RideModel;
+			sourceTree = "<group>";
+		};
+		D3E7E6822AE922EE00C00157 /* CheckingModel */ = {
+			isa = PBXGroup;
+			children = (
+				D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */,
+			);
+			path = CheckingModel;
+			sourceTree = "<group>";
+		};
+		D3E7E6832AE9230200C00157 /* CodeVerifyModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3B3F15F2ADE97FB0000B662 /* CodeUserVerifyModel.swift */,
+			);
+			path = CodeVerifyModel;
+			sourceTree = "<group>";
+		};
+		D3E7E6842AE9230D00C00157 /* SponsorModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3E7E6782AE9229000C00157 /* SponsorModel.swift */,
+				D3E7E67C2AE922B700C00157 /* SponsorModel+Firebase.swift */,
+			);
+			path = SponsorModel;
 			sourceTree = "<group>";
 		};
 		D3FF7DF82AE2EAE60025389F /* Sponsors */ = {
@@ -692,6 +742,7 @@
 				D3B3F1692ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3B3F1652ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
+				D3E7E67D2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
 				D3B3F1582ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F1892ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3B3F1602ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
@@ -713,6 +764,7 @@
 				D3B3F1722ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14A2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D3FF7DFF2AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
+				D3E7E6792AE9229000C00157 /* SponsorModel.swift in Sources */,
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
 				D3B3F1502ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15C2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
@@ -739,6 +791,7 @@
 				D36281412AE288E000E21A4F /* HomeView.swift in Sources */,
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
 				D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
+				D3E7E67A2AE9229000C00157 /* SponsorModel.swift in Sources */,
 				D3B3F1612ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3FF7E282AE2EC220025389F /* HistoryView.swift in Sources */,
 				D3FF7E202AE2EC090025389F /* NewsViewModel.swift in Sources */,
@@ -759,6 +812,7 @@
 				D3FF7E142AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
+				D3E7E67E2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
 				D3FF7E0C2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
 				D3FF7E102AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1922ADFDEA30000B662 /* Styles.swift in Sources */,
@@ -795,6 +849,7 @@
 				D3B3F16B2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3B3F1672ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
+				D3E7E67F2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
 				D3B3F15A2ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F18B2ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3B3F1622ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
@@ -816,6 +871,7 @@
 				D3B3F1742ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14C2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D3FF7E012AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
+				D3E7E67B2AE9229000C00157 /* SponsorModel.swift in Sources */,
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
 				D3B3F1522ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15E2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,

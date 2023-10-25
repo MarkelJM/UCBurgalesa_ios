@@ -135,7 +135,20 @@ class FirestoreManager {
         }
     }
 
-    
+    ///SPONSOR
+    func getSponsors(completion: @escaping ([SponsorModel]?, Error?) -> Void) {
+        db.collection("sponsorsUCB").getDocuments { (snapshot, error) in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            if let documents = snapshot?.documents {
+                let sponsors = documents.compactMap { SponsorModel(from: $0.data()) }
+                completion(sponsors, nil)
+            }
+        }
+    }
     
     
 

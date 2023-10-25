@@ -23,5 +23,6 @@ class AppState: ObservableObject {
         case settings
         case history
         case news
+        case home
     }
 }

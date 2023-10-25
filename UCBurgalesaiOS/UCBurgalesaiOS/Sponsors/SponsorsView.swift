@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct SponsorsView: View {
+    @StateObject var viewModel = SponsorsViewModel()
+
     var body: some View {
-        Text("Contenido de Patrocinadores")
+        VStack {
+            Text("Patrocinadores")
+                .font(.largeTitle)
+                .padding()
+
+            List(viewModel.sponsors, id: \.sponsorURL) { sponsor in
+                if let validURL = URL(string: sponsor.sponsorURL) {
+                    URLImage(url: validURL)
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                } else {
+                    Text("URL inválida")
+                        .foregroundColor(.red)
+                }
+            }
+        }
+        .onAppear {
+            viewModel.fetchSponsors()
+        }
     }
 }
-
 struct SponsorsView_Previews: PreviewProvider {
     static var previews: some View {
         SponsorsView()

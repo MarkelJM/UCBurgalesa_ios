@@ -38,6 +38,8 @@ class ProfileRegisterViewModel: ObservableObject {
     
     @Published var selectedImage: UIImage?//to upload photo
     
+    @EnvironmentObject var appState: AppState
+    
     func fetchUserEmail() {
         //para guardar todos los datos que rellena el usuario en firestore--> traemos el email
         if let user = Auth.auth().currentUser {
@@ -103,7 +105,8 @@ class ProfileRegisterViewModel: ObservableObject {
             if let error = error {
                 self.errorMessage = error.localizedDescription
             } else if success {
-                // Navega a la siguiente vista o muestra un mensaje de éxito
+                // Navegar a la vista principal (home)
+                self.appState.currentView = .home
             }
         }
     }
