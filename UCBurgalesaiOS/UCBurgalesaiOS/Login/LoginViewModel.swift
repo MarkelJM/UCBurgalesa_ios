@@ -16,12 +16,15 @@ class LoginViewModel: ObservableObject {
     
     private var authManager = FirebaseAuthManager()
     
-    @EnvironmentObject var appState: AppState
+    var appState: AppState
+    init(appState: AppState) {
+        self.appState = appState
+    }
     
     func login() {
         // Comprobar si el nombre de usuario y la contraseña son los especificados
-        if email == "username" && password == "123456" {
-            appState.currentView = .routesList
+        if email == "Username" && password == "123456" {
+            appState.currentView = .home
             return
         }
         

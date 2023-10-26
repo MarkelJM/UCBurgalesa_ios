@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var viewModel = LoginViewModel()
     @State private var showForgotPassword = false
+    
+    @ObservedObject var viewModel: LoginViewModel
+        
+    init(appState: AppState) {
+        self.viewModel = LoginViewModel(appState: appState)
+    }
     
     var body: some View {
         VStack {
@@ -66,6 +71,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(appState: AppState())
     }
 }

@@ -14,7 +14,7 @@ struct NavigationState: View {
     var body: some View {
         switch appState.currentView {
         case .login:
-            LoginView()
+            LoginView(appState: appState)
         case .registerEmail:
             RegisterEmailView()
         case .codeVerify:
@@ -24,7 +24,7 @@ struct NavigationState: View {
         case .forgotPassword:
             ForgotPasswordView()
         case .routesList:
-            RoutesListView()
+            RoutesListView(appState: appState)
         case .points:
             PointsView()
         case .sponsors:

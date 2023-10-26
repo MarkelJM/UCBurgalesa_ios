@@ -8,32 +8,54 @@
 import SwiftUI
 
 struct RoutesListView: View {
-    @StateObject var viewModel = RoutesListViewModel()
-    
-    var body: some View {
+    @ObservedObject var viewModel: RoutesListViewModel
         
-        Text("Rutas")
-        List(viewModel.rides) { ride in
+    init(appState: AppState) {
+        self.viewModel = RoutesListViewModel(appState: appState)
+    }
+    var body: some View {
+        VStack {
             HStack {
-                VStack(alignment: .leading) {
-                    Text(ride.rideName).font(.headline)
-                    Text(ride.organizer).font(.subheadline)
-                    Text(ride.restStopName).font(.subheadline)
-                    Text(DateFormatter.firestoreDateFormatter.string(from: ride.date)).font(.subheadline)
-                }
+                Image(systemName: "arrow.left")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20, height: 20)
+                    .onTapGesture {
+                        viewModel.navigateBackToHome()
+                    }
                 Spacer()
-                URLImage(url: ride.routeImage)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
+                Text("Rutas")
+            }
+            .padding()
+            Text("Rutas")
+            List(viewModel.rides) { ride in
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(ride.rideName).font(.headline)
+                        Text(ride.organizer).font(.subheadline)
+                        Text(ride.restStopName).font(.subheadline)
+                        Text(DateFormatter.firestoreDateFormatter.string(from: ride.date)).font(.subheadline)
+                    }
+                    Spacer()
+                    URLImage(url: ride.routeImage)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                }
+            }
+            .onAppear(perform: viewModel.fetchRides)
+        }
+        onChange(of: viewModel.shouldNavigateBackToHome) { shouldNavigate in
+            if shouldNavigate {
+                viewModel.appState.currentView = .home
+                viewModel.shouldNavigateBackToHome = false
             }
         }
-        .onAppear(perform: viewModel.fetchRides)
     }
 }
 
 struct RoutesListView_Previews: PreviewProvider {
     static var previews: some View {
-        RoutesListView().environmentObject(RoutesListViewModel.mock)
+        RoutesListView(appState: AppState())
     }
 }
 
