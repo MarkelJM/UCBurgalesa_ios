@@ -27,7 +27,7 @@ struct HomeView: View {
                 
                 // Tercera fila de botones
                 HStack(spacing: 20) {
-                    navigationButton(destination: .history, imageName: "book.fill")
+                    navigationButton(destination: .club, imageName: "book.fill")
                     navigationButton(destination: .news, imageName: "newspaper.fill")
                 }
                 

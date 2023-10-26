@@ -31,25 +31,13 @@ struct HistoryView: View {
                     .font(.headline)
                 
                 
-                Text("Presidentes")
-                    .font(.title2)
-                    .padding(.top)
                 
-                ForEach(presidentes, id: \.self) { presidente in
-                    Text(presidente)
-                }
-                
-                // ... (y así sucesivamente para el resto de las secciones)
             }
             .padding()
         }
     }
     
-    let presidentes = [
-        "José López Rodríguez (1.972)",
-        "Emiliano Nebreda Perdiguero (1.973-74)",
-        // ... (y así sucesivamente para el resto de los presidentes)
-    ]
+    
 }
 
 struct HistoryView_Previews: PreviewProvider {
