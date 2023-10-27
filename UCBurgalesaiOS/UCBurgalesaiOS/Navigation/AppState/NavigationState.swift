@@ -24,7 +24,7 @@ struct NavigationState: View {
         case .forgotPassword:
             ForgotPasswordView()
         case .routesList:
-            RoutesListView(appState: appState)
+            RoutesListView().environmentObject(appState)
         case .points:
             PointsView()
         case .sponsors:

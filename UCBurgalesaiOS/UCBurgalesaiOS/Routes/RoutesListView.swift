@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct RoutesListView: View {
-    @ObservedObject var viewModel: RoutesListViewModel
-        
-    init(appState: AppState) {
-        self.viewModel = RoutesListViewModel(appState: appState)
-    }
+    @StateObject var viewModel = RoutesListViewModel()
+    @EnvironmentObject var appState: AppState
+    //@Binding var isPresented: Bool
+    
     var body: some View {
         VStack {
             HStack {
@@ -34,7 +33,7 @@ struct RoutesListView: View {
                         Text(ride.rideName).font(.headline)
                         Text(ride.organizer).font(.subheadline)
                         Text(ride.restStopName).font(.subheadline)
-                        Text(DateFormatter.firestoreDateFormatter.string(from: ride.date)).font(.subheadline)
+                        Text(DateFormatter.firestoreDateOnlyFormatter.string(from: ride.date)).font(.subheadline)
                     }
                     Spacer()
                     URLImage(url: ride.routeImage)
@@ -44,25 +43,31 @@ struct RoutesListView: View {
             }
             .onAppear(perform: viewModel.fetchRides)
         }
+        /*
         onChange(of: viewModel.shouldNavigateBackToHome) { shouldNavigate in
             if shouldNavigate {
-                viewModel.appState.currentView = .home
+                appState.currentView = .home
                 viewModel.shouldNavigateBackToHome = false
             }
         }
+         */
     }
 }
 
 struct RoutesListView_Previews: PreviewProvider {
     static var previews: some View {
-        RoutesListView(appState: AppState())
+        RoutesListView().environmentObject(AppState())
     }
 }
+
+
+
+
 
 /*
 struct RoutesListView_Previews: PreviewProvider {
     static var previews: some View {
-        RoutesListView()
+        RoutesListView(appState: AppState())
     }
 }
 */

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class RoutesListViewModel: ObservableObject {
     @Published var rides: [RideModel] = []
@@ -16,16 +17,15 @@ class RoutesListViewModel: ObservableObject {
     
     private var firestoreManager = FirestoreManager()
     
-    var appState: AppState
-    init(appState: AppState) {
-        self.appState = appState
-    }
+    @EnvironmentObject var appState: AppState
     
     func fetchRides() {
         isLoading = true
+        print("Fetching rides...")
         firestoreManager.fetchAllRides { [weak self] (rides, error) in
             DispatchQueue.main.async {
                 self?.isLoading = false
+                print("accediendo a ride")
                 if let rides = rides {
                     print("Rides fetched: \(rides.count)")
                     self?.rides = rides
@@ -36,6 +36,7 @@ class RoutesListViewModel: ObservableObject {
             }
         }
     }
+
     
 
     func navigateBackToHome() {
@@ -45,7 +46,7 @@ class RoutesListViewModel: ObservableObject {
 
 }
 
-
+/*
 //prueba por que no muestra nada la preview
 extension RoutesListViewModel {
     static var mock: RoutesListViewModel {
@@ -56,4 +57,4 @@ extension RoutesListViewModel {
         return viewModel
     }
 }
-
+*/

@@ -114,19 +114,28 @@ class FirestoreManager {
     
     //DatosRutas
     func fetchAllRides(completion: @escaping ([RideModel]?, Error?) -> Void) {
+        print("Accessing Firestore...")
+        //db.collection("MockDatosSalidasPrueba").getDocuments { (querySnapshot, error) in
         db.collection("MockDatosSalidasPrueba").getDocuments { (querySnapshot, error) in
+
             if let error = error {
+                print("Firestore error: \(error.localizedDescription)")
                 completion(nil, error)
                 return
             }
             
             var rides: [RideModel] = []
-            
+            print("probando si entra")
             for document in querySnapshot!.documents {
+                print("prbando si pasa")
                 if let ride = RideModel(from: document.data()) {
+                    print("ride")
                     rides.append(ride)
+                } else {
+                    print("Failed to parse document with ID: \(document.documentID)")
                 }
             }
+
             
             // Ordenar las rutas por fecha
             rides.sort { $0.date < $1.date }
@@ -134,6 +143,7 @@ class FirestoreManager {
             completion(rides, nil)
         }
     }
+
 
     ///SPONSOR
     func getSponsors(completion: @escaping ([SponsorModel]?, Error?) -> Void) {
