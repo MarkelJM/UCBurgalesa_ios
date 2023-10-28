@@ -9,9 +9,18 @@ import SwiftUI
 
 struct ClubView: View {
     @State private var selectedTab: Int = 0
+    @EnvironmentObject var appState: AppState
+
     
     var body: some View {
         VStack {
+            HStack {
+                BackButton(destination: .home)
+                    .environmentObject(appState)
+                Spacer()
+                
+            }
+            .padding()
             ClubTopTabBar(selectedTab: $selectedTab)
             
             if selectedTab == 0 {

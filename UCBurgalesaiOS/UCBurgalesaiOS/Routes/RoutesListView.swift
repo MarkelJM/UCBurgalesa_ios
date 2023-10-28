@@ -10,22 +10,17 @@ import SwiftUI
 struct RoutesListView: View {
     @StateObject var viewModel = RoutesListViewModel()
     @EnvironmentObject var appState: AppState
-    //@Binding var isPresented: Bool
     
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "arrow.left")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-                    .onTapGesture {
-                        viewModel.navigateBackToHome()
-                    }
+                BackButton(destination: .home)
+                    .environmentObject(appState)
                 Spacer()
-                Text("Rutas")
+                
             }
             .padding()
+            
             Text("Rutas")
             List(viewModel.rides) { ride in
                 HStack {
@@ -43,14 +38,7 @@ struct RoutesListView: View {
             }
             .onAppear(perform: viewModel.fetchRides)
         }
-        /*
-        onChange(of: viewModel.shouldNavigateBackToHome) { shouldNavigate in
-            if shouldNavigate {
-                appState.currentView = .home
-                viewModel.shouldNavigateBackToHome = false
-            }
-        }
-         */
+        
     }
 }
 
@@ -63,11 +51,3 @@ struct RoutesListView_Previews: PreviewProvider {
 
 
 
-
-/*
-struct RoutesListView_Previews: PreviewProvider {
-    static var previews: some View {
-        RoutesListView(appState: AppState())
-    }
-}
-*/

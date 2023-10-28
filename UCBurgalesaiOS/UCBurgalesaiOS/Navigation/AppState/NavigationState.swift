@@ -28,11 +28,11 @@ struct NavigationState: View {
         case .points:
             PointsView()
         case .sponsors:
-            SponsorsView()
+            SponsorsView().environmentObject(appState)
         case .settings:
             SettingsView()
         case .club:
-            ClubView()
+            ClubView().environmentObject(appState)
         case .news:
             NewsView()
         case .home:

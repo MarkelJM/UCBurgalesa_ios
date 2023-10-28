@@ -72,6 +72,22 @@ extension TextField {
             .cornerRadius(10)
     }
 }
+//flecha para volver atras.
+struct BackButton: View {
+    @EnvironmentObject var appState: AppState
+    var destination: AppState.AppView
+    
+    var body: some View {
+        Image(systemName: "arrow.left")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 20, height: 20)
+            .onTapGesture {
+                appState.currentView = destination
+            }
+    }
+}
+
 
 
 

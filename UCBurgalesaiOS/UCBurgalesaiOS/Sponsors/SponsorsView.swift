@@ -9,9 +9,18 @@ import SwiftUI
 
 struct SponsorsView: View {
     @StateObject var viewModel = SponsorsViewModel()
+    @EnvironmentObject var appState: AppState
+
 
     var body: some View {
         VStack {
+            HStack {
+                BackButton(destination: .home)
+                    .environmentObject(appState)
+                Spacer()
+                
+            }
+            .padding()
             Text("Patrocinadores")
                 .font(.largeTitle)
                 .padding()
