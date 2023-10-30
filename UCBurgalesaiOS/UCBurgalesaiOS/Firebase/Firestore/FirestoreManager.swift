@@ -175,7 +175,25 @@ class FirestoreManager {
             }
         }
     }
-    
+    ///NEWS
+    func fetchAllNews(completion: @escaping ([NewsModel]?, Error?) -> Void) {
+        db.collection("NewsUCB").getDocuments { (querySnapshot, error) in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            var news: [NewsModel] = []
+            for document in querySnapshot!.documents {
+                if let newsItem = NewsModel(from: document.data()) {
+                    news.append(newsItem)
+                }
+            }
+            
+            completion(news, nil)
+        }
+    }
+
     
 
     
