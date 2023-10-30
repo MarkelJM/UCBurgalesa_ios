@@ -4,7 +4,6 @@
 //
 //  Created by Markel Juaristi on 16/10/23.
 //
-
 import Foundation
 import SwiftUI
 
@@ -37,8 +36,15 @@ struct NavigationState: View {
             NewsView()
         case .home:
             HomeView().environmentObject(appState)
-            
+        case .detailRoute:
+            Group {
+                if let selectedRide = appState.selectedRide {
+                    DetailRoutesView(viewModel: DetailRoutesViewModel(ride: selectedRide))
+                        .environmentObject(appState)
+                } else {
+                    Text("No ride selected")
+                }
+            }
         }
     }
 }
-

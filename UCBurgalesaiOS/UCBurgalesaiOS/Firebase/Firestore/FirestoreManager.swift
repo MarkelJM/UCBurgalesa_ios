@@ -143,6 +143,22 @@ class FirestoreManager {
             completion(rides, nil)
         }
     }
+    
+    func fetchRideDetails(rideId: String, completion: @escaping (RideModel?, Error?) -> Void) {
+        db.collection("MockDatosSalidasPrueba").document(rideId).getDocument { (document, error) in
+            if let error = error {
+                completion(nil, error)
+                return
+            }
+            
+            if let documentData = document?.data(), let ride = RideModel(from: documentData) {
+                completion(ride, nil)
+            } else {
+                completion(nil, nil)
+            }
+        }
+    }
+
 
 
     ///SPONSOR

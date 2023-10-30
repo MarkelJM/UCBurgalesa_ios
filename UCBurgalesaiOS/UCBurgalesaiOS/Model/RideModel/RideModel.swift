@@ -35,7 +35,12 @@ enum RouteType: String {
     case all
 }
 
-struct Coordinate {
+struct Coordinate: Identifiable {
+    var id = UUID()
     var latitude: Double
     var longitude: Double
+    
+    static func ==(lhs: Coordinate, rhs: Coordinate) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
 }

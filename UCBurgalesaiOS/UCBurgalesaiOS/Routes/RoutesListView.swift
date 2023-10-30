@@ -23,17 +23,21 @@ struct RoutesListView: View {
             
             Text("Rutas")
             List(viewModel.rides) { ride in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(ride.rideName).font(.headline)
-                        Text(ride.organizer).font(.subheadline)
-                        Text(ride.restStopName).font(.subheadline)
-                        Text(DateFormatter.firestoreDateOnlyFormatter.string(from: ride.date)).font(.subheadline)
+                Button(action: {
+                    appState.currentView = .detailRoute
+                }) {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(ride.rideName).font(.headline)
+                            Text(ride.organizer).font(.subheadline)
+                            Text(ride.restStopName).font(.subheadline)
+                            Text(DateFormatter.firestoreDateOnlyFormatter.string(from: ride.date)).font(.subheadline)
+                        }
+                        Spacer()
+                        URLImage(url: ride.routeImage)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 100)
                     }
-                    Spacer()
-                    URLImage(url: ride.routeImage)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 100, height: 100)
                 }
             }
             .onAppear(perform: viewModel.fetchRides)

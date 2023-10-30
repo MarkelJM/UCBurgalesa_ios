@@ -9,6 +9,7 @@ import Foundation
 
 class AppState: ObservableObject {
     @Published var isLoggedIn: Bool = false
+    @Published var selectedRide: RideModel? // used for detailroutes inicializator
     @Published var currentView: AppView = .login
     
     enum AppView {
@@ -24,5 +25,6 @@ class AppState: ObservableObject {
         case club
         case news
         case home
+        case detailRoute
     }
 }

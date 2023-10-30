@@ -47,6 +47,18 @@
 		D36281442AE288EF00E21A4F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281432AE288EF00E21A4F /* HomeViewModel.swift */; };
 		D36281452AE288EF00E21A4F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281432AE288EF00E21A4F /* HomeViewModel.swift */; };
 		D36281462AE288EF00E21A4F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36281432AE288EF00E21A4F /* HomeViewModel.swift */; };
+		D3A65EAA2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EA92AEFC66900D0E79B /* DetailRoutesView.swift */; };
+		D3A65EAB2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EA92AEFC66900D0E79B /* DetailRoutesView.swift */; };
+		D3A65EAC2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EA92AEFC66900D0E79B /* DetailRoutesView.swift */; };
+		D3A65EAE2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EAD2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift */; };
+		D3A65EAF2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EAD2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift */; };
+		D3A65EB02AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EAD2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift */; };
+		D3A65EB32AEFFCA900D0E79B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB22AEFFCA900D0E79B /* NewsModel.swift */; };
+		D3A65EB42AEFFCA900D0E79B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB22AEFFCA900D0E79B /* NewsModel.swift */; };
+		D3A65EB52AEFFCA900D0E79B /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB22AEFFCA900D0E79B /* NewsModel.swift */; };
+		D3A65EB72AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */; };
+		D3A65EB82AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */; };
+		D3A65EB92AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */; };
 		D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
@@ -209,6 +221,10 @@
 		D362813A2AE14AFA00E21A4F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		D362813F2AE288E000E21A4F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D36281432AE288EF00E21A4F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D3A65EA92AEFC66900D0E79B /* DetailRoutesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRoutesView.swift; sourceTree = "<group>"; };
+		D3A65EAD2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRoutesViewModel.swift; sourceTree = "<group>"; };
+		D3A65EB22AEFFCA900D0E79B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsModel+Firebase.swift"; sourceTree = "<group>"; };
 		D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3B3F13F2ADD8D370000B662 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3B3F1452ADD95C30000B662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -358,6 +374,7 @@
 		D323D8C22ABC580B00BBEC4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3A65EB12AEFFC9000D0E79B /* NewsModel */,
 				D3E7E6842AE9230D00C00157 /* SponsorModel */,
 				D3E7E6832AE9230200C00157 /* CodeVerifyModel */,
 				D3E7E6822AE922EE00C00157 /* CheckingModel */,
@@ -383,6 +400,24 @@
 				D36281432AE288EF00E21A4F /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		D3A65EA82AEFC5E100D0E79B /* DetailRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				D3A65EA92AEFC66900D0E79B /* DetailRoutesView.swift */,
+				D3A65EAD2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift */,
+			);
+			path = DetailRoutes;
+			sourceTree = "<group>";
+		};
+		D3A65EB12AEFFC9000D0E79B /* NewsModel */ = {
+			isa = PBXGroup;
+			children = (
+				D3A65EB22AEFFCA900D0E79B /* NewsModel.swift */,
+				D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */,
+			);
+			path = NewsModel;
 			sourceTree = "<group>";
 		};
 		D3B3F13A2ADD8D150000B662 /* Login */ = {
@@ -579,6 +614,7 @@
 		D3FF7DF92AE2EB100025389F /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				D3A65EA82AEFC5E100D0E79B /* DetailRoutes */,
 				D3FF7E062AE2EBB50025389F /* RoutesListView.swift */,
 				D3FF7E0A2AE2EBC10025389F /* RoutesListViewModel.swift */,
 			);
@@ -792,11 +828,14 @@
 				D36281372AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D89B2ABC57E800BBEC4E /* ContentView.swift in Sources */,
 				D3FF7E072AE2EBB50025389F /* RoutesListView.swift in Sources */,
+				D3A65EB72AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
 				D3FF7E0F2AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1402ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3FF7E032AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E172AE2EBF00025389F /* SettingView.swift in Sources */,
 				D3FF7E132AE2EBE20025389F /* PointsView.swift in Sources */,
+				D3A65EB32AEFFCA900D0E79B /* NewsModel.swift in Sources */,
+				D3A65EAE2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */,
 				D36281402AE288E000E21A4F /* HomeView.swift in Sources */,
 				D3FF7E2F2AE4419C0025389F /* URLImage.swift in Sources */,
 				D3B3F1722ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
@@ -816,6 +855,7 @@
 				D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB02AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D362813B2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
+				D3A65EAA2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
 				D3E7E6982AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
@@ -836,6 +876,7 @@
 				D3FF7E282AE2EC220025389F /* HistoryContentView.swift in Sources */,
 				D3FF7E202AE2EC090025389F /* NewsViewModel.swift in Sources */,
 				D3E7E6992AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
+				D3A65EB82AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
 				D3B3F1592ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F18E2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
@@ -844,13 +885,16 @@
 				D3B3F17C2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D362813C2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
 				D3B3F1472ADD95C30000B662 /* AppState.swift in Sources */,
+				D3A65EAF2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */,
 				D3FF7E242AE2EC150025389F /* NewsView.swift in Sources */,
 				D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
+				D3A65EAB2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
 				D3FF7E1C2AE2EBFC0025389F /* SettingViewModel.swift in Sources */,
 				D3B3F16F2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
 				D3FF7E042AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3E7E68C2AE9670600C00157 /* ContactView.swift in Sources */,
+				D3A65EB42AEFFCA900D0E79B /* NewsModel.swift in Sources */,
 				D3E7E6882AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
 				D3FF7E142AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
@@ -907,11 +951,14 @@
 				D36281392AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */,
 				D3FF7E092AE2EBB50025389F /* RoutesListView.swift in Sources */,
+				D3A65EB92AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
 				D3FF7E112AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1422ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3FF7E052AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E192AE2EBF00025389F /* SettingView.swift in Sources */,
 				D3FF7E152AE2EBE20025389F /* PointsView.swift in Sources */,
+				D3A65EB52AEFFCA900D0E79B /* NewsModel.swift in Sources */,
+				D3A65EB02AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */,
 				D36281422AE288E000E21A4F /* HomeView.swift in Sources */,
 				D3FF7E312AE4419C0025389F /* URLImage.swift in Sources */,
 				D3B3F1742ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
@@ -931,6 +978,7 @@
 				D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB22AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D362813D2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
+				D3A65EAC2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
 				D3E7E69A2AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 			);
