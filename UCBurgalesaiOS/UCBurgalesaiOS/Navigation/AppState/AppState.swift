@@ -21,7 +21,7 @@ class AppState: ObservableObject {
         case routesList
         case points
         case sponsors
-        case settings
+        case profileSettings
         case club
         case news
         case home

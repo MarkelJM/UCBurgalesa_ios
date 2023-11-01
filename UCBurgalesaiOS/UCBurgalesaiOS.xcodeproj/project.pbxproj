@@ -59,6 +59,9 @@
 		D3A65EB72AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */; };
 		D3A65EB82AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */; };
 		D3A65EB92AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */; };
+		D3A65EBC2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */; };
+		D3A65EBD2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */; };
+		D3A65EBE2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */; };
 		D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
@@ -164,12 +167,12 @@
 		D3FF7E132AE2EBE20025389F /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E122AE2EBE20025389F /* PointsView.swift */; };
 		D3FF7E142AE2EBE20025389F /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E122AE2EBE20025389F /* PointsView.swift */; };
 		D3FF7E152AE2EBE20025389F /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E122AE2EBE20025389F /* PointsView.swift */; };
-		D3FF7E172AE2EBF00025389F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E162AE2EBF00025389F /* SettingView.swift */; };
-		D3FF7E182AE2EBF00025389F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E162AE2EBF00025389F /* SettingView.swift */; };
-		D3FF7E192AE2EBF00025389F /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E162AE2EBF00025389F /* SettingView.swift */; };
-		D3FF7E1B2AE2EBFC0025389F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1A2AE2EBFC0025389F /* SettingViewModel.swift */; };
-		D3FF7E1C2AE2EBFC0025389F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1A2AE2EBFC0025389F /* SettingViewModel.swift */; };
-		D3FF7E1D2AE2EBFC0025389F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1A2AE2EBFC0025389F /* SettingViewModel.swift */; };
+		D3FF7E172AE2EBF00025389F /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E162AE2EBF00025389F /* ProfileSettingView.swift */; };
+		D3FF7E182AE2EBF00025389F /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E162AE2EBF00025389F /* ProfileSettingView.swift */; };
+		D3FF7E192AE2EBF00025389F /* ProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E162AE2EBF00025389F /* ProfileSettingView.swift */; };
+		D3FF7E1B2AE2EBFC0025389F /* ProfileSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1A2AE2EBFC0025389F /* ProfileSettingViewModel.swift */; };
+		D3FF7E1C2AE2EBFC0025389F /* ProfileSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1A2AE2EBFC0025389F /* ProfileSettingViewModel.swift */; };
+		D3FF7E1D2AE2EBFC0025389F /* ProfileSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1A2AE2EBFC0025389F /* ProfileSettingViewModel.swift */; };
 		D3FF7E1F2AE2EC090025389F /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1E2AE2EC090025389F /* NewsViewModel.swift */; };
 		D3FF7E202AE2EC090025389F /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1E2AE2EC090025389F /* NewsViewModel.swift */; };
 		D3FF7E212AE2EC090025389F /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7E1E2AE2EC090025389F /* NewsViewModel.swift */; };
@@ -225,6 +228,7 @@
 		D3A65EAD2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRoutesViewModel.swift; sourceTree = "<group>"; };
 		D3A65EB22AEFFCA900D0E79B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsModel+Firebase.swift"; sourceTree = "<group>"; };
+		D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSettingView.swift; sourceTree = "<group>"; };
 		D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3B3F13F2ADD8D370000B662 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3B3F1452ADD95C30000B662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -260,8 +264,8 @@
 		D3FF7E0A2AE2EBC10025389F /* RoutesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E0E2AE2EBD60025389F /* PointsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E122AE2EBE20025389F /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
-		D3FF7E162AE2EBF00025389F /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		D3FF7E1A2AE2EBFC0025389F /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		D3FF7E162AE2EBF00025389F /* ProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingView.swift; sourceTree = "<group>"; };
+		D3FF7E1A2AE2EBFC0025389F /* ProfileSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E1E2AE2EC090025389F /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E222AE2EC150025389F /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		D3FF7E262AE2EC220025389F /* HistoryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryContentView.swift; sourceTree = "<group>"; };
@@ -418,6 +422,14 @@
 				D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */,
 			);
 			path = NewsModel;
+			sourceTree = "<group>";
+		};
+		D3A65EBA2AF2607A00D0E79B /* EditProfileSetting */ = {
+			isa = PBXGroup;
+			children = (
+				D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */,
+			);
+			path = EditProfileSetting;
 			sourceTree = "<group>";
 		};
 		D3B3F13A2ADD8D150000B662 /* Login */ = {
@@ -633,8 +645,9 @@
 		D3FF7DFB2AE2EB300025389F /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				D3FF7E162AE2EBF00025389F /* SettingView.swift */,
-				D3FF7E1A2AE2EBFC0025389F /* SettingViewModel.swift */,
+				D3A65EBA2AF2607A00D0E79B /* EditProfileSetting */,
+				D3FF7E162AE2EBF00025389F /* ProfileSettingView.swift */,
+				D3FF7E1A2AE2EBFC0025389F /* ProfileSettingViewModel.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -810,6 +823,7 @@
 				D3FF7E232AE2EC150025389F /* NewsView.swift in Sources */,
 				D3B3F1462ADD95C30000B662 /* AppState.swift in Sources */,
 				D36281442AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
+				D3A65EBC2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */,
 				D3B3F1952ADFE9BF0000B662 /* Backgrounds.swift in Sources */,
 				D3B3F18D2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F1692ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
@@ -832,7 +846,7 @@
 				D3FF7E0F2AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1402ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3FF7E032AE2EBA50025389F /* SponsorsView.swift in Sources */,
-				D3FF7E172AE2EBF00025389F /* SettingView.swift in Sources */,
+				D3FF7E172AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3FF7E132AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3A65EB32AEFFCA900D0E79B /* NewsModel.swift in Sources */,
 				D3A65EAE2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */,
@@ -851,7 +865,7 @@
 				D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D3B3F17B2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D323D8C82ABC58C800BBEC4E /* RideModel.swift in Sources */,
-				D3FF7E1B2AE2EBFC0025389F /* SettingViewModel.swift in Sources */,
+				D3FF7E1B2AE2EBFC0025389F /* ProfileSettingViewModel.swift in Sources */,
 				D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB02AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D362813B2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
@@ -890,13 +904,14 @@
 				D323D8C92ABC58C800BBEC4E /* RideModel.swift in Sources */,
 				D3B3F1772ADEA1F80000B662 /* VerificationPopUpView.swift in Sources */,
 				D3A65EAB2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
-				D3FF7E1C2AE2EBFC0025389F /* SettingViewModel.swift in Sources */,
+				D3FF7E1C2AE2EBFC0025389F /* ProfileSettingViewModel.swift in Sources */,
 				D3B3F16F2ADE9CD30000B662 /* RegisterEmailViewModel.swift in Sources */,
 				D3FF7E042AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3E7E68C2AE9670600C00157 /* ContactView.swift in Sources */,
 				D3A65EB42AEFFCA900D0E79B /* NewsModel.swift in Sources */,
 				D3E7E6882AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
 				D3FF7E142AE2EBE20025389F /* PointsView.swift in Sources */,
+				D3A65EBD2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3E7E67E2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
@@ -909,7 +924,7 @@
 				D323D8CD2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 				D3E7E6902AE9672D00C00157 /* PrimeMembersView.swift in Sources */,
 				D3B3F16A2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
-				D3FF7E182AE2EBF00025389F /* SettingView.swift in Sources */,
+				D3FF7E182AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3B3F1552ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F1412ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
@@ -933,6 +948,7 @@
 				D3FF7E252AE2EC150025389F /* NewsView.swift in Sources */,
 				D3B3F1482ADD95C30000B662 /* AppState.swift in Sources */,
 				D36281462AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
+				D3A65EBE2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */,
 				D3B3F1972ADFE9BF0000B662 /* Backgrounds.swift in Sources */,
 				D3B3F18F2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F16B2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
@@ -955,7 +971,7 @@
 				D3FF7E112AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1422ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3FF7E052AE2EBA50025389F /* SponsorsView.swift in Sources */,
-				D3FF7E192AE2EBF00025389F /* SettingView.swift in Sources */,
+				D3FF7E192AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3FF7E152AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3A65EB52AEFFCA900D0E79B /* NewsModel.swift in Sources */,
 				D3A65EB02AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */,
@@ -974,7 +990,7 @@
 				D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D3B3F17D2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D323D8CA2ABC58C800BBEC4E /* RideModel.swift in Sources */,
-				D3FF7E1D2AE2EBFC0025389F /* SettingViewModel.swift in Sources */,
+				D3FF7E1D2AE2EBFC0025389F /* ProfileSettingViewModel.swift in Sources */,
 				D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB22AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D362813D2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,

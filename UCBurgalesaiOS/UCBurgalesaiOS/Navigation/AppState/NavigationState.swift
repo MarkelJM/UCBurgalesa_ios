@@ -28,8 +28,8 @@ struct NavigationState: View {
             PointsView()
         case .sponsors:
             SponsorsView().environmentObject(appState)
-        case .settings:
-            SettingsView()
+        case .profileSettings:
+            ProfileSettingView(viewModel: ProfileSettingViewModel())
         case .club:
             ClubView().environmentObject(appState)
         case .news:

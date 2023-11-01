@@ -22,7 +22,7 @@ struct HomeView: View {
                 // Segunda fila de botones
                 HStack(spacing: 20) {
                     navigationButton(destination: .sponsors, imageName: "gift.fill")
-                    navigationButton(destination: .settings, imageName: "gearshape.fill")
+                    navigationButton(destination: .profileSettings, imageName: "gearshape.fill")
                 }
                 
                 // Tercera fila de botones
