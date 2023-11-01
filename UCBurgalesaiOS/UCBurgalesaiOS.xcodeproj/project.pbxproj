@@ -62,6 +62,9 @@
 		D3A65EBC2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */; };
 		D3A65EBD2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */; };
 		D3A65EBE2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */; };
+		D3A65EC02AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */; };
+		D3A65EC12AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */; };
+		D3A65EC22AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */; };
 		D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
@@ -229,6 +232,7 @@
 		D3A65EB22AEFFCA900D0E79B /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsModel+Firebase.swift"; sourceTree = "<group>"; };
 		D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSettingView.swift; sourceTree = "<group>"; };
+		D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckingModel+Firebase.swift"; sourceTree = "<group>"; };
 		D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3B3F13F2ADD8D370000B662 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3B3F1452ADD95C30000B662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -576,6 +580,7 @@
 			isa = PBXGroup;
 			children = (
 				D323D8CB2ABC58FB00BBEC4E /* CheckingModel.swift */,
+				D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */,
 			);
 			path = CheckingModel;
 			sourceTree = "<group>";
@@ -828,6 +833,7 @@
 				D3B3F18D2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F1692ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3E7E68F2AE9672D00C00157 /* PrimeMembersView.swift in Sources */,
+				D3A65EC02AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */,
 				D3B3F1652ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3E7E67D2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
@@ -887,6 +893,7 @@
 				D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
 				D3E7E67A2AE9229000C00157 /* SponsorModel.swift in Sources */,
 				D3B3F1612ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
+				D3A65EC12AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */,
 				D3FF7E282AE2EC220025389F /* HistoryContentView.swift in Sources */,
 				D3FF7E202AE2EC090025389F /* NewsViewModel.swift in Sources */,
 				D3E7E6992AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
@@ -953,6 +960,7 @@
 				D3B3F18F2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D3B3F16B2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3E7E6912AE9672D00C00157 /* PrimeMembersView.swift in Sources */,
+				D3A65EC22AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */,
 				D3B3F1672ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3E7E67F2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
