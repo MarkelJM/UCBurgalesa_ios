@@ -193,6 +193,31 @@ class FirestoreManager {
             completion(news, nil)
         }
     }
+    
+    ///CHECKING
+    
+    
+    func saveCheckin(checkin: CheckingModel, completion: @escaping (Bool, Error?) -> Void) {
+        let data = checkin.documentData
+        db.collection("checkins").addDocument(data: data) { error in
+            if let error = error {
+                completion(false, error)
+            } else {
+                completion(true, nil)
+            }
+        }
+    }
+    
+    func getCheckins(for userId: String, completion: @escaping ([CheckingModel]?, Error?) -> Void) {
+        db.collection("checkins").whereField("profileId", isEqualTo: userId).getDocuments { (snapshot, error) in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                let checkins = snapshot?.documents.compactMap { CheckingModel(documentData: $0.data()) }
+                completion(checkins, nil)
+            }
+        }
+    }
 
     
 

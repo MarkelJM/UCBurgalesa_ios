@@ -65,6 +65,12 @@
 		D3A65EC02AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */; };
 		D3A65EC12AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */; };
 		D3A65EC22AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */; };
+		D3A65EC52AF2C19800D0E79B /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EC42AF2C19800D0E79B /* CheckinViewModel.swift */; };
+		D3A65EC62AF2C19800D0E79B /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EC42AF2C19800D0E79B /* CheckinViewModel.swift */; };
+		D3A65EC72AF2C19800D0E79B /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EC42AF2C19800D0E79B /* CheckinViewModel.swift */; };
+		D3A65EC92AF2C1D500D0E79B /* CheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EC82AF2C1D500D0E79B /* CheckinView.swift */; };
+		D3A65ECA2AF2C1D500D0E79B /* CheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EC82AF2C1D500D0E79B /* CheckinView.swift */; };
+		D3A65ECB2AF2C1D500D0E79B /* CheckinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A65EC82AF2C1D500D0E79B /* CheckinView.swift */; };
 		D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
 		D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */; };
@@ -233,6 +239,8 @@
 		D3A65EB62AEFFCC700D0E79B /* NewsModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsModel+Firebase.swift"; sourceTree = "<group>"; };
 		D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSettingView.swift; sourceTree = "<group>"; };
 		D3A65EBF2AF2C0CC00D0E79B /* CheckingModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckingModel+Firebase.swift"; sourceTree = "<group>"; };
+		D3A65EC42AF2C19800D0E79B /* CheckinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewModel.swift; sourceTree = "<group>"; };
+		D3A65EC82AF2C1D500D0E79B /* CheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinView.swift; sourceTree = "<group>"; };
 		D3B3F13B2ADD8D2A0000B662 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D3B3F13F2ADD8D370000B662 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D3B3F1452ADD95C30000B662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -341,6 +349,7 @@
 				D362813E2AE288BD00E21A4F /* Home */,
 				D3B3F1872ADEE6E40000B662 /* Design */,
 				D3B3F1822ADEE2810000B662 /* Images */,
+				D3A65EC32AF2C17E00D0E79B /* Checkin */,
 				D3B3F14D2ADD96550000B662 /* Register */,
 				D3B3F1432ADD95A90000B662 /* Navigation */,
 				D3B3F13A2ADD8D150000B662 /* Login */,
@@ -434,6 +443,15 @@
 				D3A65EBB2AF2609600D0E79B /* EditProfileSettingView.swift */,
 			);
 			path = EditProfileSetting;
+			sourceTree = "<group>";
+		};
+		D3A65EC32AF2C17E00D0E79B /* Checkin */ = {
+			isa = PBXGroup;
+			children = (
+				D3A65EC42AF2C19800D0E79B /* CheckinViewModel.swift */,
+				D3A65EC82AF2C1D500D0E79B /* CheckinView.swift */,
+			);
+			path = Checkin;
 			sourceTree = "<group>";
 		};
 		D3B3F13A2ADD8D150000B662 /* Login */ = {
@@ -851,6 +869,7 @@
 				D3A65EB72AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
 				D3FF7E0F2AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1402ADD8D370000B662 /* LoginView.swift in Sources */,
+				D3A65EC52AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
 				D3FF7E032AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E172AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3FF7E132AE2EBE20025389F /* PointsView.swift in Sources */,
@@ -866,6 +885,7 @@
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
 				D3B3F1502ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15C2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
+				D3A65EC92AF2C1D500D0E79B /* CheckinView.swift in Sources */,
 				D3B3F1542ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F17F2ADEDE980000B662 /* ProfileRegisterView.swift in Sources */,
 				D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
@@ -917,9 +937,11 @@
 				D3E7E68C2AE9670600C00157 /* ContactView.swift in Sources */,
 				D3A65EB42AEFFCA900D0E79B /* NewsModel.swift in Sources */,
 				D3E7E6882AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
+				D3A65ECA2AF2C1D500D0E79B /* CheckinView.swift in Sources */,
 				D3FF7E142AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3A65EBD2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
+				D3A65EC62AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
 				D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3E7E67E2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
 				D3FF7E0C2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
@@ -978,6 +1000,7 @@
 				D3A65EB92AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
 				D3FF7E112AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1422ADD8D370000B662 /* LoginView.swift in Sources */,
+				D3A65EC72AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
 				D3FF7E052AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E192AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3FF7E152AE2EBE20025389F /* PointsView.swift in Sources */,
@@ -993,6 +1016,7 @@
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
 				D3B3F1522ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
 				D3B3F15E2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
+				D3A65ECB2AF2C1D500D0E79B /* CheckinView.swift in Sources */,
 				D3B3F1562ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F1812ADEDE980000B662 /* ProfileRegisterView.swift in Sources */,
 				D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,

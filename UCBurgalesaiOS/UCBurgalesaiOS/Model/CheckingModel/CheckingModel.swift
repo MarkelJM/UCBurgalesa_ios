@@ -16,7 +16,8 @@ struct CheckingModel {
     var pointsAwarded: Int
 }
 
-enum CheckType {
-    case start
-    case rest
+enum CheckType: String {
+    case start = "start"
+    case rest = "rest"
 }
+
