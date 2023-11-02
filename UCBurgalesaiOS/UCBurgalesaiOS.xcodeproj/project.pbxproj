@@ -158,6 +158,18 @@
 		D3E7E6982AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */; };
 		D3E7E6992AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */; };
 		D3E7E69A2AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */; };
+		D3FEA9432AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
+		D3FEA9442AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
+		D3FEA9452AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
+		D3FEA9472AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */; };
+		D3FEA9482AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */; };
+		D3FEA9492AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */; };
+		D3FEA94B2AF40521003B0A5D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */; };
+		D3FEA94C2AF40521003B0A5D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */; };
+		D3FEA94D2AF40521003B0A5D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */; };
+		D3FEA94F2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */; };
+		D3FEA9502AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */; };
+		D3FEA9512AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */; };
 		D3FF7DFF2AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E012AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
@@ -270,6 +282,10 @@
 		D3E7E68E2AE9672D00C00157 /* PrimeMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeMembersView.swift; sourceTree = "<group>"; };
 		D3E7E6922AE9675800C00157 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeMembersViewModel.swift; sourceTree = "<group>"; };
+		D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideCheckinModel.xcdatamodel; sourceTree = "<group>"; };
+		D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckinModel+CoreData.swift"; sourceTree = "<group>"; };
+		D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckin+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E022AE2EBA50025389F /* SponsorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsView.swift; sourceTree = "<group>"; };
 		D3FF7E062AE2EBB50025389F /* RoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListView.swift; sourceTree = "<group>"; };
@@ -340,6 +356,7 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3FEA9402AF40442003B0A5D /* CoreData */,
 				D3FF7DFD2AE2EB3C0025389F /* Club */,
 				D3FF7DFC2AE2EB370025389F /* News */,
 				D3FF7DFB2AE2EB300025389F /* Setting */,
@@ -637,6 +654,17 @@
 			path = PrimeMembers;
 			sourceTree = "<group>";
 		};
+		D3FEA9402AF40442003B0A5D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */,
+				D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */,
+				D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */,
+				D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		D3FF7DF82AE2EAE60025389F /* Sponsors */ = {
 			isa = PBXGroup;
 			children = (
@@ -843,6 +871,7 @@
 				D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E0B2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
 				D3E7E6872AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
+				D3FEA9472AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */,
 				D3FF7E232AE2EC150025389F /* NewsView.swift in Sources */,
 				D3B3F1462ADD95C30000B662 /* AppState.swift in Sources */,
 				D36281442AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
@@ -880,6 +909,8 @@
 				D3B3F1722ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14A2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D3FF7DFF2AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
+				D3FEA94B2AF40521003B0A5D /* CoreDataManager.swift in Sources */,
+				D3FEA94F2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */,
 				D3E7E6792AE9229000C00157 /* SponsorModel.swift in Sources */,
 				D3E7E6932AE9675800C00157 /* ClubView.swift in Sources */,
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
@@ -898,6 +929,7 @@
 				D3A65EAA2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
 				D3E7E6982AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
+				D3FEA9432AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,13 +938,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B3F1662ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
+				D3FEA9502AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */,
 				D3B3F18A2ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
+				D3FEA9482AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */,
 				D36281412AE288E000E21A4F /* HomeView.swift in Sources */,
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
 				D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
 				D3E7E67A2AE9229000C00157 /* SponsorModel.swift in Sources */,
 				D3B3F1612ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
+				D3FEA9442AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */,
 				D3A65EC12AF2C0CC00D0E79B /* CheckingModel+Firebase.swift in Sources */,
 				D3FF7E282AE2EC220025389F /* HistoryContentView.swift in Sources */,
 				D3FF7E202AE2EC090025389F /* NewsViewModel.swift in Sources */,
@@ -946,6 +981,7 @@
 				D3E7E67E2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
 				D3FF7E0C2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
 				D3FF7E102AE2EBD60025389F /* PointsViewModel.swift in Sources */,
+				D3FEA94C2AF40521003B0A5D /* CoreDataManager.swift in Sources */,
 				D3B3F1922ADFDEA30000B662 /* Styles.swift in Sources */,
 				D3B3F1852ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3B3F1962ADFE9BF0000B662 /* Backgrounds.swift in Sources */,
@@ -974,6 +1010,7 @@
 				D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E0D2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
 				D3E7E6892AE963C300C00157 /* ClubTopTabBar.swift in Sources */,
+				D3FEA9492AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */,
 				D3FF7E252AE2EC150025389F /* NewsView.swift in Sources */,
 				D3B3F1482ADD95C30000B662 /* AppState.swift in Sources */,
 				D36281462AE288EF00E21A4F /* HomeViewModel.swift in Sources */,
@@ -1011,6 +1048,8 @@
 				D3B3F1742ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
 				D3B3F14C2ADD962D0000B662 /* NavigationState.swift in Sources */,
 				D3FF7E012AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
+				D3FEA94D2AF40521003B0A5D /* CoreDataManager.swift in Sources */,
+				D3FEA9512AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */,
 				D3E7E67B2AE9229000C00157 /* SponsorModel.swift in Sources */,
 				D3E7E6952AE9675800C00157 /* ClubView.swift in Sources */,
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
@@ -1029,6 +1068,7 @@
 				D3A65EAC2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
 				D3E7E69A2AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
+				D3FEA9452AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1390,6 +1430,19 @@
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */,
+			);
+			currentVersion = D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */;
+			path = RideCheckinModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D323D88D2ABC57E800BBEC4E /* Project object */;
 }
