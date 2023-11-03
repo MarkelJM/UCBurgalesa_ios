@@ -170,6 +170,12 @@
 		D3FEA94F2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */; };
 		D3FEA9502AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */; };
 		D3FEA9512AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */; };
+		D3FEA9542AF50F57003B0A5D /* PointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9532AF50F57003B0A5D /* PointsModel.swift */; };
+		D3FEA9552AF50F57003B0A5D /* PointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9532AF50F57003B0A5D /* PointsModel.swift */; };
+		D3FEA9562AF50F57003B0A5D /* PointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9532AF50F57003B0A5D /* PointsModel.swift */; };
+		D3FEA9582AF512C2003B0A5D /* PointsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9572AF512C2003B0A5D /* PointsModel+Firebase.swift */; };
+		D3FEA9592AF512C2003B0A5D /* PointsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9572AF512C2003B0A5D /* PointsModel+Firebase.swift */; };
+		D3FEA95A2AF512C2003B0A5D /* PointsModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9572AF512C2003B0A5D /* PointsModel+Firebase.swift */; };
 		D3FF7DFF2AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
 		D3FF7E012AE2EB930025389F /* SponsorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */; };
@@ -286,6 +292,8 @@
 		D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckinModel+CoreData.swift"; sourceTree = "<group>"; };
 		D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D3FEA94E2AF408AF003B0A5D /* RideCheckin+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D3FEA9532AF50F57003B0A5D /* PointsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsModel.swift; sourceTree = "<group>"; };
+		D3FEA9572AF512C2003B0A5D /* PointsModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PointsModel+Firebase.swift"; sourceTree = "<group>"; };
 		D3FF7DFE2AE2EB930025389F /* SponsorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsViewModel.swift; sourceTree = "<group>"; };
 		D3FF7E022AE2EBA50025389F /* SponsorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorsView.swift; sourceTree = "<group>"; };
 		D3FF7E062AE2EBB50025389F /* RoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListView.swift; sourceTree = "<group>"; };
@@ -408,6 +416,7 @@
 		D323D8C22ABC580B00BBEC4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D3FEA9522AF50F35003B0A5D /* Points */,
 				D3A65EB12AEFFC9000D0E79B /* NewsModel */,
 				D3E7E6842AE9230D00C00157 /* SponsorModel */,
 				D3E7E6832AE9230200C00157 /* CodeVerifyModel */,
@@ -665,6 +674,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		D3FEA9522AF50F35003B0A5D /* Points */ = {
+			isa = PBXGroup;
+			children = (
+				D3FEA9532AF50F57003B0A5D /* PointsModel.swift */,
+				D3FEA9572AF512C2003B0A5D /* PointsModel+Firebase.swift */,
+			);
+			path = Points;
+			sourceTree = "<group>";
+		};
 		D3FF7DF82AE2EAE60025389F /* Sponsors */ = {
 			isa = PBXGroup;
 			children = (
@@ -894,6 +912,7 @@
 				D3FF7E272AE2EC220025389F /* HistoryContentView.swift in Sources */,
 				D36281372AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D89B2ABC57E800BBEC4E /* ContentView.swift in Sources */,
+				D3FEA9582AF512C2003B0A5D /* PointsModel+Firebase.swift in Sources */,
 				D3FF7E072AE2EBB50025389F /* RoutesListView.swift in Sources */,
 				D3A65EB72AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
 				D3FF7E0F2AE2EBD60025389F /* PointsViewModel.swift in Sources */,
@@ -901,6 +920,7 @@
 				D3A65EC52AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
 				D3FF7E032AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E172AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
+				D3FEA9542AF50F57003B0A5D /* PointsModel.swift in Sources */,
 				D3FF7E132AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3A65EB32AEFFCA900D0E79B /* NewsModel.swift in Sources */,
 				D3A65EAE2AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */,
@@ -942,6 +962,7 @@
 				D3B3F18A2ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3FEA9482AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */,
+				D3FEA9552AF50F57003B0A5D /* PointsModel.swift in Sources */,
 				D36281412AE288E000E21A4F /* HomeView.swift in Sources */,
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
 				D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
@@ -983,6 +1004,7 @@
 				D3FF7E102AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3FEA94C2AF40521003B0A5D /* CoreDataManager.swift in Sources */,
 				D3B3F1922ADFDEA30000B662 /* Styles.swift in Sources */,
+				D3FEA9592AF512C2003B0A5D /* PointsModel+Firebase.swift in Sources */,
 				D3B3F1852ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3B3F1962ADFE9BF0000B662 /* Backgrounds.swift in Sources */,
 				D3115FB12AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
@@ -1033,6 +1055,7 @@
 				D3FF7E292AE2EC220025389F /* HistoryContentView.swift in Sources */,
 				D36281392AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
 				D323D8B42ABC57E900BBEC4E /* UCBurgalesaiOSUITests.swift in Sources */,
+				D3FEA95A2AF512C2003B0A5D /* PointsModel+Firebase.swift in Sources */,
 				D3FF7E092AE2EBB50025389F /* RoutesListView.swift in Sources */,
 				D3A65EB92AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
 				D3FF7E112AE2EBD60025389F /* PointsViewModel.swift in Sources */,
@@ -1040,6 +1063,7 @@
 				D3A65EC72AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
 				D3FF7E052AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E192AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
+				D3FEA9562AF50F57003B0A5D /* PointsModel.swift in Sources */,
 				D3FF7E152AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3A65EB52AEFFCA900D0E79B /* NewsModel.swift in Sources */,
 				D3A65EB02AEFC9EA00D0E79B /* DetailsRoutesViewModel.swift in Sources */,

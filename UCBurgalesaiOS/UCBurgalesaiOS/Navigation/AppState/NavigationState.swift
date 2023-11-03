@@ -25,7 +25,7 @@ struct NavigationState: View {
         case .routesList:
             RoutesListView().environmentObject(appState)
         case .points:
-            PointsView()
+            PointsView().environmentObject(appState)
         case .sponsors:
             SponsorsView().environmentObject(appState)
         case .profileSettings:

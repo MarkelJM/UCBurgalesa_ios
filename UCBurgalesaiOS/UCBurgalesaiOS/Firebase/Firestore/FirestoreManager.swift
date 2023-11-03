@@ -250,6 +250,37 @@ class FirestoreManager {
             }
         }
     }
+    ///POINTS
+    // Método para obtener los puntos totales de un usuario
+        func getTotalPoints(for userId: String, completion: @escaping (Int) -> Void) {
+            let userPointsRef = db.collection("PointsUCB").document(userId)
+            userPointsRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let totalPoints = document.data()?["totalPoints"] as? Int ?? 0
+                    completion(totalPoints)
+                } else {
+                    // Manejar el caso en que no existan puntos o haya un error
+                    completion(0)
+                }
+            }
+        }
+
+        // Método para obtener los puntos por salida de un usuario
+        func getRidePoints(for userId: String, completion: @escaping ([PointsModel]) -> Void) {
+            let userRidePointsRef = db.collection("PointsUCB").document(userId).collection("RidePoints")
+            userRidePointsRef.getDocuments { (snapshot, error) in
+                var pointsArray: [PointsModel] = []
+                if let snapshot = snapshot {
+                    for document in snapshot.documents {
+                        if let pointsModel = PointsModel(from: document.data()) {
+                            pointsArray.append(pointsModel)
+                        }
+                    }
+                }
+                // Devolver el array de puntos por salida
+                completion(pointsArray)
+            }
+        }
 
     
 
