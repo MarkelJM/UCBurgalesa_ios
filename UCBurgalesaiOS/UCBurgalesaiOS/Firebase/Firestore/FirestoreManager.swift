@@ -218,6 +218,38 @@ class FirestoreManager {
             }
         }
     }
+    ///POINTSUCB
+    func updatePoints(for userId: String, with score: Int, for rideId: String, completion: @escaping (Bool) -> Void) {
+        let userPointsRef = db.collection("PointsUCB").document(userId)
+        
+        db.runTransaction({ (transaction, errorPointer) -> Any? in
+            let userDocument: DocumentSnapshot
+            do {
+                try userDocument = transaction.getDocument(userPointsRef)
+            } catch let fetchError as NSError {
+                errorPointer?.pointee = fetchError
+                return nil
+            }
+            
+            let oldPoints = userDocument.data()?["totalPoints"] as? Int ?? 0
+            let newPoints = oldPoints + score
+            transaction.updateData(["totalPoints": newPoints], forDocument: userPointsRef)
+            
+            // Agrega un registro de la salida con los puntos
+            let ridePointsData = ["rideId": rideId, "points": score, "date": FieldValue.serverTimestamp()] as [String : Any]
+            transaction.setData(ridePointsData, forDocument: userPointsRef.collection("RidePoints").document())
+            
+            return nil
+        }) { (object, error) in
+            if let error = error {
+                print("Transaction failed: \(error)")
+                completion(false)
+            } else {
+                print("Transaction successfully committed!")
+                completion(true)
+            }
+        }
+    }
 
     
 

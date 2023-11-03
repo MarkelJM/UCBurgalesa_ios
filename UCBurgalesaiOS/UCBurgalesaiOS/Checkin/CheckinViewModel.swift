@@ -42,5 +42,39 @@ class CheckinViewModel: ObservableObject {
             return isUserWithinRadius(userLocation: userLocation, targetLocation: ride.restStopCoordinates, radius: ride.restStopCheckinRadius) && currentDate >= ride.minRestStopCheckinTime
         }
     }
+    
+    
+    
+    func verifyCheckinsAndAwardPoints(for ride: RideModel, userId: String, completion: @escaping (Bool) -> Void) {
+        firestoreManager.getCheckins(for: userId) { (checkins, error) in
+            if let error = error {
+                print("Error fetching checkins: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            
+            guard let checkins = checkins else {
+                completion(false)
+                return
+            }
+            
+            let hasStartCheckin = checkins.contains { $0.rideId == ride.rideId && $0.checkinType == .start }
+            let hasRestCheckin = checkins.contains { $0.rideId == ride.rideId && $0.checkinType == .rest }
+            
+            if hasStartCheckin && hasRestCheckin {
+                // Utiliza el score de RideModel para determinar los puntos a otorgar
+                let pointsToAward = ride.score
+                
+                // Actualiza Firebase con los nuevos puntos
+                self.firestoreManager.updatePoints(for: userId, with: pointsToAward, for: ride.rideId) { success in
+                    completion(success)
+                }
+            } else {
+                completion(false)
+            }
+        }
+    }
+
+
 }
 
