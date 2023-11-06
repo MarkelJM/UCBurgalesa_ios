@@ -10,8 +10,13 @@ import Foundation
 class AppState: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var selectedRide: RideModel? // used for detailroutes inicializator
-    @Published var currentView: AppView = .login
-    
+    @Published var currentView: AppView = .login {
+        didSet {
+            // Actualiza la visibilidad de la TabBar basada en la vista actual
+            isTabViewHidden = !(currentView == .home || currentView == .detailRoute)
+        }
+    }
+    @Published var isTabViewHidden: Bool = true
     enum AppView {
         case onboarding
         case login

@@ -49,10 +49,7 @@ struct HomeView: View {
             .padding()
             .navigationBarTitle("Home", displayMode: .inline)
         }
-        .tabItem {
-            Image(systemName: "house.fill")
-            Text("Home")
-        }
+        
     }
     
     func navigationButton(destination: AppState.AppView, imageName: String) -> some View {

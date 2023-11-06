@@ -165,6 +165,9 @@
 		D3FA78902AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */; };
 		D3FA78912AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */; };
 		D3FA78922AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */; };
+		D3FA78952AF914D300D1D9E9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78942AF914D300D1D9E9 /* TabBarView.swift */; };
+		D3FA78962AF914D300D1D9E9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78942AF914D300D1D9E9 /* TabBarView.swift */; };
+		D3FA78972AF914D300D1D9E9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78942AF914D300D1D9E9 /* TabBarView.swift */; };
 		D3FEA9432AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9442AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9452AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
@@ -297,6 +300,7 @@
 		D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeMembersViewModel.swift; sourceTree = "<group>"; };
 		D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D3FA78942AF914D300D1D9E9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideCheckinModel.xcdatamodel; sourceTree = "<group>"; };
 		D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckinModel+CoreData.swift"; sourceTree = "<group>"; };
 		D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -505,6 +509,7 @@
 		D3B3F1432ADD95A90000B662 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				D3FA78932AF914B900D1D9E9 /* TabBar */,
 				D3E7E6852AE963A200C00157 /* ClubNavigation */,
 				D3B3F1442ADD95B20000B662 /* AppState */,
 			);
@@ -689,6 +694,14 @@
 				D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		D3FA78932AF914B900D1D9E9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA78942AF914D300D1D9E9 /* TabBarView.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		D3FEA9402AF40442003B0A5D /* CoreData */ = {
@@ -949,6 +962,7 @@
 				D3FF7E0F2AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1402ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3A65EC52AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
+				D3FA78952AF914D300D1D9E9 /* TabBarView.swift in Sources */,
 				D3FF7E032AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E172AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3FEA9542AF50F57003B0A5D /* PointsModel.swift in Sources */,
@@ -1046,6 +1060,7 @@
 				D3E7E6902AE9672D00C00157 /* PrimeMembersView.swift in Sources */,
 				D3B3F16A2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3FF7E182AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
+				D3FA78962AF914D300D1D9E9 /* TabBarView.swift in Sources */,
 				D3B3F1552ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F1412ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
@@ -1096,6 +1111,7 @@
 				D3FF7E112AE2EBD60025389F /* PointsViewModel.swift in Sources */,
 				D3B3F1422ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3A65EC72AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
+				D3FA78972AF914D300D1D9E9 /* TabBarView.swift in Sources */,
 				D3FF7E052AE2EBA50025389F /* SponsorsView.swift in Sources */,
 				D3FF7E192AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3FEA9562AF50F57003B0A5D /* PointsModel.swift in Sources */,

@@ -69,10 +69,13 @@ class ProfileRegisterViewModel: ObservableObject {
                         }
 
                         if let profilePhotoURL = url {
-                            self.profilePhoto = profilePhotoURL
-                            self.saveProfile()
+                            DispatchQueue.main.async {
+                                self.profilePhoto = profilePhotoURL
+                                self.saveProfile()
+                            }
                         }
                     }
+
                 }
             }
         } else {
@@ -110,11 +113,14 @@ class ProfileRegisterViewModel: ObservableObject {
             } else if success {
                 // Aquí también debes obtener el token de Firebase y guardarlo
                 if let token = Auth.auth().currentUser?.uid { // Usando el UID como token de ejemplo
-                    keychainManager.saveToken(token: token)
+                    self.keychainManager.saveToken(token)
                 }
-                appState.currentView = .home
+                DispatchQueue.main.async {
+                    self.appState.currentView = .home
+                }
             }
         }
+
     }
     
     func loadProfile() {

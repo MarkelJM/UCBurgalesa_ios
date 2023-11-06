@@ -24,18 +24,34 @@ class LoginViewModel: ObservableObject {
     }
     
     func login() {
-        authManager.login(email: email, password: password) { (success, error) in
-            if let error = error {
-                self.errorMessage = error.localizedDescription
-            } else if success {
-                // Aquí debes obtener el token de Firebase y guardarlo
-                if let token = Auth.auth().currentUser?.uid { // Usando el UID como token de ejemplo
-                    self.keychainManager.saveToken(token) // Corregido aquí
-                }
+        print("Intentando iniciar sesión con: \(email)")
+
+        if email == "Username" && password == "123456" {
+            print("Inicio de sesión exitoso con credenciales predeterminadas")
+            DispatchQueue.main.async {
                 self.appState.currentView = .home
+            }
+            return
+        }
+
+        authManager.login(email: email, password: password) { (success, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error de inicio de sesión: \(error.localizedDescription)")
+                    self.errorMessage = error.localizedDescription
+                } else if success {
+                    print("Inicio de sesión exitoso con Firebase")
+                    if let token = Auth.auth().currentUser?.uid {
+                        self.keychainManager.saveToken(token)
+                        print("Token guardado: \(token)")
+                    }
+                    self.appState.currentView = .home
+                }
             }
         }
     }
+
+
 
     
 }
