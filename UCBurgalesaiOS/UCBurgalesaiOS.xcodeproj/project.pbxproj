@@ -158,6 +158,13 @@
 		D3E7E6982AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */; };
 		D3E7E6992AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */; };
 		D3E7E69A2AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */; };
+		D3FA78882AF520A800D1D9E9 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3FA78872AF520A800D1D9E9 /* KeychainSwift */; };
+		D3FA788C2AF8FC3500D1D9E9 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */; };
+		D3FA788D2AF8FC3500D1D9E9 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */; };
+		D3FA788E2AF8FC3500D1D9E9 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */; };
+		D3FA78902AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */; };
+		D3FA78912AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */; };
+		D3FA78922AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */; };
 		D3FEA9432AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9442AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9452AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
@@ -288,6 +295,8 @@
 		D3E7E68E2AE9672D00C00157 /* PrimeMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeMembersView.swift; sourceTree = "<group>"; };
 		D3E7E6922AE9675800C00157 /* ClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubView.swift; sourceTree = "<group>"; };
 		D3E7E6972AEA71ED00C00157 /* PrimeMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeMembersViewModel.swift; sourceTree = "<group>"; };
+		D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideCheckinModel.xcdatamodel; sourceTree = "<group>"; };
 		D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckinModel+CoreData.swift"; sourceTree = "<group>"; };
 		D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -313,6 +322,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FA78882AF520A800D1D9E9 /* KeychainSwift in Frameworks */,
 				D323D8ED2AC5DC7D00BBEC4E /* FirebaseFirestoreSwift in Frameworks */,
 				D323D8E92AC5DC7D00BBEC4E /* FirebaseCrashlytics in Frameworks */,
 				D323D8F12AC5DC7D00BBEC4E /* FirebaseMessaging in Frameworks */,
@@ -364,6 +374,8 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3FA788A2AF8FB8500D1D9E9 /* Keychain */,
+				D3FA78892AF8FB7700D1D9E9 /* Onboarding */,
 				D3FEA9402AF40442003B0A5D /* CoreData */,
 				D3FF7DFD2AE2EB3C0025389F /* Club */,
 				D3FF7DFC2AE2EB370025389F /* News */,
@@ -663,6 +675,22 @@
 			path = PrimeMembers;
 			sourceTree = "<group>";
 		};
+		D3FA78892AF8FB7700D1D9E9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D3FA788A2AF8FB8500D1D9E9 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		D3FEA9402AF40442003B0A5D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -766,6 +794,7 @@
 				D323D8EE2AC5DC7D00BBEC4E /* FirebaseFunctions */,
 				D323D8F02AC5DC7D00BBEC4E /* FirebaseMessaging */,
 				D323D8F22AC5DC7D00BBEC4E /* FirebaseStorage */,
+				D3FA78872AF520A800D1D9E9 /* KeychainSwift */,
 			);
 			productName = UCBurgalesaiOS;
 			productReference = D323D8952ABC57E800BBEC4E /* UCBurgalesaiOS.app */;
@@ -841,6 +870,7 @@
 			mainGroup = D323D88C2ABC57E800BBEC4E;
 			packageReferences = (
 				D323D8E32AC5DC7D00BBEC4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D3FA78862AF520A800D1D9E9 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = D323D8962ABC57E800BBEC4E /* Products */;
 			projectDirPath = "";
@@ -885,6 +915,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FA78902AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */,
 				D3B3F1912ADFDEA30000B662 /* Styles.swift in Sources */,
 				D323D8C42ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E0B2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
@@ -946,6 +977,7 @@
 				D3B3F1842ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB02AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D362813B2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
+				D3FA788C2AF8FC3500D1D9E9 /* KeychainManager.swift in Sources */,
 				D3A65EAA2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
 				D3E7E6982AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
@@ -978,6 +1010,7 @@
 				D3B3F18E2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E082AE2EBB50025389F /* RoutesListView.swift in Sources */,
+				D3FA78912AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */,
 				D3E7E6942AE9675800C00157 /* ClubView.swift in Sources */,
 				D3B3F17C2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D362813C2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
@@ -996,6 +1029,7 @@
 				D3A65ECA2AF2C1D500D0E79B /* CheckinView.swift in Sources */,
 				D3FF7E142AE2EBE20025389F /* PointsView.swift in Sources */,
 				D3A65EBD2AF2609600D0E79B /* EditProfileSettingView.swift in Sources */,
+				D3FA788D2AF8FC3500D1D9E9 /* KeychainManager.swift in Sources */,
 				D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3A65EC62AF2C19800D0E79B /* CheckinViewModel.swift in Sources */,
 				D3B3F1732ADE9D190000B662 /* RegisterEmailView.swift in Sources */,
@@ -1028,6 +1062,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FA78922AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */,
 				D3B3F1932ADFDEA30000B662 /* Styles.swift in Sources */,
 				D323D8C62ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E0D2AE2EBC10025389F /* RoutesListViewModel.swift in Sources */,
@@ -1089,6 +1124,7 @@
 				D3B3F1862ADEE2B00000B662 /* ImagePicker.swift in Sources */,
 				D3115FB22AD5C06200E437D0 /* RideModel+Firebase.swift in Sources */,
 				D362813D2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
+				D3FA788E2AF8FC3500D1D9E9 /* KeychainManager.swift in Sources */,
 				D3A65EAC2AEFC66900D0E79B /* DetailRoutesView.swift in Sources */,
 				D3E7E69A2AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
@@ -1410,6 +1446,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		D3FA78862AF520A800D1D9E9 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1452,6 +1496,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D323D8E32AC5DC7D00BBEC4E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		D3FA78872AF520A800D1D9E9 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3FA78862AF520A800D1D9E9 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
