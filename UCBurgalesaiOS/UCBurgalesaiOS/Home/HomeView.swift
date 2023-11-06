@@ -5,15 +5,28 @@
 //  Created by Markel Juaristi on 20/10/23.
 //
 import SwiftUI
+import KeychainSwift
 
 struct HomeView: View {
     @StateObject var viewModel = HomeViewModel()
     @EnvironmentObject var appState: AppState
+    @StateObject private var keychainManager = KeychainManager()
     
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
                 // Primer fila de botones
+                HStack{
+                    Button("Cerrar sesión") {
+                        keychainManager.deleteToken()
+                        appState.currentView = .login
+                    }
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    .frame(maxWidth: .infinity, alignment: .topTrailing)
+                }
                 HStack(spacing: 20) {
                     navigationButton(destination: .routesList, imageName: "map")
                     navigationButton(destination: .points, imageName: "star.fill")

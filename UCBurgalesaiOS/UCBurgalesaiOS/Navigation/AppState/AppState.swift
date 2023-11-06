@@ -13,6 +13,7 @@ class AppState: ObservableObject {
     @Published var currentView: AppView = .login
     
     enum AppView {
+        case onboarding
         case login
         case registerEmail
         case codeVerify

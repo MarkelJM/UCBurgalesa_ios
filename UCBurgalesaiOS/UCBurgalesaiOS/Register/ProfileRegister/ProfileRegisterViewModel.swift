@@ -35,6 +35,7 @@ class ProfileRegisterViewModel: ObservableObject {
     
     private var firestoreManager = FirestoreManager()
     private var cancellables = Set<AnyCancellable>()
+    @StateObject private var keychainManager = KeychainManager()
     
     @Published var selectedImage: UIImage?//to upload photo
     
@@ -77,6 +78,8 @@ class ProfileRegisterViewModel: ObservableObject {
         } else {
             saveProfile()
         }
+        
+        
     }
     
     func saveProfile() {
@@ -105,8 +108,11 @@ class ProfileRegisterViewModel: ObservableObject {
             if let error = error {
                 self.errorMessage = error.localizedDescription
             } else if success {
-                // Navegar a la vista principal (home)
-                self.appState.currentView = .home
+                // Aquí también debes obtener el token de Firebase y guardarlo
+                if let token = Auth.auth().currentUser?.uid { // Usando el UID como token de ejemplo
+                    keychainManager.saveToken(token: token)
+                }
+                appState.currentView = .home
             }
         }
     }

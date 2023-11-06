@@ -8,7 +8,7 @@
 import Foundation
 import KeychainSwift
 
-class KeychainManager {
+class KeychainManager: ObservableObject { 
     private let keychain = KeychainSwift()
 
     private let tokenKey = "authToken"

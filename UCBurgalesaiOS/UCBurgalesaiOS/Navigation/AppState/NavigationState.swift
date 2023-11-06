@@ -12,6 +12,8 @@ struct NavigationState: View {
     
     var body: some View {
         switch appState.currentView {
+        case .onboarding:
+            OnboardingView()
         case .login:
             LoginView(appState: appState)
         case .registerEmail:
