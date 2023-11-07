@@ -9,11 +9,13 @@ import SwiftUI
 
 struct NavigationState: View {
     @EnvironmentObject var appState: AppState
-    @StateObject var checkinViewModel = CheckinViewModel() //temporal; no sera necesario, ya que se accederá por el TabBar unica y exclusivamente al checkin
     
     var body: some View {
         Group {
             if appState.shouldShowTabBar {
+                TabBarView() // La TabBarView se muestra cuando shouldShowTabBar es true
+            } else {
+                // Aquí manejas las vistas que no muestran el TabBar
                 switch appState.currentView {
                 case .onboarding:
                     OnboardingView()
@@ -38,28 +40,21 @@ struct NavigationState: View {
                 case .club:
                     ClubView().environmentObject(appState)
                 case .news:
-                    NewsView().environmentObject(appState) 
-                case .home:
-                    HomeView().environmentObject(appState)
-                case .checkin:
-                    CheckinView(viewModel: checkinViewModel)
+                    NewsView().environmentObject(appState)
                 case .detailRoute:
-                    Group {
-                        if let selectedRide = appState.selectedRide {
-                            DetailRoutesView(viewModel: DetailRoutesViewModel(ride: selectedRide))
-                                .environmentObject(appState)
-                        } else {
-                            Text("No ride selected")
-                        }
+                    if let selectedRide = appState.selectedRide {
+                        DetailRoutesView(viewModel: DetailRoutesViewModel(ride: selectedRide))
+                            .environmentObject(appState)
+                    } else {
+                        Text("No ride selected")
                     }
+                default:
+                    EmptyView() // Para cualquier otro caso no manejado
                 }
-            } else {
-                TabBarView() // La TabBarView se muestra cuando no está oculta
             }
         }
     }
 }
-
 /*
 
 struct NavigationState: View {

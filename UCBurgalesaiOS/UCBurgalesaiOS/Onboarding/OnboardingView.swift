@@ -34,11 +34,15 @@ struct OnboardingView: View {
     }
 
     private func navigateBasedOnAuthentication() {
-        if progress >= 10 {
+        if progress >= 10 { // Asegúrate de que esta condición coincida con el progreso total
             if keychainManager.getToken() != nil {
-                appState.currentView = .home
+                DispatchQueue.main.async {
+                    self.appState.currentView = .home
+                }
             } else {
-                appState.currentView = .login
+                DispatchQueue.main.async {
+                    self.appState.currentView = .login
+                }
             }
         }
     }

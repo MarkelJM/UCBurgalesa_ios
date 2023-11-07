@@ -9,14 +9,15 @@ import Foundation
 
 class AppState: ObservableObject {
     @Published var isLoggedIn: Bool = false
-    @Published var selectedRide: RideModel? // used for detailroutes inicializator
-    @Published var shouldShowTabBar: Bool = true
+    @Published var selectedRide: RideModel? // Utilizado para el inicializador de DetailRoutes
+    @Published var shouldShowTabBar: Bool = false // Por defecto es true para mostrar en home y checkin
     @Published var currentView: AppView = .onboarding {
         didSet {
-            shouldShowTabBar = !(currentView == .onboarding || currentView == .login)
+            // El TabBar se muestra solo en home y checkin
+            shouldShowTabBar = (currentView == .home || currentView == .checkin)
+            print("shouldShowTabBar is now \(shouldShowTabBar)")
         }
     }
-
     
     enum AppView {
         case onboarding
