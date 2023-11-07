@@ -15,12 +15,18 @@ struct CheckinView: View {
     
     var body: some View {
         VStack {
-            // Botón para iniciar el check-in
+            Picker("Tipo de Ruta", selection: $viewModel.selectedRouteType) {
+                Text("Corta").tag(RouteType.short)
+                Text("Larga").tag(RouteType.long)
+                Text("Todos").tag(RouteType.all)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            
             Button("Iniciar Check-in") {
                 viewModel.requestUserLocation()
             }
+            .disabled(viewModel.selectedRouteType == nil)
             
-            // Mensaje de éxito
             if viewModel.isCheckinSuccessful {
                 Text("Check-in realizado con éxito.")
             }
@@ -34,7 +40,6 @@ struct CheckinView: View {
         })
     }
 }
-
 
 
 /*

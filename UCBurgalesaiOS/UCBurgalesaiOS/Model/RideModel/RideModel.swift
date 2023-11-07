@@ -30,7 +30,7 @@ struct RideModel: Identifiable {
 
 enum RouteType: String {
     case long
-    case joint
+    //case joint
     case short
     case all
 }

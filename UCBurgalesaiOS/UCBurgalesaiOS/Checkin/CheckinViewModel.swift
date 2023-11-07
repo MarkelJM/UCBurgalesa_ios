@@ -4,7 +4,6 @@
 //
 //  Created by Markel Juaristi on 1/11/23.
 //
-
 import Foundation
 import FirebaseAuth
 import CoreLocation
@@ -13,6 +12,7 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var isCheckinSuccessful: Bool = false
     @Published var showAlert: Bool = false
     @Published var alertMessage: String = ""
+    @Published var selectedRouteType: RouteType? // Para almacenar la selección del usuario
     private var locationManager = CLLocationManager()
     private var firestoreManager = FirestoreManager()
     
@@ -35,6 +35,33 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         alertMessage = "Error obteniendo la ubicación: \(error.localizedDescription)"
         showAlert = true
+    }
+    
+    private func performCheckin(for ride: RideModel, userLocation: CLLocation) {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            alertMessage = "No se pudo identificar al usuario."
+            showAlert = true
+            return
+        }
+        
+        guard let selectedRouteType = selectedRouteType else {
+            alertMessage = "Por favor, selecciona el tipo de ruta antes de hacer check-in."
+            showAlert = true
+            return
+        }
+        
+        let checkinType = determineCheckinType(for: ride, userLocation: userLocation, selectedRouteType: selectedRouteType)
+        let checkin = CheckingModel(checkinId: UUID().uuidString, profileId: userId, rideId: ride.rideId, checkinTime: Date(), checkinType: checkinType, pointsAwarded: ride.score)
+        
+        firestoreManager.saveCheckin(checkin: checkin) { [weak self] (success, error) in
+            guard let self = self else { return }
+            if let error = error {
+                self.alertMessage = "Error performing checkin: \(error.localizedDescription)"
+                self.showAlert = true
+            } else {
+                self.isCheckinSuccessful = true
+            }
+        }
     }
     
     private func initiateCheckin(userLocation: CLLocation) {
@@ -69,31 +96,11 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
-    private func performCheckin(for ride: RideModel, userLocation: CLLocation) {
-        guard let userId = Auth.auth().currentUser?.uid else {
-            alertMessage = "No se pudo identificar al usuario."
-            showAlert = true
-            return
-        }
-        
-        let checkinType = determineCheckinType(for: ride, userLocation: userLocation)
-        let checkin = CheckingModel(checkinId: UUID().uuidString, profileId: userId, rideId: ride.rideId, checkinTime: Date(), checkinType: checkinType, pointsAwarded: ride.score)
-        
-        firestoreManager.saveCheckin(checkin: checkin) { [weak self] (success, error) in
-            guard let self = self else { return }
-            if let error = error {
-                self.alertMessage = "Error performing checkin: \(error.localizedDescription)"
-                self.showAlert = true
-            } else {
-                self.isCheckinSuccessful = true
-            }
-        }
-    }
-    
-    private func determineCheckinType(for ride: RideModel, userLocation: CLLocation) -> CheckType {
+    private func determineCheckinType(for ride: RideModel, userLocation: CLLocation, selectedRouteType: RouteType) -> CheckType {
         let currentDate = Date()
         let startTime = ride.startTime
         let restTime = ride.minRestStopCheckinTime
+        
         
         if currentDate >= startTime && currentDate < restTime {
             return .start
@@ -101,6 +108,7 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             return .rest
         }
     }
+
     
     private func canPerformCheckin(for ride: RideModel, userLocation: CLLocation) -> Bool {
         let currentDate = Date()
@@ -119,7 +127,6 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         return isStartTime || isRestTime
     }
 }
-
 
 
 /*
