@@ -18,17 +18,19 @@ struct TabBarView: View {
                 }
                 .tag(AppState.AppView.home)
             
-            // Asegúrate de que CheckinView solo se muestra si hay un selectedRide disponible
+            // Solo muestra la vista de Checkin si selectedRide no es nil
             if let selectedRide = appState.selectedRide {
                 CheckinView(viewModel: CheckinViewModel(), ride: selectedRide)
                     .tabItem {
                         Label("Check-in", systemImage: "checkmark.circle.fill")
                     }
-                    .tag(AppState.AppView.detailRoute)
+                    .tag(AppState.AppView.checkin)
             }
         }
+        .accentColor(.primary) // O el color que prefieras para los íconos de la TabBar
     }
 }
+
 
 /*
 struct TabBarView_Previews: PreviewProvider {

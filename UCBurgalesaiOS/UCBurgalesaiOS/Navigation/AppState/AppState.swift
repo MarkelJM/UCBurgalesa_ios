@@ -10,13 +10,14 @@ import Foundation
 class AppState: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var selectedRide: RideModel? // used for detailroutes inicializator
+    @Published var shouldShowTabBar: Bool = true
     @Published var currentView: AppView = .login {
         didSet {
-            // Actualiza la visibilidad de la TabBar basada en la vista actual
-            isTabViewHidden = !(currentView == .home || currentView == .detailRoute)
+            shouldShowTabBar = !(currentView == .home || currentView == .checkin)
         }
     }
-    @Published var isTabViewHidden: Bool = true
+
+    
     enum AppView {
         case onboarding
         case login
@@ -31,6 +32,7 @@ class AppState: ObservableObject {
         case club
         case news
         case home
+        case checkin
         case detailRoute
     }
 }

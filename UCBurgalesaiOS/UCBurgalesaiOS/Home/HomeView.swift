@@ -54,15 +54,17 @@ struct HomeView: View {
     
     func navigationButton(destination: AppState.AppView, imageName: String) -> some View {
         Button(action: {
+            print("Navigating to \(destination)")
             appState.currentView = destination
         }) {
             Image(systemName: imageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
-                .cornerRadius(15) // Radio en los bordes
+                .cornerRadius(15)
         }
     }
+
 }
 
 struct HomeView_Previews: PreviewProvider {

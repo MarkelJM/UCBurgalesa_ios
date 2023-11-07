@@ -15,8 +15,7 @@ struct PointsView: View {
         VStack {
             
             HStack {
-                BackButton(destination: .home)
-                    .environmentObject(appState)
+                BackButton(destination: .home) 
                 Spacer()
                 Text("Puntos Totales: \(viewModel.totalPoints)")
                     .font(.title)
@@ -33,10 +32,14 @@ struct PointsView: View {
             }
         }
         .navigationTitle("Mis Puntos")
+        
         .onAppear {
+            print("PointsView appeared")
             viewModel.fetchTotalPoints()
             viewModel.fetchRidePoints()
         }
+
+         
     }
 }
 

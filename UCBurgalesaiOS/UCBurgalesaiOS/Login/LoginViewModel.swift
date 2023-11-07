@@ -25,10 +25,22 @@ class LoginViewModel: ObservableObject {
     
     func login() {
         print("Intentando iniciar sesión con: \(email)")
-
+        /*
         if email == "Username" && password == "123456" {
             print("Inicio de sesión exitoso con credenciales predeterminadas")
             DispatchQueue.main.async {
+                self.appState.currentView = .home
+            }
+            return
+        }
+         */
+        print("Intentando iniciar sesión con: \(email)")
+
+        // Verificar si las credenciales predeterminadas están siendo usadas
+        if email == "Username" && password == "123456" {
+            print("Inicio de sesión exitoso con credenciales predeterminadas")
+            DispatchQueue.main.async {
+                self.keychainManager.saveToken("default_token")
                 self.appState.currentView = .home
             }
             return

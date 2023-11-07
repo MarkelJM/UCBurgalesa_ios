@@ -10,6 +10,7 @@ import SwiftUI
 struct CheckinView: View {
     @ObservedObject var viewModel: CheckinViewModel
     var ride: RideModel
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
         VStack {
@@ -27,6 +28,11 @@ struct CheckinView: View {
                 Text("Checkin successful!")
             }
         }
+        .navigationBarTitle("Check-in", displayMode: .inline)
+        .navigationBarItems(trailing: Button("Cerrar") {
+            // Aquí manejas el cierre de la vista de check-in
+            appState.currentView = .home 
+        })
     }
 }
 

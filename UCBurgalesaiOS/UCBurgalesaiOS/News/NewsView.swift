@@ -9,8 +9,14 @@ import SwiftUI
 
 struct NewsView: View {
     @ObservedObject var viewModel = NewsViewModel()
+    @EnvironmentObject var appState: AppState 
     
     var body: some View {
+        HStack {
+            BackButton(destination: .home)
+                .environmentObject(appState)
+            Spacer()
+        }
         List(viewModel.newsItems) { newsItem in
             VStack(alignment: .leading) {
                 Text(newsItem.title).font(.headline)

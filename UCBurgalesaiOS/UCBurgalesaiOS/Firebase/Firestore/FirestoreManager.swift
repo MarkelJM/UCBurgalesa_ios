@@ -194,7 +194,7 @@ class FirestoreManager {
         }
     }
     
-    ///CHECKING
+    ///CHECKIN
     
     
     func saveCheckin(checkin: CheckingModel, completion: @escaping (Bool, Error?) -> Void) {
@@ -251,36 +251,56 @@ class FirestoreManager {
         }
     }
     ///POINTS
-    // Método para obtener los puntos totales de un usuario
-        func getTotalPoints(for userId: String, completion: @escaping (Int) -> Void) {
-            let userPointsRef = db.collection("PointsUCB").document(userId)
-            userPointsRef.getDocument { (document, error) in
-                if let document = document, document.exists {
-                    let totalPoints = document.data()?["totalPoints"] as? Int ?? 0
-                    completion(totalPoints)
-                } else {
-                    // Manejar el caso en que no existan puntos o haya un error
-                    completion(0)
-                }
+    func getTotalPoints(for userId: String?, completion: @escaping (Int) -> Void) {
+        guard let userId = userId, !userId.isEmpty else {
+            print("Error: userId is nil or empty")
+            completion(0)
+            return
+        }
+        print("Accessing Firestore for total points...")
+        let userPointsRef = db.collection("PointsUCB").document(userId)
+        userPointsRef.getDocument { (document, error) in
+            if let error = error {
+                print("Error fetching total points: \(error.localizedDescription)")
+            }
+            if let document = document, document.exists {
+                let totalPoints = document.data()?["totalPoints"] as? Int ?? 0
+                print("Total points in document: \(totalPoints)")
+                completion(totalPoints)
+            } else {
+                print("Document for total points does not exist")
+                completion(0)
             }
         }
+    }
 
-        // Método para obtener los puntos por salida de un usuario
-        func getRidePoints(for userId: String, completion: @escaping ([PointsModel]) -> Void) {
-            let userRidePointsRef = db.collection("PointsUCB").document(userId).collection("RidePoints")
-            userRidePointsRef.getDocuments { (snapshot, error) in
-                var pointsArray: [PointsModel] = []
-                if let snapshot = snapshot {
-                    for document in snapshot.documents {
-                        if let pointsModel = PointsModel(from: document.data()) {
-                            pointsArray.append(pointsModel)
-                        }
+    func getRidePoints(for userId: String?, completion: @escaping ([PointsModel]) -> Void) {
+        guard let userId = userId, !userId.isEmpty else {
+            print("Error: userId is nil or empty")
+            completion([])
+            return
+        }
+        print("Accessing Firestore for ride points...")
+        let userRidePointsRef = db.collection("PointsUCB").document(userId).collection("RidePoints")
+        userRidePointsRef.getDocuments { (snapshot, error) in
+            if let error = error {
+                print("Error fetching ride points: \(error.localizedDescription)")
+            }
+            var pointsArray: [PointsModel] = []
+            if let snapshot = snapshot {
+                for document in snapshot.documents {
+                    if let pointsModel = PointsModel(from: document.data()) {
+                        pointsArray.append(pointsModel)
                     }
                 }
-                // Devolver el array de puntos por salida
-                completion(pointsArray)
+                print("Ride points documents fetched: \(pointsArray.count) entries")
+            } else {
+                print("No documents in ride points collection")
             }
+            completion(pointsArray)
         }
+    }
+
 
     
 

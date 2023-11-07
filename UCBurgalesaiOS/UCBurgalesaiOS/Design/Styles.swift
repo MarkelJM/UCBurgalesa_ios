@@ -74,6 +74,20 @@ extension TextField {
 }
 //flecha para volver atras.
 struct BackButton: View {
+    @EnvironmentObject var appState: AppState // Accede a appState desde el entorno
+    var destination: AppState.AppView
+
+    var body: some View {
+        Button(action: {
+            appState.currentView = destination
+        }) {
+            Image(systemName: "arrow.left")
+        }
+    }
+}
+
+/*
+struct BackButton: View {
     @EnvironmentObject var appState: AppState
     var destination: AppState.AppView
     
@@ -87,7 +101,7 @@ struct BackButton: View {
             }
     }
 }
-
+*/
 
 
 
