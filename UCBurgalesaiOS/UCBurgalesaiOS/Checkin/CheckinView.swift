@@ -5,8 +5,39 @@
 //  Created by Markel Juaristi on 1/11/23.
 //
 
+
+
 import SwiftUI
 
+struct CheckinView: View {
+    @StateObject var viewModel = CheckinViewModel()
+    @EnvironmentObject var appState: AppState
+    
+    var body: some View {
+        VStack {
+            // Botón para iniciar el check-in
+            Button("Iniciar Check-in") {
+                viewModel.requestUserLocation()
+            }
+            
+            // Mensaje de éxito
+            if viewModel.isCheckinSuccessful {
+                Text("Check-in realizado con éxito.")
+            }
+        }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Check-in"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
+        }
+        .navigationBarTitle("Check-in", displayMode: .inline)
+        .navigationBarItems(trailing: Button("Cerrar") {
+            appState.currentView = .home
+        })
+    }
+}
+
+
+
+/*
 struct CheckinView: View {
     @ObservedObject var viewModel: CheckinViewModel
     var ride: RideModel
@@ -64,3 +95,4 @@ struct CheckinView_Previews: PreviewProvider {
     }
 }
 
+*/

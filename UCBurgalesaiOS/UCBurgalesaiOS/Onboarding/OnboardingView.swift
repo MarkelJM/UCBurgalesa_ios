@@ -34,7 +34,7 @@ struct OnboardingView: View {
     }
 
     private func navigateBasedOnAuthentication() {
-        if progress >= 30 {
+        if progress >= 10 {
             if keychainManager.getToken() != nil {
                 appState.currentView = .home
             } else {

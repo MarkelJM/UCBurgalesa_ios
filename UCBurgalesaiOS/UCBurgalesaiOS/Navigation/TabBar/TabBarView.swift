@@ -11,25 +11,24 @@ struct TabBarView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        TabView {
+        TabView(selection: $appState.currentView) {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
                 .tag(AppState.AppView.home)
             
-            // Solo muestra la vista de Checkin si selectedRide no es nil
-            if let selectedRide = appState.selectedRide {
-                CheckinView(viewModel: CheckinViewModel(), ride: selectedRide)
-                    .tabItem {
-                        Label("Check-in", systemImage: "checkmark.circle.fill")
-                    }
-                    .tag(AppState.AppView.checkin)
-            }
+            // Muestra la vista de Checkin directamente
+            CheckinView()
+                .tabItem {
+                    Label("Check-in", systemImage: "checkmark.circle.fill")
+                }
+                .tag(AppState.AppView.checkin)
         }
         .accentColor(.primary) // O el color que prefieras para los íconos de la TabBar
     }
 }
+
 
 
 /*

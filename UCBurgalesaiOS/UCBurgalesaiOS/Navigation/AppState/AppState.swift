@@ -13,7 +13,7 @@ class AppState: ObservableObject {
     @Published var shouldShowTabBar: Bool = true
     @Published var currentView: AppView = .onboarding {
         didSet {
-            shouldShowTabBar = !(currentView == .home || currentView == .checkin)
+            shouldShowTabBar = !(currentView == .onboarding || currentView == .login)
         }
     }
 

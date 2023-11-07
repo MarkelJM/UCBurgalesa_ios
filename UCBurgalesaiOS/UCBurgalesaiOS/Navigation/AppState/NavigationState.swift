@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NavigationState: View {
     @EnvironmentObject var appState: AppState
+    @StateObject var checkinViewModel = CheckinViewModel() //temporal; no sera necesario, ya que se accederá por el TabBar unica y exclusivamente al checkin
     
     var body: some View {
         Group {
@@ -41,11 +42,7 @@ struct NavigationState: View {
                 case .home:
                     HomeView().environmentObject(appState)
                 case .checkin:
-                    if let selectedRide = appState.selectedRide {
-                        CheckinView(viewModel: CheckinViewModel(), ride: selectedRide)
-                    } else {
-                        Text("No ride selected for check-in")
-                    }
+                    CheckinView(viewModel: checkinViewModel)
                 case .detailRoute:
                     Group {
                         if let selectedRide = appState.selectedRide {
