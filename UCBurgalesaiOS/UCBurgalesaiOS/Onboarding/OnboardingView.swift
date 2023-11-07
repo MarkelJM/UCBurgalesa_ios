@@ -16,12 +16,11 @@ struct OnboardingView: View {
     var body: some View {
         VStack {
             Text("Onboarding")
-            ProgressView(value: progress, total: 2)
+            ProgressView(value: progress, total: 10)
                 .progressViewStyle(LinearProgressViewStyle())
-                //.tint(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
-                .tint(Color.violet3) 
+                .tint(Color.violet3)
                 .onReceive(timer) { _ in
-                    if progress < 2 {
+                    if progress < 10 {
                         progress += 0.1
                     } else {
                         timer.upstream.connect().cancel()
@@ -35,10 +34,12 @@ struct OnboardingView: View {
     }
 
     private func navigateBasedOnAuthentication() {
-        if keychainManager.getToken() != nil {
-            appState.currentView = .home
-        } else {
-            appState.currentView = .login
+        if progress >= 30 {
+            if keychainManager.getToken() != nil {
+                appState.currentView = .home
+            } else {
+                appState.currentView = .login
+            }
         }
     }
 }
@@ -48,4 +49,3 @@ struct OnboardingView_Previews: PreviewProvider {
         OnboardingView().environmentObject(AppState())
     }
 }
-

@@ -11,7 +11,7 @@ class AppState: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var selectedRide: RideModel? // used for detailroutes inicializator
     @Published var shouldShowTabBar: Bool = true
-    @Published var currentView: AppView = .login {
+    @Published var currentView: AppView = .onboarding {
         didSet {
             shouldShowTabBar = !(currentView == .home || currentView == .checkin)
         }
