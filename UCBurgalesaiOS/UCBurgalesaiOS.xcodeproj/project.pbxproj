@@ -400,9 +400,9 @@
 				D3B3F13A2ADD8D150000B662 /* Login */,
 				D3C56AEF2ADD89DB008378BF /* Firebase */,
 				D323D8C22ABC580B00BBEC4E /* Model */,
+				D323D8E02AC5D95E00BBEC4E /* SupportingFiles */,
 				D323D8982ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift */,
 				D323D89A2ABC57E800BBEC4E /* ContentView.swift */,
-				D323D8E02AC5D95E00BBEC4E /* SupportingFiles */,
 				D323D89E2ABC57E900BBEC4E /* Preview Content */,
 			);
 			path = UCBurgalesaiOS;

@@ -14,24 +14,41 @@ struct OnboardingView: View {
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        VStack {
-            Text("Onboarding")
-            ProgressView(value: progress, total: 10)
-                .progressViewStyle(LinearProgressViewStyle())
-                .tint(Color.violet3)
-                .onReceive(timer) { _ in
-                    if progress < 10 {
-                        progress += 0.1
-                    } else {
-                        timer.upstream.connect().cancel()
-                        navigateBasedOnAuthentication()
-                    }
-                }
-                .onAppear {
-                    progress = 0 // Reset the progress when the view appears
-                }
+        ZStack {
+            DiagonalSolidShadedBackground()
+
+            VStack {
+                Spacer()
+                Image("escudoUCB")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 150)
+                    .padding(.bottom, 100)
+                
+                Text("Bienvenido a la aplicación de la Unión Cicloturista Burgalesa")
+                    .font(.whatTheFont(size: 20))
+                    .foregroundColor(.black)
+                    .padding()
+                    .background(Color.white.opacity(0.2))
+                    .cornerRadius(10)
+
+                Spacer()
+                
+                ProgressView(value: progress, total: 10)
+                    .progressViewStyle(LinearProgressViewStyle())
+                    .tint(Color.violet3)
+                    .scaleEffect(x: 1, y: 2, anchor: .center)
+                    .padding(.bottom, 100)
+
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            progress = 0
         }
     }
+
 
     private func navigateBasedOnAuthentication() {
         if progress >= 10 { // Asegúrate de que esta condición coincida con el progreso total
