@@ -168,6 +168,9 @@
 		D3FA78952AF914D300D1D9E9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78942AF914D300D1D9E9 /* TabBarView.swift */; };
 		D3FA78962AF914D300D1D9E9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78942AF914D300D1D9E9 /* TabBarView.swift */; };
 		D3FA78972AF914D300D1D9E9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78942AF914D300D1D9E9 /* TabBarView.swift */; };
+		D3FA789A2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */; };
+		D3FA789B2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */; };
+		D3FA789C2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */; };
 		D3FEA9432AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9442AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9452AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
@@ -301,6 +304,7 @@
 		D3FA788B2AF8FC3500D1D9E9 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		D3FA78942AF914D300D1D9E9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinSheetView.swift; sourceTree = "<group>"; };
 		D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideCheckinModel.xcdatamodel; sourceTree = "<group>"; };
 		D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckinModel+CoreData.swift"; sourceTree = "<group>"; };
 		D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -490,6 +494,7 @@
 		D3A65EC32AF2C17E00D0E79B /* Checkin */ = {
 			isa = PBXGroup;
 			children = (
+				D3FA78982AFBB6EE00D1D9E9 /* CheckinSheet */,
 				D3A65EC42AF2C19800D0E79B /* CheckinViewModel.swift */,
 				D3A65EC82AF2C1D500D0E79B /* CheckinView.swift */,
 			);
@@ -702,6 +707,14 @@
 				D3FA78942AF914D300D1D9E9 /* TabBarView.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D3FA78982AFBB6EE00D1D9E9 /* CheckinSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */,
+			);
+			path = CheckinSheet;
 			sourceTree = "<group>";
 		};
 		D3FEA9402AF40442003B0A5D /* CoreData */ = {
@@ -996,6 +1009,7 @@
 				D3E7E6982AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CC2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 				D3FEA9432AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */,
+				D3FA789A2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1023,7 @@
 				D3C56AF32ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3FEA9482AF404F4003B0A5D /* RideCheckinModel+CoreData.swift in Sources */,
 				D3FEA9552AF50F57003B0A5D /* PointsModel.swift in Sources */,
+				D3FA789B2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */,
 				D36281412AE288E000E21A4F /* HomeView.swift in Sources */,
 				D323D8AA2ABC57E900BBEC4E /* UCBurgalesaiOSTests.swift in Sources */,
 				D3FF7E002AE2EB930025389F /* SponsorsViewModel.swift in Sources */,
@@ -1145,6 +1160,7 @@
 				D3E7E69A2AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D323D8CE2ABC58FB00BBEC4E /* CheckingModel.swift in Sources */,
 				D3FEA9452AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */,
+				D3FA789C2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
