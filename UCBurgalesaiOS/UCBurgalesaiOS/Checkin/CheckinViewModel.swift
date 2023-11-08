@@ -15,6 +15,7 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var selectedRouteType: RouteType? // Para almacenar la selección del usuario
     private var locationManager = CLLocationManager()
     private var firestoreManager = FirestoreManager()
+    @Published var isCheckinAvailable: Bool = false
     
     override init() {
         super.init()
@@ -79,7 +80,8 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             
             if let rides = rides {
                 if let todayRide = rides.first(where: { DateFormatter.firestoreDateOnlyFormatter.string(from: $0.date) == dateString }) {
-                    if self.canPerformCheckin(for: todayRide, userLocation: userLocation) {
+                    let checkinType = self.determineCheckinType(for: todayRide, userLocation: userLocation, selectedRouteType: self.selectedRouteType ?? .all)
+                    if self.canPerformCheckin(for: todayRide, userLocation: userLocation, checkType: checkinType) {
                         self.performCheckin(for: todayRide, userLocation: userLocation)
                     } else {
                         self.alertMessage = "No estás en el lugar o tiempo correcto para hacer check-in."
@@ -95,6 +97,7 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             }
         }
     }
+
     
     private func determineCheckinType(for ride: RideModel, userLocation: CLLocation, selectedRouteType: RouteType) -> CheckType {
         let currentDate = Date()
@@ -110,7 +113,7 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     
-    private func canPerformCheckin(for ride: RideModel, userLocation: CLLocation) -> Bool {
+    private func canPerformCheckin(for ride: RideModel, userLocation: CLLocation, checkType: CheckType) -> Bool {
         let currentDate = Date()
         let startLocation = CLLocation(latitude: ride.startCoordinates.latitude, longitude: ride.startCoordinates.longitude)
         let restLocation = CLLocation(latitude: ride.restStopCoordinates.latitude, longitude: ride.restStopCoordinates.longitude)
@@ -121,11 +124,93 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         let startTime = ride.startTime
         let restTime = ride.minRestStopCheckinTime
         
-        let isStartTime = currentDate >= startTime && isWithinStartRadius
-        let isRestTime = currentDate >= restTime && isWithinRestRadius
-        
-        return isStartTime || isRestTime
+        switch checkType {
+        case .start:
+            return currentDate >= startTime && currentDate < restTime && isWithinStartRadius
+        case .rest:
+            return currentDate >= restTime && isWithinRestRadius
+        }
     }
+
+    
+    func checkForTodaysRide() {
+        let currentDate = Date()
+        let dateString = DateFormatter.firestoreDateOnlyFormatter.string(from: currentDate)
+        
+        firestoreManager.fetchAllRides { [weak self] (rides, error) in
+            guard let self = self else { return }
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.alertMessage = "Error fetching rides: \(error.localizedDescription)"
+                    self.showAlert = true
+                }
+                return
+            }
+            
+            if let rides = rides {
+                let todaysRides = rides.filter { DateFormatter.firestoreDateOnlyFormatter.string(from: $0.date) == dateString }
+                if let selectedRide = todaysRides.first(where: { $0.category == self.selectedRouteType || self.selectedRouteType == .all }) {
+                    DispatchQueue.main.async {
+                        self.isCheckinAvailable = true
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.alertMessage = "No hay salidas \(self.selectedRouteType?.rawValue ?? "") programadas para hoy."
+                        self.showAlert = true
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.alertMessage = "No se pudo obtener la información de las salidas."
+                    self.showAlert = true
+                }
+            }
+        }
+    }
+    
+    func initiateCheckin(type: CheckType) {
+        guard let userLocation = locationManager.location else {
+            alertMessage = "No se pudo obtener la ubicación actual."
+            showAlert = true
+            return
+        }
+        
+        let currentDate = Date()
+        let dateString = DateFormatter.firestoreDateOnlyFormatter.string(from: currentDate)
+        
+        firestoreManager.fetchAllRides { [weak self] (rides, error) in
+            guard let self = self else { return }
+            
+            if let error = error {
+                DispatchQueue.main.async {
+                    self.alertMessage = "Error fetching rides: \(error.localizedDescription)"
+                    self.showAlert = true
+                }
+                return
+            }
+            
+            guard let rides = rides, let todayRide = rides.first(where: { DateFormatter.firestoreDateOnlyFormatter.string(from: $0.date) == dateString }) else {
+                DispatchQueue.main.async {
+                    self.alertMessage = "No hay salidas programadas para hoy."
+                    self.showAlert = true
+                }
+                return
+            }
+            
+            let canCheckin = self.canPerformCheckin(for: todayRide, userLocation: userLocation, checkType: type)
+            
+            if canCheckin {
+                self.performCheckin(for: todayRide, userLocation: userLocation)
+            } else {
+                DispatchQueue.main.async {
+                    self.alertMessage = "No estás en el lugar o tiempo correcto para hacer check-in de \(type == .start ? "salida" : "descanso")."
+                    self.showAlert = true
+                }
+            }
+        }
+    }
+
 }
 
 

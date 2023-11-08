@@ -12,23 +12,28 @@ import SwiftUI
 struct CheckinView: View {
     @StateObject var viewModel = CheckinViewModel()
     @EnvironmentObject var appState: AppState
+    @State private var showingCheckinSheet = false
     
     var body: some View {
         VStack {
-            Picker("Tipo de Ruta", selection: $viewModel.selectedRouteType) {
-                Text("Corta").tag(RouteType.short)
-                Text("Larga").tag(RouteType.long)
-                Text("Todos").tag(RouteType.all)
+            HStack {
+                ForEach(RouteType.allCases, id: \.self) { routeType in
+                    Button(action: {
+                        viewModel.selectedRouteType = routeType
+                        viewModel.checkForTodaysRide()
+                    }) {
+                        Text(routeType.rawValue.capitalized)
+                    }
+                }
             }
-            .pickerStyle(SegmentedPickerStyle())
             
-            Button("Iniciar Check-in") {
-                viewModel.requestUserLocation()
-            }
-            .disabled(viewModel.selectedRouteType == nil)
-            
-            if viewModel.isCheckinSuccessful {
-                Text("Check-in realizado con éxito.")
+            if viewModel.isCheckinAvailable {
+                Button("Iniciar Check-in") {
+                    showingCheckinSheet = true
+                }
+                .sheet(isPresented: $showingCheckinSheet) {
+                    CheckinSheetView(viewModel: viewModel)
+                }
             }
         }
         .alert(isPresented: $viewModel.showAlert) {
@@ -40,6 +45,22 @@ struct CheckinView: View {
         })
     }
 }
+
+struct CheckinSheetView: View {
+    @ObservedObject var viewModel: CheckinViewModel
+    
+    var body: some View {
+        VStack {
+            Button("Check-in Salida") {
+                viewModel.initiateCheckin(type: .start)
+            }
+            Button("Check-in Descanso") {
+                viewModel.initiateCheckin(type: .rest)
+            }
+        }
+    }
+}
+
 
 
 /*

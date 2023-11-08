@@ -28,7 +28,7 @@ struct RideModel: Identifiable {
     var restStopCheckinRadius: Double
 }
 
-enum RouteType: String {
+enum RouteType: String, CaseIterable {
     case long
     //case joint
     case short
