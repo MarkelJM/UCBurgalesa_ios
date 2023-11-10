@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var showForgotPassword = false
-    
+    @EnvironmentObject var appState: AppState
     @ObservedObject var viewModel: LoginViewModel
         
     init(appState: AppState) {
@@ -17,60 +17,51 @@ struct LoginView: View {
     }
     
     var body: some View {
-        VStack {
-            Image("escudoUCB")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 150)
-                .padding(.top, 50)
-                .padding(.bottom, 50)
-            
-            TextField("Email", text: $viewModel.email)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.horizontal)
-            
-            SecureField("Password", text: $viewModel.password)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.horizontal)
-            Text("Forgot your password?")
-                .onTapGesture {
+        ZStack {
+            DiagonalSolidShadedBackground()
+
+            VStack {
+                Image("EscudoUCB")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 150)
+                    .padding(.top, 200)
+                    .padding(.bottom, 50)
+                
+                TextField("Email", text: $viewModel.email)
+                    .textFieldStyle()
+                
+                SecureField("Contraseña", text: $viewModel.password)
+                    .inputFieldStyle()
+                
+                Button("¿Olvidó su contraseña?") {
                     showForgotPassword = true
                 }
-                .sheet(isPresented: $showForgotPassword) { 
-                    ForgotPasswordView()
+                .buttonStyle()
+                
+                Button(action: viewModel.login) {
+                    Text("Iniciar")
                 }
-            
-            Button(action: viewModel.login) {
-                Text("Login")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-                    
+                .brightOrangeButton()
+                
+                Button("Regístrate") {
+                    viewModel.register()
+                }
+                .vibrantVioletButton()
+                
+                Spacer()
             }
-            .padding(.top)
-            
-            
-            
-            Text("Regístrate")
-                .onTapGesture {
-                    // Navigate to registration view
-                }
-                .padding(.top, 100)
-            
-            
-            
-            
+            .padding(.horizontal) 
         }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
+
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(appState: AppState())
+        LoginView(appState: AppState()).environmentObject(AppState())
     }
 }
+
+

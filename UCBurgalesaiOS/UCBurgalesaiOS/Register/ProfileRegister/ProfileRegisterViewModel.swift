@@ -88,7 +88,7 @@ class ProfileRegisterViewModel: ObservableObject {
     func saveProfile() {
         let profile = ProfileModel(
             id: UUID().uuidString,
-            clubId: "", // Asume que tienes un valor predeterminado o lo obtienes de alguna manera
+            clubId: "", 
             firstName: firstName,
             lastName1: lastName1,
             lastName2: lastName2,
@@ -111,7 +111,6 @@ class ProfileRegisterViewModel: ObservableObject {
             if let error = error {
                 self.errorMessage = error.localizedDescription
             } else if success {
-                // Aquí también debes obtener el token de Firebase y guardarlo
                 if let token = Auth.auth().currentUser?.uid { // Usando el UID como token de ejemplo
                     self.keychainManager.saveToken(token)
                 }

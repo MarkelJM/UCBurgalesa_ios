@@ -9,25 +9,12 @@ import Foundation
 import SwiftUI
 
 
-
-struct DiagonalShadedBackground: View {
-    var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color.brightOrange, Color.deepOrange]), startPoint: .topLeading, endPoint: .bottomTrailing)
-            .overlay(
-                RoundedRectangle(cornerRadius: 0)
-                    .stroke(Color.violet.opacity(0.2), lineWidth: 5)
-                    .blur(radius: 5)
-            )
-            .edgesIgnoringSafeArea(.all)
-    }
-}
-
 struct DiagonalSolidShadedBackground: View {
     var body: some View {
         ZStack {
-            Color.deepOrange.edgesIgnoringSafeArea(.all)
+            Color.deepOrange4.edgesIgnoringSafeArea(.all)
             
-            LinearGradient(gradient: Gradient(colors: [Color.brightOrange, Color.brightOrange]),
+            LinearGradient(gradient: Gradient(colors: [Color.brightOrange4, Color.brightOrange4]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
                 .mask(
@@ -44,6 +31,21 @@ struct DiagonalSolidShadedBackground: View {
         }
     }
 }
+
+/*
+struct DiagonalShadedBackground: View {
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [Color.brightOrange, Color.deepOrange]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            .overlay(
+                RoundedRectangle(cornerRadius: 0)
+                    .stroke(Color.violet.opacity(0.2), lineWidth: 5)
+                    .blur(radius: 5)
+            )
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+
 
 
 struct DiagonalGradient1: View {
@@ -70,3 +72,4 @@ struct DiagonalGradient1: View {
         }
     }
 }
+*/

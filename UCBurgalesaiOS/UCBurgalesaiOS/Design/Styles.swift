@@ -24,7 +24,7 @@ extension Button where Label == Text {
     func brightOrangeButton() -> some View {
         self
             .buttonStyle()
-            .background(Color.brightOrange)
+            .background(Color.brightOrange4)
             .cornerRadius(10)
         
     }
@@ -32,14 +32,14 @@ extension Button where Label == Text {
     func deepOrangeButton() -> some View {
         self
             .buttonStyle()
-            .background(Color.deepOrange)
+            .background(Color.deepOrange4)
             .cornerRadius(10)
     }
     
     func vibrantVioletButton() -> some View {
         self
             .buttonStyle()
-            .background(Color.violet)
+            .background(Color.violet5)
             .cornerRadius(10)
     }
 }
@@ -70,6 +70,16 @@ extension TextField {
             .padding()
             .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
+    }
+}
+
+extension View {
+    func inputFieldStyle() -> some View {
+        self
+            .padding()
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            .padding(.horizontal)
     }
 }
 //flecha para volver atras.

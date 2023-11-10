@@ -62,6 +62,10 @@ class LoginViewModel: ObservableObject {
             }
         }
     }
+    
+    func register() {
+        appState.currentView = .codeVerify // Cambia a la vista de verificación de código
+    }
 
 
 

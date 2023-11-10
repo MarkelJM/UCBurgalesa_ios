@@ -18,6 +18,9 @@ extension Color {
     static let brightOrange2 = Color(red: 224/255, green: 154/255, blue: 43/255)
     //#FAB710
     static let brightOrange3 = Color(red: 250/255, green: 183/255, blue: 16/255)
+    
+    static let brightOrange4 = Color(red: 238/255, green: 170/255, blue: 43/255)
+
 
     // Naranja Oscuro
     //#F7844C
@@ -28,6 +31,9 @@ extension Color {
     static let deepOrange2 = Color(red: 211/255, green: 105/255, blue: 19/255)
     //#F17F1C
     static let deepOrange3 = Color(red: 241/255, green: 127/255, blue: 28/255)
+    
+    static let deepOrange4 = Color(red: 244/255, green: 146/255, blue: 37/255)
+
 
     // Violeta
     //#7F00FF
@@ -40,6 +46,9 @@ extension Color {
     static let violet3 = Color(red: 136/255, green: 46/255, blue: 120/255)
     //#640B65
     static let violet4 = Color(red: 100/255, green: 11/255, blue: 101/255)
+    
+    static let violet5 = Color(red: 129/255, green: 43/255, blue: 108/255)
+
 }
 
 

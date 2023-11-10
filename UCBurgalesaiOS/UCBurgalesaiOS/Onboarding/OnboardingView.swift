@@ -19,7 +19,7 @@ struct OnboardingView: View {
 
             VStack {
                 Spacer()
-                Image("escudoUCB")
+                Image("EscudoUCB")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 150, height: 150)
@@ -27,16 +27,16 @@ struct OnboardingView: View {
                 
                 Text("Bienvenido a la aplicación de la Unión Cicloturista Burgalesa")
                     .font(.whatTheFont(size: 20))
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .padding()
-                    .background(Color.white.opacity(0.2))
+                    .background(Color.violet5.opacity(0.9))
                     .cornerRadius(10)
 
                 Spacer()
                 
                 ProgressView(value: progress, total: 10)
                     .progressViewStyle(LinearProgressViewStyle())
-                    .tint(Color.violet3)
+                    .tint(Color.violet5)
                     .scaleEffect(x: 1, y: 2, anchor: .center)
                     .padding(.bottom, 100)
 
