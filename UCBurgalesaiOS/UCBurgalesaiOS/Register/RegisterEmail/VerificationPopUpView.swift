@@ -12,18 +12,25 @@ struct VerificationPopUpView: View {
     var checkVerification: () -> Void
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             Text("Comprueba tu email para verificar el email")
+                .padding()
+                .background(Color.gray.opacity(0.2))
+                .cornerRadius(10)
+
             Button(action: checkVerification) {
                 Text("Verificado y Registrar")
             }
+            .brightOrangeButton() 
         }
         .padding()
         .background(Color.white)
         .cornerRadius(10)
         .shadow(radius: 10)
+        .padding(.horizontal, 20)
     }
 }
+
 
 /*
 struct VerificationPopUpView_Previews: PreviewProvider {
