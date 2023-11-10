@@ -12,45 +12,55 @@ struct ForgotPasswordView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text("Restablecer contraseña")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+        ZStack {
+            DiagonalSolidShadedBackground()
             
-            Text("Introduce tu correo electrónico y te enviaremos instrucciones para restablecer tu contraseña.")
-                .multilineTextAlignment(.center)
-                .padding(.horizontal)
-            
-            TextField("Correo electrónico", text: $viewModel.email)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.emailAddress)
-                .autocapitalization(.none)
-            
-            Button(action: viewModel.resetPassword) {
-                Text("Enviar")
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+            VStack(spacing: 20) {
+                Spacer()
+                
+                Text("Restablecer contraseña")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                     .foregroundColor(.white)
-                    .cornerRadius(10)
+                    .padding(.top, 50)
+                
+                Text("Introduce tu correo electrónico y te enviaremos instrucciones para restablecer tu contraseña.")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                    .foregroundColor(.violet5)
+                
+                TextField("Correo electrónico", text: $viewModel.email)
+                    .inputFieldStyle()
+                
+                
+                Button(action: viewModel.resetPassword) {
+                    Text("Enviar")
+                }
+                .brightOrangeButton()
+                .padding(.top, 50)
+                
+                if !viewModel.message.isEmpty {
+                    Text(viewModel.message)
+                        .foregroundColor(viewModel.isError ? .red : .green)
+                        .padding()
+                }
+                
+                
+                Button("Volver al login") {
+                    presentationMode.wrappedValue.dismiss()
+                }
+                .vibrantVioletButton()
+                
+                Spacer()
             }
-            
-            if !viewModel.message.isEmpty {
-                Text(viewModel.message)
-                    .foregroundColor(viewModel.isError ? .red : .green)
-                    .padding()
-            }
-            Spacer()
-            Button("Volver al login") {
-                presentationMode.wrappedValue.dismiss()
-            }
-            .padding(.top)
-            
-            Spacer()
+            .padding(.horizontal)
         }
-        .padding()
+        .edgesIgnoringSafeArea(.all)
     }
 }
+
+// Aquí, asegúrate de que la extensión brightOrangeButton y vibrantVioletButton estén disponibles
+// como se definió anteriormente en tu código.
 
 struct ForgotPasswordView_Previews: PreviewProvider {
     static var previews: some View {
