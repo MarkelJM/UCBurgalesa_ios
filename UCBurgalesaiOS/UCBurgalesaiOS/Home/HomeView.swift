@@ -14,57 +14,72 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                // Primer fila de botones
-                HStack{
-                    Button("Cerrar sesión") {
-                        keychainManager.deleteToken()
-                        appState.currentView = .login
+            ZStack {
+                DiagonalSolidShadedBackground()
+                
+                VStack(spacing: 20) {
+                    // Botón de cerrar sesión
+                    HStack{
+                        Text("U.C. Burgalesa")
+                            .font(.whatTheFont(size: 20))
+
+                            
+                        Button("Cerrar sesión") {
+                            keychainManager.deleteToken()
+                            appState.currentView = .login
+                        }
+                        .vibrantVioletButton() // Color violeta para el botón
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        
+                        Spacer()
                     }
                     .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-                    .frame(maxWidth: .infinity, alignment: .topTrailing)
+                    
+                    
+                    // Botones organizados en un VStack con transparencia
+                    VStack(spacing: 20) {
+                        // Primera fila de botones
+                        HStack(spacing: 20) {
+                            navigationButton(destination: .sponsors, imageName: "patrocinadoresUCB")
+                            navigationButton(destination: .club, imageName: "clubUCB")
+                        }
+                        
+                        // Segunda fila de botones
+                        HStack(spacing: 20) {
+                            navigationButton(destination: .news, imageName: "noticiasUCB")
+                            navigationButton(destination: .routesList, imageName: "rutasUCB")
+                        }
+                        
+                        // Tercera fila de botones
+                        HStack(spacing: 20) {
+                            navigationButton(destination: .profileSettings, imageName: "perfilUCB")
+                            navigationButton(destination: .points, imageName: "puntosUCB")
+                        }
+                    }
+                    .padding()
+                    .background(Color.white.opacity(0.2))
+                    .cornerRadius(15)
+                    .shadow(radius: 10)
+                    
+                    Spacer()
                 }
-                HStack(spacing: 20) {
-                    navigationButton(destination: .routesList, imageName: "map")
-                    navigationButton(destination: .points, imageName: "star.fill")
-                }
-                
-                // Segunda fila de botones
-                HStack(spacing: 20) {
-                    navigationButton(destination: .sponsors, imageName: "gift.fill")
-                    navigationButton(destination: .profileSettings, imageName: "gearshape.fill")
-                }
-                
-                // Tercera fila de botones
-                HStack(spacing: 20) {
-                    navigationButton(destination: .club, imageName: "book.fill")
-                    navigationButton(destination: .news, imageName: "newspaper.fill")
-                }
-                
-                Spacer()
+                .padding()
             }
-            .padding()
-            .navigationBarTitle("Home", displayMode: .inline)
+            //.navigationBarTitle("U.C. Burgalesa", displayMode: .inline)
         }
-        
     }
     
     func navigationButton(destination: AppState.AppView, imageName: String) -> some View {
         Button(action: {
-            print("Navigating to \(destination)")
             appState.currentView = destination
         }) {
-            Image(systemName: imageName)
+            Image(imageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
                 .cornerRadius(15)
         }
     }
-
 }
 
 struct HomeView_Previews: PreviewProvider {
@@ -72,7 +87,6 @@ struct HomeView_Previews: PreviewProvider {
         HomeView().environmentObject(AppState())
     }
 }
-
 
 /*
  
