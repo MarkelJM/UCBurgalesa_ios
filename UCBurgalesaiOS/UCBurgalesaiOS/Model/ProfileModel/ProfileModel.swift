@@ -36,6 +36,6 @@ struct Address {
 }
 
 enum ProfileRouteType: String {
-    case short
-    case long
+    case short = "Corta"
+    case long = "Larga"
 }

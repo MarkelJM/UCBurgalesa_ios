@@ -4,7 +4,6 @@
 //
 //  Created by Markel Juaristi on 17/10/23.
 //
-
 import SwiftUI
 
 struct ProfileRegisterView: View {
@@ -14,27 +13,24 @@ struct ProfileRegisterView: View {
     
     var body: some View {
         ZStack {
-            // Fondo con diseño
-            //DiagonalGradient1()
-            //DiagonalShadedBackground()
             DiagonalSolidShadedBackground()
             
-            
             ScrollView {
-                VStack{
-                    Text("Rellena tu perfil")
-                        .font(.largeTitle)
+                VStack(spacing: 20) {
+                    Text("Completa tu perfil")
+                        .font(.whatTheFont(size: 24))
+                        .foregroundColor(.black)
                         .fontWeight(.bold)
                         .padding(.top, 20)
                     
                     VStack {
-                        TextField("First Name", text: $viewModel.firstName)
+                        TextField("Nombre", text: $viewModel.firstName)
                             .textFieldStyle()
-                        TextField("Last Name 1", text: $viewModel.lastName1)
+                        TextField("Primer apellido", text: $viewModel.lastName1)
                             .textFieldStyle()
-                        TextField("Last Name 2", text: $viewModel.lastName2)
+                        TextField("Segundo apellido", text: $viewModel.lastName2)
                             .textFieldStyle()
-                        TextField("Bike Brand", text: Binding<String>(
+                        TextField("Marca de bicicleta", text: Binding<String>(
                             get: { viewModel.bikeBrand ?? "" },
                             set: { viewModel.bikeBrand = $0.isEmpty ? nil : $0 }
                         ))
@@ -42,68 +38,72 @@ struct ProfileRegisterView: View {
                     }
                     
                     VStack {
-                        TextField("Postal Code", text: $viewModel.postalCode)
+                        TextField("Código postal", text: $viewModel.postalCode)
                             .textFieldStyle()
-                        TextField("City", text: $viewModel.city)
+                        TextField("Ciudad", text: $viewModel.city)
                             .textFieldStyle()
-                        TextField("Street", text: $viewModel.street)
+                        TextField("Calle", text: $viewModel.street)
                             .textFieldStyle()
-                        TextField("Phone", text: $viewModel.phone)
+                        TextField("Teléfono", text: $viewModel.phone)
                             .textFieldStyle()
-                        TextField("Email", text: $viewModel.email)
+                        TextField("Correo electrónico", text: $viewModel.email)
                             .textFieldStyle()
                     }
                     
-                    DatePicker("Birth Date", selection: $viewModel.birthDate)
+                    DatePicker("Fecha de nacimiento", selection: $viewModel.birthDate, displayedComponents: .date)
                         .padding(.horizontal)
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(10)
                     
-                    
                     VStack {
-                        Toggle("Federated", isOn: $viewModel.federated)
-                            .toggleStyle(SwitchToggleStyle(tint: .violet))
-                        Toggle("Volunteer", isOn: $viewModel.volunteer)
-                            .toggleStyle(SwitchToggleStyle(tint: .violet))
-                        TextField("Facebook Name", text: Binding<String>(
+                        Toggle("Federado", isOn: $viewModel.federated)
+                            .toggleStyleCustom()
+                        Toggle("Voluntario", isOn: $viewModel.volunteer)
+                            .toggleStyleCustom()
+                        TextField("Nombre en Facebook", text: Binding<String>(
                             get: { viewModel.facebookName ?? "" },
                             set: { viewModel.facebookName = $0.isEmpty ? nil : $0 }
                         ))
                         .textFieldStyle()
-                        TextField("Strava Account", text: Binding<String>(
+                        TextField("Cuenta de Strava", text: Binding<String>(
                             get: { viewModel.stravaAccount ?? "" },
                             set: { viewModel.stravaAccount = $0.isEmpty ? nil : $0 }
                         ))
                         .textFieldStyle()
                     }
                     
-                    Button("Select Profile Photo") {
+                    Button("Seleccionar foto de perfil") {
                         isImagePickerPresented = true
                     }
                     .deepOrangeButton()
+                    .frame(maxHeight: 50)
                     
                     if let image = selectedImage {
                         Image(uiImage: image)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100)
+                            .cornerRadius(50)
                     }
-                    
-                    Picker("Route Type", selection: $viewModel.routeType) {
-                        Text("Short").tag(ProfileRouteType.short)
-                        Text("Long").tag(ProfileRouteType.long)
-                    }
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
+                    HStack{
+                        Picker("Tipo de ruta", selection: $viewModel.routeType) {
+                            Text("Corta").tag(ProfileRouteType.short)
+                            Text("Larga").tag(ProfileRouteType.long)
+                        }
+                        .frame(maxHeight: 50)
+                        .background(Color.brightOrange)
+                        .cornerRadius(10)
+                        .padding(.horizontal)
 
+                        
+                    }
                     
                     
-                    Button(action: viewModel.saveProfile) {
-                        Text("Save Profile")
+                    Button("Guardar perfil") {
+                        viewModel.saveProfile()
                     }
                     .vibrantVioletButton()
-                    
+                    .padding(.top, 100)
                 }
                 .padding()
                 .background(Color.white.opacity(0.9))
@@ -112,16 +112,15 @@ struct ProfileRegisterView: View {
                 .padding()
             }
             .sheet(isPresented: $isImagePickerPresented) {
-                ImagePicker(image: $selectedImage) // para subir foto desde el móvil
+                ImagePicker(image: $selectedImage)
             }
         }
     }
-        
 }
-
 
 struct ProfileRegisterView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileRegisterView()
     }
 }
+
