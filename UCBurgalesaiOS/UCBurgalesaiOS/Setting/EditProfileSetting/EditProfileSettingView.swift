@@ -50,7 +50,12 @@ struct EditProfileSettingView: View {
 
 struct EditProfileSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileSettingView(viewModel: ProfileSettingViewModel())
+        let sampleViewModel = ProfileSettingViewModel()
+        sampleViewModel.firstName = "Juan"
+        sampleViewModel.lastName1 = "Pérez"
+        // ... establecer otros campos de muestra según sea necesario
+
+        return EditProfileSettingView(viewModel: sampleViewModel)
+            .environmentObject(AppState())
     }
 }
-

@@ -38,6 +38,8 @@ struct ClubView: View {
 
 struct ClubView_Previews: PreviewProvider {
     static var previews: some View {
-        ClubView()
+        let appState = AppState() // Asegúrate de que esto se inicializa con los valores necesarios
+        ClubView().environmentObject(appState)
     }
 }
+

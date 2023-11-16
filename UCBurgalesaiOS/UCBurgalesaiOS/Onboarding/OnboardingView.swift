@@ -26,29 +26,33 @@ struct OnboardingView: View {
                     .padding(.bottom, 100)
                 
                 Text("Bienvenido a la aplicación de la Unión Cicloturista Burgalesa")
-                    .font(.whatTheFont(size: 20))
+                    .font(.title) // Cambié el font para evitar el error
                     .foregroundColor(.white)
                     .padding()
-                    .background(Color.violet5.opacity(0.9))
+                    .background(Color.violet.opacity(0.9)) // Cambié el color para evitar el error
                     .cornerRadius(10)
 
                 Spacer()
                 
-                ProgressView(value: progress, total: 10)
+                ProgressView(value: progress, total: 100)
                     .progressViewStyle(LinearProgressViewStyle())
-                    .tint(Color.violet5)
+                    .tint(Color.violet) // Cambié el color para evitar el error
                     .scaleEffect(x: 1, y: 2, anchor: .center)
                     .padding(.bottom, 100)
-
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .edgesIgnoringSafeArea(.all)
         .onAppear {
             progress = 0
         }
+        .onReceive(timer) { _ in
+            if progress < 100 {
+                progress += 1
+            } else {
+                timer.upstream.connect().cancel() // Detener el temporizador
+                navigateBasedOnAuthentication()
+            }
+        }
     }
-
 
     private func navigateBasedOnAuthentication() {
         if progress >= 10 { // Asegúrate de que esta condición coincida con el progreso total

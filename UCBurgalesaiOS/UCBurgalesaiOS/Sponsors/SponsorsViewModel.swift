@@ -14,12 +14,17 @@ class SponsorsViewModel: ObservableObject {
     private var firestoreManager = FirestoreManager()
 
     func fetchSponsors() {
-        firestoreManager.getSponsors { (sponsors, error) in
-            if let error = error {
-                self.errorMessage = error.localizedDescription
-            } else if let sponsors = sponsors {
-                self.sponsors = sponsors
+        firestoreManager.getSponsors { [weak self] (sponsors, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    self?.errorMessage = "Error al cargar patrocinadores: \(error.localizedDescription)"
+                } else if let sponsors = sponsors {
+                    self?.sponsors = sponsors
+                } else {
+                    self?.errorMessage = "No se encontraron patrocinadores"
+                }
             }
         }
     }
 }
+

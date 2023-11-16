@@ -43,6 +43,11 @@ struct SponsorsView: View {
 }
 struct SponsorsView_Previews: PreviewProvider {
     static var previews: some View {
-        SponsorsView()
+        // Crear una instancia de AppState
+        let appState = AppState()
+
+        // Proporcionar la instancia de AppState como un EnvironmentObject
+        SponsorsView().environmentObject(appState)
     }
 }
+

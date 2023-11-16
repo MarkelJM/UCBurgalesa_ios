@@ -37,6 +37,11 @@ struct NewsView: View {
 
 struct NewsView_Previews: PreviewProvider {
     static var previews: some View {
-        NewsView()
+        // Crear una instancia de AppState
+        let appState = AppState()
+
+        // Proporcionar la instancia de AppState como un EnvironmentObject
+        NewsView().environmentObject(appState)
     }
 }
+
