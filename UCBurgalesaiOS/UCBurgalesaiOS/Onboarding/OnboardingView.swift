@@ -34,7 +34,7 @@ struct OnboardingView: View {
 
                 Spacer()
                 
-                ProgressView(value: progress, total: 100)
+                ProgressView(value: progress, total: 50)
                     .progressViewStyle(LinearProgressViewStyle())
                     .tint(Color.violet) // Cambié el color para evitar el error
                     .scaleEffect(x: 1, y: 2, anchor: .center)
@@ -45,7 +45,7 @@ struct OnboardingView: View {
             progress = 0
         }
         .onReceive(timer) { _ in
-            if progress < 100 {
+            if progress < 30 {
                 progress += 1
             } else {
                 timer.upstream.connect().cancel() // Detener el temporizador
