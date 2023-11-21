@@ -96,6 +96,41 @@ struct BackButton: View {
     }
 }
 
+extension Text {
+    func textStyle() -> some View {
+        self
+            .font(.whatTheFont(size: 18)) // Puedes cambiar la fuente y el tamaño según tus necesidades
+            .foregroundColor(Color.black) // Cambia el color del texto si es necesario
+            .padding()
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            .padding(.horizontal)
+    }
+}
+
+extension Label where Title == Text, Icon == Image {
+    func labelStyle() -> some View {
+        self
+            .font(.whatTheFont(size: 16))
+            .foregroundColor(Color.black) 
+            .padding()
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            .padding(.horizontal)
+    }
+}
+
+extension View{
+    func sectionStyle() -> some View {
+        self
+            .padding()
+            .background(Color.gray.opacity(0.1))
+            .cornerRadius(10)
+    }
+}
+
+
+
 /*
 struct BackButton: View {
     @EnvironmentObject var appState: AppState
