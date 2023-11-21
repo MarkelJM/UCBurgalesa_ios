@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseAuth
 import FirebaseFirestore
+import SwiftUI
 
 class ProfileSettingViewModel: ObservableObject {
     @Published var id: String = ""
@@ -28,6 +29,7 @@ class ProfileSettingViewModel: ObservableObject {
     @Published var routeType: ProfileRouteType = .short
     @Published var facebookName: String?
     @Published var stravaAccount: String?
+    @Published var selectedImage: UIImage?
 
     private var firestoreManager = FirestoreManager()
     
@@ -38,8 +40,19 @@ class ProfileSettingViewModel: ObservableObject {
                     self.firstName = profile.firstName
                     self.lastName1 = profile.lastName1
                     self.lastName2 = profile.lastName2
-                    self.profilePhoto = profile.profilePhoto // <-- Agregado aquí
-                    // ... Asigna todos los otros campos aquí
+                    self.bikeBrand = profile.bikeBrand
+                    self.address = profile.address
+                    self.phone = profile.phone
+                    self.email = profile.email
+                    self.birthDate = profile.birthDate
+                    self.federated = profile.federated
+                    self.volunteer = profile.volunteer
+                    self.rolesInClub = profile.rolesInClub
+                    self.profilePhoto = profile.profilePhoto
+                    self.photos = profile.photos
+                    self.routeType = profile.routeType
+                    self.facebookName = profile.facebookName
+                    self.stravaAccount = profile.stravaAccount
                 } else if let error = error {
                     print("Error loading profile: \(error.localizedDescription)")
                 }
@@ -51,23 +64,23 @@ class ProfileSettingViewModel: ObservableObject {
         if let userId = Auth.auth().currentUser?.uid {
             let profile = ProfileModel(
                 id: userId,
-                clubId: "clubId",
-                firstName: firstName,
-                lastName1: lastName1,
-                lastName2: lastName2,
-                bikeBrand: nil,
-                address: Address(postalCode: "postalCode", city: "city", street: "street"),
-                phone: "phone",
-                email: "email",
-                birthDate: Date(),
-                federated: false,
-                volunteer: false,
-                rolesInClub: nil,
-                profilePhoto: nil,
-                photos: nil,
-                routeType: .short,
-                facebookName: nil,
-                stravaAccount: nil 
+                clubId: self.clubId,
+                firstName: self.firstName,
+                lastName1: self.lastName1,
+                lastName2: self.lastName2,
+                bikeBrand: self.bikeBrand,
+                address: self.address,
+                phone: self.phone,
+                email: self.email,
+                birthDate: self.birthDate,
+                federated: self.federated,
+                volunteer: self.volunteer,
+                rolesInClub: self.rolesInClub,
+                profilePhoto: self.profilePhoto,
+                photos: self.photos,
+                routeType: self.routeType,
+                facebookName: self.facebookName,
+                stravaAccount: self.stravaAccount
             )
             
             firestoreManager.updateProfile(profile: profile) { (success, error) in
@@ -79,5 +92,4 @@ class ProfileSettingViewModel: ObservableObject {
             }
         }
     }
-
 }
