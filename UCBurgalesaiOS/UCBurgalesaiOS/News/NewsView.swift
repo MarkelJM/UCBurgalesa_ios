@@ -16,12 +16,15 @@ struct NewsView: View {
                 .edgesIgnoringSafeArea(.all)
 
             ScrollView {
-                VStack {
+                VStack(spacing: 20) {
                     headerView
                     newsListView
                 }
                 .padding([.leading, .trailing], 10)
                 .padding(.top, 20)
+                .background(Color.white.opacity(0.9))
+                .cornerRadius(15)
+                .shadow(radius: 10)
             }
         }
         .onAppear {
@@ -56,12 +59,12 @@ struct NewsView: View {
                 if let imageUrl = newsItem.imageUrl {
                     URLImage(url: imageUrl)
                         .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: UIScreen.main.bounds.width - 30, maxHeight: 200)
+                        .frame(maxWidth: UIScreen.main.bounds.width - 50, maxHeight: 200)
                         .cornerRadius(10)
                 }
             }
             .padding()
-            .background(Color.gray.opacity(0.1))
+            .background(Color.gray.opacity(0.2))
             .cornerRadius(10)
             .padding(.bottom, 10)
         }
