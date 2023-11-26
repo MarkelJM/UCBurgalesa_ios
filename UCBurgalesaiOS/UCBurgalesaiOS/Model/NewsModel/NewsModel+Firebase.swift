@@ -8,7 +8,6 @@
 import Foundation
 
 extension NewsModel {
-    
     init?(from data: [String: Any]) {
         guard let title = data["title"] as? String,
               let content = data["content"] as? String,
@@ -25,10 +24,10 @@ extension NewsModel {
     
     func toFirestoreData() -> [String: Any] {
         return [
-            "id": id,
-            "title": title,
-            "content": content,
-            "imageUrl": imageUrl.absoluteString
+            "id": id ?? UUID().uuidString,
+            "title": title ?? "",
+            "content": content ?? "",
+            "imageUrl": imageUrl?.absoluteString ?? ""
         ]
     }
 }
