@@ -14,43 +14,43 @@ struct OnboardingView: View {
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        ZStack {
-            DiagonalSolidShadedBackground()
+        GeometryReader{  geometry in//añadimos geometryreader para la animacion del logo
+            ZStack {
+                DiagonalSolidShadedBackground()
 
-            VStack {
-                Spacer()
-                Image("EscudoUCB")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150, height: 150)
-                    .padding(.bottom, 100)
-                
-                Text("Bienvenido a la aplicación de la Unión Cicloturista Burgalesa")
-                    .font(.title) // Cambié el font para evitar el error
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.violet.opacity(0.9)) // Cambié el color para evitar el error
-                    .cornerRadius(10)
+                VStack {
+                    Spacer()
+                    LogoAnimationView(screenSize: geometry.size)
+                    Spacer()
+                    
+                    Text("Bienvenido a la aplicación de la Unión Cicloturista Burgalesa")
+                        .font(.title) // Cambié el font para evitar el error
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.violet.opacity(0.9)) // Cambié el color para evitar el error
+                        .cornerRadius(10)
 
-                Spacer()
-                
-                ProgressView(value: progress, total: 50)
-                    .progressViewStyle(LinearProgressViewStyle())
-                    .tint(Color.violet) // Cambié el color para evitar el error
-                    .scaleEffect(x: 1, y: 2, anchor: .center)
-                    .padding(.bottom, 100)
+                    Spacer()
+                    
+                    ProgressView(value: progress, total: 50)
+                        .progressViewStyle(LinearProgressViewStyle())
+                        .tint(Color.violet) // Cambié el color para evitar el error
+                        .scaleEffect(x: 1, y: 2, anchor: .center)
+                        .padding(.bottom, 100)
+                }
+            }
+            
+            .onReceive(timer) { _ in
+                if progress < 30 {
+                    progress += 1
+                } else {
+                    timer.upstream.connect().cancel() // Detener el temporizador
+                    navigateBasedOnAuthentication()
+                }
             }
         }
         .onAppear {
             progress = 0
-        }
-        .onReceive(timer) { _ in
-            if progress < 30 {
-                progress += 1
-            } else {
-                timer.upstream.connect().cancel() // Detener el temporizador
-                navigateBasedOnAuthentication()
-            }
         }
     }
 

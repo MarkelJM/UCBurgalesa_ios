@@ -171,6 +171,9 @@
 		D3FA789A2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */; };
 		D3FA789B2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */; };
 		D3FA789C2AFBB71A00D1D9E9 /* CheckinSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */; };
+		D3FA78A12B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78A02B150AED00D1D9E9 /* LogoAnimationView.swift */; };
+		D3FA78A22B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78A02B150AED00D1D9E9 /* LogoAnimationView.swift */; };
+		D3FA78A32B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA78A02B150AED00D1D9E9 /* LogoAnimationView.swift */; };
 		D3FEA9432AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9442AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
 		D3FEA9452AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3FEA9412AF404A6003B0A5D /* RideCheckinModel.xcdatamodeld */; };
@@ -305,6 +308,7 @@
 		D3FA788F2AF8FD1D00D1D9E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		D3FA78942AF914D300D1D9E9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinSheetView.swift; sourceTree = "<group>"; };
+		D3FA78A02B150AED00D1D9E9 /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
 		D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideCheckinModel.xcdatamodel; sourceTree = "<group>"; };
 		D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckinModel+CoreData.swift"; sourceTree = "<group>"; };
 		D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3FA789E2B150ACB00D1D9E9 /* Animations */,
 				D3FA788A2AF8FB8500D1D9E9 /* Keychain */,
 				D3FA78892AF8FB7700D1D9E9 /* Onboarding */,
 				D3FEA9402AF40442003B0A5D /* CoreData */,
@@ -717,6 +722,22 @@
 			path = CheckinSheet;
 			sourceTree = "<group>";
 		};
+		D3FA789E2B150ACB00D1D9E9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA789F2B150AD200D1D9E9 /* LogoOnboarding */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D3FA789F2B150AD200D1D9E9 /* LogoOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA78A02B150AED00D1D9E9 /* LogoAnimationView.swift */,
+			);
+			path = LogoOnboarding;
+			sourceTree = "<group>";
+		};
 		D3FEA9402AF40442003B0A5D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,6 +1014,7 @@
 				D3E7E6932AE9675800C00157 /* ClubView.swift in Sources */,
 				D323D8992ABC57E800BBEC4E /* UCBurgalesaiOSApp.swift in Sources */,
 				D3B3F1502ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
+				D3FA78A12B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */,
 				D3B3F15C2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3A65EC92AF2C1D500D0E79B /* CheckinView.swift in Sources */,
 				D3B3F1542ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
@@ -1040,6 +1062,7 @@
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E082AE2EBB50025389F /* RoutesListView.swift in Sources */,
 				D3FA78912AF8FD1D00D1D9E9 /* OnboardingView.swift in Sources */,
+				D3FA78A22B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */,
 				D3E7E6942AE9675800C00157 /* ClubView.swift in Sources */,
 				D3B3F17C2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
 				D362813C2AE14AFA00E21A4F /* ForgotPasswordView.swift in Sources */,
@@ -1144,6 +1167,7 @@
 				D3E7E6952AE9675800C00157 /* ClubView.swift in Sources */,
 				D323D8B62ABC57E900BBEC4E /* UCBurgalesaiOSUITestsLaunchTests.swift in Sources */,
 				D3B3F1522ADD9CEF0000B662 /* FirestoreManager.swift in Sources */,
+				D3FA78A32B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */,
 				D3B3F15E2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3A65ECB2AF2C1D500D0E79B /* CheckinView.swift in Sources */,
 				D3B3F1562ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
