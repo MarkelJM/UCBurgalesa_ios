@@ -9,12 +9,20 @@ import SwiftUI
 
 struct RegisterEmailView: View {
     @StateObject var viewModel = RegisterEmailViewModel()
-    
+
     var body: some View {
         ZStack {
             DiagonalSolidShadedBackground() 
 
             VStack(spacing: 20) {
+                HStack{
+                    
+                    Text("Registrándote")
+                        .font(.title)
+                        .foregroundColor(Color.white)
+                    
+                }
+                
                 Text("Registra tu email, para poder tener conectado tu cuenta con la app")
                     .font(.whatTheFont(size: 20))
                     .foregroundColor(.white)

@@ -10,13 +10,22 @@ struct ProfileRegisterView: View {
     @StateObject var viewModel = ProfileRegisterViewModel()
     @State private var isImagePickerPresented: Bool = false
     @State private var selectedImage: UIImage?
+    @EnvironmentObject var appState: AppState
+
     
     var body: some View {
         ZStack {
             DiagonalSolidShadedBackground()
             
             ScrollView {
+                HStack{
+                    
+                    Text("Registrándote")
+                        .font(.title)
+                        .foregroundColor(Color.white)
+                }
                 VStack(spacing: 20) {
+
                     Text("Completa tu perfil")
                         .font(.whatTheFont(size: 24))
                         .foregroundColor(.black)

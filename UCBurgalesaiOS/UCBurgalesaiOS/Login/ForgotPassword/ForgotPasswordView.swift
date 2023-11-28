@@ -10,13 +10,22 @@ import SwiftUI
 struct ForgotPasswordView: View {
     @StateObject var viewModel = ForgotPasswordViewModel()
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var appState: AppState
+
     
     var body: some View {
         ZStack {
             DiagonalSolidShadedBackground()
             
             VStack(spacing: 20) {
+                HStack{
+                    BackButton(destination: .login)
+                        .environmentObject(appState)
+                    
+                    Spacer()
+                }
                 Spacer()
+                
                 
                 Text("Restablecer contraseña")
                     .font(.largeTitle)
