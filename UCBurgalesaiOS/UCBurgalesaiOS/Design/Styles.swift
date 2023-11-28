@@ -92,6 +92,14 @@ struct BackButton: View {
             appState.currentView = destination
         }) {
             Image(systemName: "arrow.left")
+                .foregroundColor(.white) // Establecer el color del icono
+                .padding(10) // Añadir algo de relleno alrededor del icono
+                .background(Color.gray.opacity(0.5)) // Color de fondo (ajustable)
+                .cornerRadius(8) // Esquinas redondeadas
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8) // Crea un borde redondeado
+                        .stroke(Color.white, lineWidth: 2) // Color y grosor del borde
+                )
         }
     }
 }

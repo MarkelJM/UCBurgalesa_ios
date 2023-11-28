@@ -21,23 +21,26 @@ struct OnboardingView: View {
                 VStack {
                     Spacer()
                     LogoAnimationView(screenSize: geometry.size)
+                        .padding(.bottom,200)
                     Spacer()
                     
                     Text("Bienvenido a la aplicación de la Unión Cicloturista Burgalesa")
                         .font(.title) // Cambié el font para evitar el error
                         .foregroundColor(.white)
                         .padding()
-                        .background(Color.violet.opacity(0.9)) // Cambié el color para evitar el error
+                        .background(Color.violet5) // Cambié el color para evitar el error
                         .cornerRadius(10)
 
                     Spacer()
-                    
+                    /*
                     ProgressView(value: progress, total: 50)
                         .progressViewStyle(LinearProgressViewStyle())
                         .tint(Color.violet) // Cambié el color para evitar el error
                         .scaleEffect(x: 1, y: 2, anchor: .center)
                         .padding(.bottom, 100)
+                     */
                 }
+                .padding(.bottom, 100)
             }
             
             .onReceive(timer) { _ in
