@@ -11,6 +11,7 @@ struct CheckinView: View {
     @StateObject var viewModel = CheckinViewModel()
     @EnvironmentObject var appState: AppState
     @State private var showingCheckinSheet = false
+    @StateObject private var keychainManager = KeychainManager()
 
     var body: some View {
         ZStack {
@@ -18,6 +19,21 @@ struct CheckinView: View {
                 .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 20) {
+                HStack{
+                    Text("U.C. Burgalesa")
+                        .font(.whatTheFont(size: 20))
+
+                        
+                    Button("Cerrar sesión") {
+                        keychainManager.deleteToken()
+                        appState.currentView = .login
+                    }
+                    .vibrantVioletButton() // Color violeta para el botón
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    
+                    Spacer()
+                }
+                .padding()
                 //headerView
 
                 Image("EscudoUCB")

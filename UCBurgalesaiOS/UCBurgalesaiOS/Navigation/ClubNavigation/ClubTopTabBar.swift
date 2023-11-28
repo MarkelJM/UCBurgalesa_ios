@@ -19,8 +19,8 @@ struct ClubTopTabBar: View {
                 }) {
                     Text(tab.title)
                         .padding()
-                        .background(selectedTab == tab.rawValue ? Color.blue : Color.clear)
-                        .foregroundColor(selectedTab == tab.rawValue ? .white : .blue)
+                        .background(selectedTab == tab.rawValue ? Color.violet : Color.clear)
+                        .foregroundColor(selectedTab == tab.rawValue ? .white : .violet)
                         .cornerRadius(10)
                 }
             }

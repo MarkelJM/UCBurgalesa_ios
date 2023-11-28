@@ -17,10 +17,11 @@ struct TabBarView: View {
                     VStack {
                         Image(systemName: "house.fill")
                         Text("Home")
+                            .background(Color.blue)
                     }
                 }
                 .tag(AppState.AppView.home)
-                .background(Color.white) // Fondo para el tabItem
+                .background(Color.blue) // Fondo para el tabItem
 
             CheckinView()
                 .tabItem {
