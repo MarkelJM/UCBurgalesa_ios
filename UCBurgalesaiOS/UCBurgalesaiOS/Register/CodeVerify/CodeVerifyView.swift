@@ -9,12 +9,21 @@ import SwiftUI
 
 struct CodeVerifyView: View {
     @ObservedObject var viewModel = CodeVerifyViewModel()
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
         ZStack {
             DiagonalSolidShadedBackground()
 
             VStack(spacing: 20) {
+                HStack{
+                    BackButton(destination: .login)
+                        .environmentObject(appState)
+                    Spacer()
+                    Text("Registrándote")
+                        .font(.title)
+                    Spacer()
+                }
                 Text("Introduce el código e Identificador que te ha facilitado U.C. Burgalesa")
                     .font(.whatTheFont(size: 20))
                     .foregroundColor(.white)
