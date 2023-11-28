@@ -12,60 +12,78 @@ struct DetailRoutesView: View {
     @ObservedObject var viewModel: DetailRoutesViewModel
     @EnvironmentObject var appState: AppState
 
-
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                HStack {
-                    BackButton(destination: .routesList)
-                        .environmentObject(appState)
-                        .padding(.bottom, 20)
-                    Spacer()
+        ZStack {
+            DiagonalSolidShadedBackground()
+                .edgesIgnoringSafeArea(.all)
+
+            ScrollView {
+                VStack(spacing: 20) {
+                    headerView
+                    routeDetails
+                    mapView
                 }
-                VStack {
-                    Text(viewModel.ride.rideName).font(.largeTitle)
-                    Text("Organizer: \(viewModel.ride.organizer)")
-                    Text("Date: \(DateFormatter.firestoreDateOnlyFormatter.string(from: viewModel.ride.date))")
-                    Text("Score: \(viewModel.ride.score)")
-                    Text("Rest Stop Name: \(viewModel.ride.restStopName)")
-                    Text("Category: \(viewModel.ride.category.rawValue.capitalized)")
-                }
-                
-                VStack {
-                    Text("Kilometers: \(viewModel.ride.kilometers, specifier: "%.2f") km")
-                    Text("Start Time: \(DateFormatter.firestoreDateTimeFormatter.string(from: viewModel.ride.startTime))")
-                    Text("Route Points: \(viewModel.ride.routePoints.joined(separator: ", "))")
-                    Text("Profile Image: \(viewModel.ride.profileImage)")
-                    Text("Route Image: \(viewModel.ride.routeImage)")
-                }
-                
-                VStack {
-                    MapView(startCoordinate: viewModel.ride.startCoordinates, restStopCoordinate: viewModel.ride.restStopCoordinates)
-                }
+                .padding()
+                .background(Color.white.opacity(0.9))
+                .cornerRadius(15)
+                .shadow(radius: 10)
             }
-            .padding()
         }
+    }
+
+    var headerView: some View {
+        HStack {
+            BackButton(destination: .routesList)
+                .environmentObject(appState)
+            Spacer()
+            Text(viewModel.ride.rideName)
+                .font(.whatTheFont(size: 24))
+            Spacer()
+        }
+    }
+
+    var routeDetails: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            detailText("Organizer: \(viewModel.ride.organizer)")
+            detailText("Date: \(DateFormatter.firestoreDateOnlyFormatter.string(from: viewModel.ride.date))")
+            detailText("Score: \(viewModel.ride.score)")
+            detailText("Rest Stop Name: \(viewModel.ride.restStopName)")
+            detailText("Category: \(viewModel.ride.category.rawValue.capitalized)")
+            detailText("Kilometers: \(String(format: "%.2f km", viewModel.ride.kilometers))")
+            detailText("Start Time: \(DateFormatter.firestoreDateTimeFormatter.string(from: viewModel.ride.startTime))")
+            detailText("Route Points: \(viewModel.ride.routePoints.joined(separator: ", "))")
+        }
+    }
+
+
+    var mapView: some View {
+        MapView(startCoordinate: viewModel.ride.startCoordinates, restStopCoordinate: viewModel.ride.restStopCoordinates)
+            .frame(height: 300)
+    }
+
+    func detailText(_ text: String) -> some View {
+        Text(text)
+            .font(.identifont(size: 18))
+            .foregroundColor(Color.black)
+            .padding(5)
     }
 }
 
 struct MapView: View {
     var startCoordinate: Coordinate
     var restStopCoordinate: Coordinate
-    
+
     var body: some View {
         Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: startCoordinate.latitude, longitude: startCoordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))), annotationItems: [startCoordinate, restStopCoordinate]) { coordinate in
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)) {
-                if coordinate == startCoordinate {
-                    Image(systemName: "arrow.up.circle.fill") // Puedes cambiar esto por tu imagen de inicio
-                        .foregroundColor(.blue)
-                } else {
-                    Image(systemName: "house.fill") // Puedes cambiar esto por tu imagen de café
-                        .foregroundColor(.red)
-                }
+                Image(systemName: coordinate == startCoordinate ? "arrow.up.circle.fill" : "house.fill")
+                    .foregroundColor(coordinate == startCoordinate ? .blue : .red)
             }
         }
     }
 }
+
+
 
 struct DetailRoutesView_Previews: PreviewProvider {
     static var previews: some View {
@@ -76,5 +94,3 @@ struct DetailRoutesView_Previews: PreviewProvider {
             .environmentObject(AppState()) 
     }
 }
-
-
