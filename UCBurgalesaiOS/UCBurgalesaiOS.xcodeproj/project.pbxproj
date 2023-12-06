@@ -309,6 +309,8 @@
 		D3FA78942AF914D300D1D9E9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D3FA78992AFBB71A00D1D9E9 /* CheckinSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinSheetView.swift; sourceTree = "<group>"; };
 		D3FA78A02B150AED00D1D9E9 /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		D3FA78A52B209FC000D1D9E9 /* UCBurgalesaiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UCBurgalesaiOS.entitlements; sourceTree = "<group>"; };
+		D3FA78A62B20A0E800D1D9E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D3FEA9422AF404A6003B0A5D /* RideCheckinModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RideCheckinModel.xcdatamodel; sourceTree = "<group>"; };
 		D3FEA9462AF404F4003B0A5D /* RideCheckinModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RideCheckinModel+CoreData.swift"; sourceTree = "<group>"; };
 		D3FEA94A2AF40521003B0A5D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				D323D8A82ABC57E900BBEC4E /* UCBurgalesaiOSTests */,
 				D323D8B22ABC57E900BBEC4E /* UCBurgalesaiOSUITests */,
 				D323D8962ABC57E800BBEC4E /* Products */,
+				D3FA78A72B20A35C00D1D9E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,6 +389,8 @@
 		D323D8972ABC57E800BBEC4E /* UCBurgalesaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3FA78A62B20A0E800D1D9E9 /* Info.plist */,
+				D3FA78A52B209FC000D1D9E9 /* UCBurgalesaiOS.entitlements */,
 				D3FA789E2B150ACB00D1D9E9 /* Animations */,
 				D3FA788A2AF8FB8500D1D9E9 /* Keychain */,
 				D3FA78892AF8FB7700D1D9E9 /* Onboarding */,
@@ -736,6 +741,13 @@
 				D3FA78A02B150AED00D1D9E9 /* LogoAnimationView.swift */,
 			);
 			path = LogoOnboarding;
+			sourceTree = "<group>";
+		};
+		D3FA78A72B20A35C00D1D9E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D3FEA9402AF40442003B0A5D /* CoreData */ = {
@@ -1346,6 +1358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UCBurgalesaiOS/UCBurgalesaiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1353,6 +1366,7 @@
 				DEVELOPMENT_TEAM = BHC56Q6KCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UCBurgalesaiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1376,12 +1390,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UCBurgalesaiOS/UCBurgalesaiOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UCBurgalesaiOS/Preview Content\"";
 				DEVELOPMENT_TEAM = BHC56Q6KCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UCBurgalesaiOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
