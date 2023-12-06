@@ -7,6 +7,7 @@
 import Foundation
 import FirebaseAuth
 import CoreLocation
+import FirebaseAnalytics
 
 class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var isCheckinSuccessful: Bool = false
@@ -96,6 +97,7 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                 self.showAlert = true
             }
         }
+
     }
 
     
@@ -209,6 +211,11 @@ class CheckinViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
                 }
             }
         }
+        // Registro del evento de check-in
+        Analytics.logEvent("checkin", parameters: [
+            "type": type.rawValue as NSObject,
+            "timestamp": Date().timeIntervalSince1970 as NSObject
+        ])
     }
 
 }

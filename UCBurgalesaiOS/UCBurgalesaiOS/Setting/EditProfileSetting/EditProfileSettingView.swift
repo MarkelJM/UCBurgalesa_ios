@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
+import FirebaseAuth
 
 struct EditProfileSettingView: View {
     @ObservedObject var viewModel: ProfileSettingViewModel
@@ -61,7 +63,14 @@ struct EditProfileSettingView: View {
 
                     Button("Guardar Cambios") {
                         showConfirmationAlert.toggle()
-                    }.vibrantVioletButton().padding(.top, 50)
+                        // Registro del evento de edición de perfil
+                        Analytics.logEvent("profile_edit", parameters: [
+                            "userID": Auth.auth().currentUser?.uid as NSObject? ?? "unknown" as NSObject,
+                            "timestamp": Date().timeIntervalSince1970 as NSObject
+                        ])
+                    }
+                    .vibrantVioletButton().padding(.top, 50)
+
                 }
                 .padding()
                 .background(Color.white.opacity(0.9))

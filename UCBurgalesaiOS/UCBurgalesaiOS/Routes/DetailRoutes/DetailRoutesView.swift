@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import FirebaseAnalytics
 
 struct DetailRoutesView: View {
     @ObservedObject var viewModel: DetailRoutesViewModel
@@ -27,6 +28,13 @@ struct DetailRoutesView: View {
                 .background(Color.white.opacity(0.9))
                 .cornerRadius(15)
                 .shadow(radius: 10)
+            }
+            .onAppear {
+                // Registro del evento de visualización de detalles de la ruta
+                Analytics.logEvent("route_details_viewed", parameters: [
+                    "routeID": viewModel.ride.rideId as NSObject,
+                    "timestamp": Date().timeIntervalSince1970 as NSObject
+                ])
             }
         }
     }

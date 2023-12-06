@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct ClubView: View {
     @State private var selectedTab: Int = 0
@@ -33,7 +34,12 @@ struct ClubView: View {
             
             Spacer()
         }
+        .onAppear {
+            // Registro del evento de visualización de la vista del club
+            Analytics.logEvent("club_viewed", parameters: nil)
+        }
     }
+    
 }
 
 struct ClubView_Previews: PreviewProvider {
