@@ -146,7 +146,7 @@ class ProfileRegisterViewModel: ObservableObject {
                     self.facebookName = profile.facebookName
                     self.stravaAccount = profile.stravaAccount
                 } else if let error = error {
-                    // Puedes manejar el error aquí, por ejemplo, mostrando un mensaje al usuario
+                    // manejar el error aquí, por ejemplo, mostrando un mensaje al usuario
                     print("Error loading profile: \(error.localizedDescription)")
                 }
             }

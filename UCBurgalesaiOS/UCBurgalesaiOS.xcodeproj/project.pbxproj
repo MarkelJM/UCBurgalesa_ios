@@ -86,12 +86,6 @@
 		D3B3F1502ADD9CEF0000B662 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F14F2ADD9CEF0000B662 /* FirestoreManager.swift */; };
 		D3B3F1512ADD9CEF0000B662 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F14F2ADD9CEF0000B662 /* FirestoreManager.swift */; };
 		D3B3F1522ADD9CEF0000B662 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F14F2ADD9CEF0000B662 /* FirestoreManager.swift */; };
-		D3B3F1542ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */; };
-		D3B3F1552ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */; };
-		D3B3F1562ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */; };
-		D3B3F1582ADD9D750000B662 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1572ADD9D750000B662 /* RegisterView.swift */; };
-		D3B3F1592ADD9D750000B662 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1572ADD9D750000B662 /* RegisterView.swift */; };
-		D3B3F15A2ADD9D750000B662 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F1572ADD9D750000B662 /* RegisterView.swift */; };
 		D3B3F15C2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F15B2ADDA0B80000B662 /* ProfileModel+Firebase.swift */; };
 		D3B3F15D2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F15B2ADDA0B80000B662 /* ProfileModel+Firebase.swift */; };
 		D3B3F15E2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3F15B2ADDA0B80000B662 /* ProfileModel+Firebase.swift */; };
@@ -280,8 +274,6 @@
 		D3B3F1452ADD95C30000B662 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		D3B3F1492ADD962D0000B662 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
 		D3B3F14F2ADD9CEF0000B662 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
-		D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		D3B3F1572ADD9D750000B662 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D3B3F15B2ADDA0B80000B662 /* ProfileModel+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileModel+Firebase.swift"; sourceTree = "<group>"; };
 		D3B3F15F2ADE97FB0000B662 /* CodeUserVerifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeUserVerifyModel.swift; sourceTree = "<group>"; };
 		D3B3F1642ADE992E0000B662 /* CodeVerifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerifyViewModel.swift; sourceTree = "<group>"; };
@@ -546,8 +538,6 @@
 				D3B3F1792ADED7CA0000B662 /* ProfileRegister */,
 				D3B3F16C2ADE9CBC0000B662 /* RegisterEmail */,
 				D3B3F1632ADE99040000B662 /* CodeVerify */,
-				D3B3F1532ADD9D4E0000B662 /* RegisterViewModel.swift */,
-				D3B3F1572ADD9D750000B662 /* RegisterView.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1015,7 +1005,6 @@
 				D3B3F1652ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF22ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3E7E67D2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
-				D3B3F1582ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F1892ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3B3F1602ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3FF7E1F2AE2EC090025389F /* NewsViewModel.swift in Sources */,
@@ -1052,7 +1041,6 @@
 				D3FA78A12B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */,
 				D3B3F15C2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3A65EC92AF2C1D500D0E79B /* CheckinView.swift in Sources */,
-				D3B3F1542ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F17F2ADEDE980000B662 /* ProfileRegisterView.swift in Sources */,
 				D3B3F13C2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D3B3F17B2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,
@@ -1092,7 +1080,6 @@
 				D3FF7E202AE2EC090025389F /* NewsViewModel.swift in Sources */,
 				D3E7E6992AEA71ED00C00157 /* PrimeMembersViewModel.swift in Sources */,
 				D3A65EB82AEFFCC700D0E79B /* NewsModel+Firebase.swift in Sources */,
-				D3B3F1592ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F18E2ADEE7330000B662 /* Fonts.swift in Sources */,
 				D323D8C52ABC585200BBEC4E /* ProfileModel.swift in Sources */,
 				D3FF7E082AE2EBB50025389F /* RoutesListView.swift in Sources */,
@@ -1134,7 +1121,6 @@
 				D3B3F16A2ADE995E0000B662 /* CodeVerifyView.swift in Sources */,
 				D3FF7E182AE2EBF00025389F /* ProfileSettingView.swift in Sources */,
 				D3FA78962AF914D300D1D9E9 /* TabBarView.swift in Sources */,
-				D3B3F1552ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F1412ADD8D370000B662 /* LoginView.swift in Sources */,
 				D3B3F13D2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D36281382AE14AD600E21A4F /* ForgotPasswordViewModel.swift in Sources */,
@@ -1168,7 +1154,6 @@
 				D3B3F1672ADE992E0000B662 /* CodeVerifyViewModel.swift in Sources */,
 				D3C56AF42ADD8A01008378BF /* FirebaseAuthManager.swift in Sources */,
 				D3E7E67F2AE922B700C00157 /* SponsorModel+Firebase.swift in Sources */,
-				D3B3F15A2ADD9D750000B662 /* RegisterView.swift in Sources */,
 				D3B3F18B2ADEE6FB0000B662 /* Colors.swift in Sources */,
 				D3B3F1622ADE97FB0000B662 /* CodeUserVerifyModel.swift in Sources */,
 				D3FF7E212AE2EC090025389F /* NewsViewModel.swift in Sources */,
@@ -1205,7 +1190,6 @@
 				D3FA78A32B150AED00D1D9E9 /* LogoAnimationView.swift in Sources */,
 				D3B3F15E2ADDA0B80000B662 /* ProfileModel+Firebase.swift in Sources */,
 				D3A65ECB2AF2C1D500D0E79B /* CheckinView.swift in Sources */,
-				D3B3F1562ADD9D4E0000B662 /* RegisterViewModel.swift in Sources */,
 				D3B3F1812ADEDE980000B662 /* ProfileRegisterView.swift in Sources */,
 				D3B3F13E2ADD8D2A0000B662 /* LoginViewModel.swift in Sources */,
 				D3B3F17D2ADEDC1C0000B662 /* ProfileRegisterViewModel.swift in Sources */,

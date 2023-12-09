@@ -21,7 +21,7 @@ class CoreDataManager {
     
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "RideCheckinModel") // Asegúrate de que esto coincida con el nombre de tu archivo .xcdatamodeld
+        let container = NSPersistentContainer(name: "RideCheckinModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")

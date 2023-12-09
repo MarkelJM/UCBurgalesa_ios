@@ -13,7 +13,7 @@ struct LogoAnimationView: View {
     let screenSize: CGSize
 
     var body: some View {
-        Image("EscudoUCB")
+        Image("escudoUCB")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 150, height: 150)

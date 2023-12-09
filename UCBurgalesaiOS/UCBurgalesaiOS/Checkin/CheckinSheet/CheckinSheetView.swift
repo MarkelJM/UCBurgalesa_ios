@@ -50,7 +50,7 @@ struct CheckinSheetView: View {
 
 struct CheckinSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        // Aquí puedes crear un viewModel ficticio o usar uno real si es necesario
+        
         CheckinSheetView(viewModel: CheckinViewModel())
     }
 }

@@ -68,8 +68,7 @@ struct ForgotPasswordView: View {
     }
 }
 
-// Aquí, asegúrate de que la extensión brightOrangeButton y vibrantVioletButton estén disponibles
-// como se definió anteriormente en tu código.
+
 
 struct ForgotPasswordView_Previews: PreviewProvider {
     static var previews: some View {

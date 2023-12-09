@@ -37,18 +37,7 @@ class FirestoreManager {
             }
         }
     }
-    /*
-    func updateProfile(profile: ProfileModel, completion: @escaping (Bool, Error?) -> Void) {
-        let data = profile.toFirestoreData()
-        db.collection("Profiles").document(profile.id).updateData(data) { error in
-            if let error = error {
-                completion(false, error)
-                return
-            }
-            completion(true, nil)
-        }
-    }
-    */
+    
     func updateProfile(profile: ProfileModel, completion: @escaping (Bool, Error?) -> Void) {
         let data = profile.toFirestoreData()
         db.collection("Profiles").document(profile.id).setData(data, merge: true) { error in

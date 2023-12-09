@@ -13,11 +13,3 @@ struct NewsModel: Identifiable {
     var imageUrl: URL?
 }
 
-/*
-struct NewsModel: Identifiable {
-    var id: String
-    var title: String
-    var content: String
-    var imageUrl: URL
-}
-*/

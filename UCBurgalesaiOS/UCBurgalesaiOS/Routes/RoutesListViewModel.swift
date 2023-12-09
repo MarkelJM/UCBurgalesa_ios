@@ -46,15 +46,3 @@ class RoutesListViewModel: ObservableObject {
 
 }
 
-/*
-//prueba por que no muestra nada la preview
-extension RoutesListViewModel {
-    static var mock: RoutesListViewModel {
-        let viewModel = RoutesListViewModel(appState: AppState())
-        viewModel.rides = [
-            RideModel(rideId: "1", date: Date(), rideName: "Test Ride", organizer: "John Doe", score: 5, restStopName: "Test Stop", profileImage: URL(string: "https://example.com/image1.jpg")!, routeImage: URL(string: "https://example.com/route1.jpg")!, category: .all, kilometers: 50.0, startTime: Date(), routePoints: ["Point 1", "Point 2"], startCoordinates: Coordinate(latitude: 0, longitude: 0), startCheckinRadius: 500, minRestStopCheckinTime: Date(), restStopCoordinates: Coordinate(latitude: 1, longitude: 1), restStopCheckinRadius: 500)
-        ]
-        return viewModel
-    }
-}
-*/
