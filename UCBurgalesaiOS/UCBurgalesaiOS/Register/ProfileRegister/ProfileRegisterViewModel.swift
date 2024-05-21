@@ -126,7 +126,6 @@ class ProfileRegisterViewModel: ObservableObject {
         if let userId = Auth.auth().currentUser?.uid {
             firestoreManager.getProfile(for: userId) { (profile, error) in
                 if let profile = profile {
-                    // Asignar los datos del perfil a las propiedades del ViewModel
                     self.firstName = profile.firstName
                     self.lastName1 = profile.lastName1
                     self.lastName2 = profile.lastName2
@@ -146,7 +145,6 @@ class ProfileRegisterViewModel: ObservableObject {
                     self.facebookName = profile.facebookName
                     self.stravaAccount = profile.stravaAccount
                 } else if let error = error {
-                    // manejar el error aquí, por ejemplo, mostrando un mensaje al usuario
                     print("Error loading profile: \(error.localizedDescription)")
                 }
             }

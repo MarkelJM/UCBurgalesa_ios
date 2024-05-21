@@ -21,7 +21,7 @@ struct LoginView: View {
             DiagonalSolidShadedBackground()
 
             VStack {
-                Image("EscudoUCB")
+                Image("escudoUCB")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 150, height: 150)

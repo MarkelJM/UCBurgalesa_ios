@@ -65,7 +65,7 @@ struct HomeView: View {
                 }
                 .padding()
             }
-            //.navigationBarTitle("U.C. Burgalesa", displayMode: .inline)
+           
         }
     }
     
