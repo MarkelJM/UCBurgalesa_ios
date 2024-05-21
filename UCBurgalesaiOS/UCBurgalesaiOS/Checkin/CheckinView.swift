@@ -28,7 +28,7 @@ struct CheckinView: View {
                         keychainManager.deleteToken()
                         appState.currentView = .login
                     }
-                    .vibrantVioletButton() // Color violeta para el botón
+                    .vibrantVioletButton() 
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     
                     Spacer()
@@ -100,18 +100,7 @@ struct CheckinView: View {
             Alert(title: Text("Check-in"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
         }
     }
-    /*
-    var headerView: some View {
-        HStack {
-            BackButton(destination: .home)
-                .environmentObject(appState)
-            Spacer()
-            Text("Check-in")
-                .font(.whatTheFont(size: 24))
-            Spacer()
-        }
-    }
-     */
+    
 }
 
 struct CheckinView_Previews: PreviewProvider {

@@ -25,20 +25,14 @@ struct OnboardingView: View {
                     Spacer()
                     
                     Text("Bienvenido a la aplicación de la Unión Cicloturista Burgalesa")
-                        .font(.title) // Cambié el font para evitar el error
+                        .font(.title)
                         .foregroundColor(.white)
                         .padding()
-                        .background(Color.violet5) // Cambié el color para evitar el error
+                        .background(Color.violet5) 
                         .cornerRadius(10)
 
                     Spacer()
-                    /*
-                    ProgressView(value: progress, total: 50)
-                        .progressViewStyle(LinearProgressViewStyle())
-                        .tint(Color.violet) // Cambié el color para evitar el error
-                        .scaleEffect(x: 1, y: 2, anchor: .center)
-                        .padding(.bottom, 100)
-                     */
+                   
                 }
                 .padding(.bottom, 100)
             }
@@ -47,7 +41,7 @@ struct OnboardingView: View {
                 if progress < 30 {
                     progress += 1
                 } else {
-                    timer.upstream.connect().cancel() // Detener el temporizador
+                    timer.upstream.connect().cancel() 
                     navigateBasedOnAuthentication()
                 }
             }
@@ -58,7 +52,7 @@ struct OnboardingView: View {
     }
 
     private func navigateBasedOnAuthentication() {
-        if progress >= 10 { // Asegúrate de que esta condición coincida con el progreso total
+        if progress >= 10 {
             if keychainManager.getToken() != nil {
                 DispatchQueue.main.async {
                     self.appState.currentView = .home

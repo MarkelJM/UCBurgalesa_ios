@@ -104,7 +104,6 @@ class FirestoreManager {
     //DatosRutas
     func fetchAllRides(completion: @escaping ([RideModel]?, Error?) -> Void) {
         print("Accessing Firestore...")
-        //db.collection("MockDatosSalidasPrueba").getDocuments { (querySnapshot, error) in
         db.collection("MockDatosSalidasPrueba").getDocuments { (querySnapshot, error) in
 
             if let error = error {
